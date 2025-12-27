@@ -81,7 +81,7 @@ export default function PlayerRow({
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0, opacity: 0 }}
                             key={item.instanceId}
-                            className={`item-icon rarity-${item.rarity}`}
+                            className={`item-icon rarity-${item.rarity.toLowerCase()}`}
                             onMouseEnter={(e) => {
                                 const rect = e.currentTarget.getBoundingClientRect();
                                 onHoverItem({

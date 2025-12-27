@@ -5,7 +5,7 @@ export default function TooltipContent({ item }) {
     const tokenClasses = getTokenClasses(item.name);
     return (
         <>
-            <div className={`wow-name rarity-text-${item.rarity}`}>
+            <div className={`wow-name rarity-text-${item.rarity.toLowerCase()}`}>
                 {item.name}
             </div>
             {tokenClasses && (

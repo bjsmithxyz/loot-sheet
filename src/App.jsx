@@ -178,7 +178,7 @@ function App() {
                             pointerEvents: 'none'
                         }}
                     >
-                        <div className={`wow-name rarity-text-${hoveredGridItem.item.rarity}`}>
+                        <div className={`wow-name rarity-text-${hoveredGridItem.item.rarity.toLowerCase()}`}>
                             {hoveredGridItem.item.name}
                         </div>
                     </div>

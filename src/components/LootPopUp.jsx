@@ -46,10 +46,10 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
                         onMouseEnter={() => setHoveredItem(item)}
                         onMouseLeave={() => setHoveredItem(null)}
                     >
-                        <div className={`item-icon-small rarity-${item.rarity}`}>
+                        <div className={`item-icon-small rarity-${item.rarity.toLowerCase()}`}>
                             {item.name[0]}
                         </div>
-                        <span className={`item-name rarity-text-${item.rarity}`}>
+                        <span className={`item-name rarity-text-${item.rarity.toLowerCase()}`}>
                             {item.name}
                             {getTokenClasses(item.name) && (
                                 <div className="token-classes-row small">
