@@ -1,6 +1,6 @@
 # TBC Loot Tracker
 
-A modern, visual loot tracking application for World of Warcraft: The Burning Crusade Classic. This tool helps Loot Councils and Guild Masters track loot distribution, visualize assignments, and manage raid rosters efficiently.
+A modern, visual loot tracking application for World of Warcraft: The Burning Crusade Classic. This tool helps Loot Councils and Guild Masters track loot distribution, visualise assignments, and manage raid rosters efficiently.
 
 ## Features
 
@@ -47,13 +47,19 @@ Open your browser to the URL shown (usually `http://localhost:5173`).
 ## Project Structure
 
 ```
-src/
-├── components/     # Reusable UI components (LootPopUp, PlayerRow, etc.)
-├── data/           # Static data files (loot.json, raids.json)
-├── utils/          # Helper functions and constants (wow-constants.js)
-├── App.jsx         # Main application controller
-└── index.css       # Global styles and variables
+.
+├── docs/           # Documentation and Design Documents
+└── src/
+    ├── components/ # Reusable UI components (LootPopUp, PlayerRow, etc.)
+    ├── data/       # Static data files (loot.json, raids.json)
+    ├── utils/      # Helper functions and constants (wow-constants.js)
+    ├── App.jsx     # Main application controller
+    └── index.css   # Global styles and variables
 ```
+
+## Documentation
+
+For a detailed overview of the component architecture and data flow, please refer to the [Technical Design Document](docs/technical_design.md).
 
 ## Import Format
 
