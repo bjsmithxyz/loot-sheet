@@ -1,0 +1,31 @@
+{
+  "karazhan": {
+    "name": "Karazhan",
+    "bosses": [
+      { "id": "attumen", "name": "Attumen the Huntsman" },
+      { "id": "moroes", "name": "Moroes" },
+      { "id": "maiden", "name": "Maiden of Virtue" },
+      { "id": "opera", "name": "Opera Event" },
+      { "id": "curator", "name": "The Curator" },
+      { "id": "illhoof", "name": "Terestian Illhoof" },
+      { "id": "shade", "name": "Shade of Aran" },
+      { "id": "netherspite", "name": "Netherspite" },
+      { "id": "chess", "name": "Chess Event" },
+      { "id": "prince", "name": "Prince Malchezaar" },
+      { "id": "nightbane", "name": "Nightbane" }
+    ]
+  },
+  "gruul": {
+    "name": "Gruul's Lair",
+    "bosses": [
+      { "id": "maulgar", "name": "High King Maulgar" },
+      { "id": "gruul", "name": "Gruul the Dragonkiller" }
+    ]
+  },
+  "magtheridon": {
+    "name": "Magtheridon's Lair",
+    "bosses": [
+      { "id": "magtheridon", "name": "Magtheridon" }
+    ]
+  }
+}

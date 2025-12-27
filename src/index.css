@@ -1,0 +1,92 @@
+:root {
+  /* WoW Class Colors */
+  --color-warrior: #C79C6E;
+  --color-paladin: #F58CBA;
+  --color-hunter: #ABD473;
+  --color-rogue: #FFF569;
+  --color-priest: #FFFFFF;
+  --color-deathknight: #C41F3B;
+  --color-shaman: #0070DE;
+  --color-mage: #69CCF0;
+  --color-warlock: #9482C9;
+  --color-monk: #00FF96;
+  --color-druid: #FF7D0A;
+  --color-demonhunter: #A330C9;
+
+  /* Item Rarities */
+  --rarity-poor: #9d9d9d;
+  --rarity-common: #ffffff;
+  --rarity-uncommon: #1eff00;
+  --rarity-rare: #0070dd;
+  --rarity-epic: #a335ee;
+  --rarity-legendary: #ff8000;
+  --rarity-artifact: #e6cc80;
+
+  /* UI Colors */
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #141418;
+  --bg-tertiary: #1f1f27;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent: #d4af37; /* Gold/Classic feel */
+  --danger: #ff4d4d;
+  
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.glass-panel {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}

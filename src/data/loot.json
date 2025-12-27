@@ -1,0 +1,2641 @@
+{
+  "attumen": [
+    {
+      "id": 28510,
+      "name": "Spectral Band of Innervation",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Rings",
+      "stats": [
+        "+24 Intellect",
+        "+29 Healing",
+        "+22 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SBOI",
+      "req": 70
+    },
+    {
+      "id": 28509,
+      "name": "Worgen Claw Necklace",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Amulets",
+      "stats": [
+        "+20 Agility",
+        "+42 Attack Power",
+        "+42 Ranged Attack Power",
+        "+21 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "WCN",
+      "req": 70
+    },
+    {
+      "id": 28508,
+      "name": "Gloves of Saintly Blessings",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+25 Intellect",
+        "+25 Spirit",
+        "+40 Healing",
+        "+27 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "GOSB",
+      "req": 70
+    },
+    {
+      "id": 28507,
+      "name": "Handwraps of Flowing Thought",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+22 Intellect",
+        "+35 Healing",
+        "+24 Stamina"
+      ],
+      "equip": "Improves spell hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "HOFT",
+      "req": 70
+    },
+    {
+      "id": 28477,
+      "name": "Harbinger Bands",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+21 Intellect",
+        "+14 Spirit",
+        "+26 Healing",
+        "+21 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "HB",
+      "req": 70
+    },
+    {
+      "id": 28506,
+      "name": "Gloves of Dexterous Manipulation",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+35 Agility",
+        "+42 Attack Power",
+        "+42 Ranged Attack Power",
+        "+22 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "GODM",
+      "req": 70
+    },
+    {
+      "id": 28453,
+      "name": "Bracers of the White Stag",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+18 Intellect",
+        "+22 Spirit",
+        "+26 Healing",
+        "+16 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOTWS",
+      "req": 70
+    },
+    {
+      "id": 28503,
+      "name": "Whirlwind Bracers",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+20 Intellect",
+        "+7 Mana Regen",
+        "+46 Healing",
+        "+19 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "WB",
+      "req": 70
+    },
+    {
+      "id": 28454,
+      "name": "Stalker's War Bands",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+21 Agility",
+        "+17 Intellect",
+        "+44 Attack Power",
+        "+44 Ranged Attack Power",
+        "+18 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SWB",
+      "req": 70
+    },
+    {
+      "id": 28505,
+      "name": "Gauntlets of Renewed Hope",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+29 Intellect",
+        "+5 Mana Regen",
+        "+62 Healing",
+        "+19 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "GORH",
+      "req": 70
+    },
+    {
+      "id": 28502,
+      "name": "Vambraces of Courage",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+33 Stamina"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "VOC",
+      "req": 70
+    },
+    {
+      "id": 28504,
+      "name": "Steelhawk Crossbow",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Crossbows",
+      "stats": [
+        "+30 Attack Power",
+        "+30 Ranged Attack Power"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "SC",
+      "req": 70
+    },
+    {
+      "id": 23809,
+      "name": "Schematic: Stabilized Eternium Scope",
+      "rarity": "Rare",
+      "ilevel": 75,
+      "bind": "Binds when picked up",
+      "type": "Recipes - Engineering Schematics",
+      "stats": [],
+      "equip": null,
+      "use": "",
+      "flavor": null,
+      "acronym": "SSES",
+      "req": 70
+    },
+    {
+      "id": 30480,
+      "name": "Fiery Warhorse's Reins",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Mounts",
+      "stats": [],
+      "equip": null,
+      "use": "",
+      "flavor": null,
+      "acronym": "FWR",
+      "req": 70
+    }
+  ],
+  "moroes": [
+    {
+      "id": 28528,
+      "name": "Moroes' Lucky Pocket Watch",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Trinkets",
+      "stats": [
+        "+38 Dodge Rating"
+      ],
+      "equip": "Increases your dodge rating by",
+      "use": "",
+      "flavor": null,
+      "acronym": "MLPW",
+      "req": 70
+    },
+    {
+      "id": 28530,
+      "name": "Brooch of Unquenchable Fury",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Amulets",
+      "stats": [
+        "+21 Intellect",
+        "+26 Healing",
+        "+24 Stamina"
+      ],
+      "equip": "Improves spell hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOUF",
+      "req": 70
+    },
+    {
+      "id": 28525,
+      "name": "Signet of Unshakable Faith",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Off-hand Frills",
+      "stats": [
+        "+21 Intellect",
+        "+22 Spirit",
+        "+37 Healing",
+        "+19 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SOUF",
+      "req": 70
+    },
+    {
+      "id": 28529,
+      "name": "Royal Cloak of Arathi Kings",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloaks",
+      "stats": [
+        "+31 Stamina",
+        "+26 Strength"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "RCOAK",
+      "req": 70
+    },
+    {
+      "id": 28570,
+      "name": "Shadow-Cloak of Dalaran",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloaks",
+      "stats": [
+        "+18 Intellect",
+        "+36 Healing",
+        "+19 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SOD",
+      "req": 70
+    },
+    {
+      "id": 28565,
+      "name": "Nethershard Girdle",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+30 Intellect",
+        "+22 Spirit",
+        "+35 Healing",
+        "+22 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "NG",
+      "req": 70
+    },
+    {
+      "id": 28545,
+      "name": "Edgewalker Longboots",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+29 Agility",
+        "+44 Attack Power",
+        "+44 Ranged Attack Power",
+        "+28 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "EL",
+      "req": 70
+    },
+    {
+      "id": 28567,
+      "name": "Belt of Gale Force",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+28 Intellect",
+        "+10 Mana Regen",
+        "+59 Healing",
+        "+27 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOGF",
+      "req": 70
+    },
+    {
+      "id": 28569,
+      "name": "Boots of Valiance",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+28 Intellect",
+        "+55 Healing",
+        "+28 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOV",
+      "req": 70
+    },
+    {
+      "id": 28566,
+      "name": "Crimson Girdle of the Indomitable",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+20 Block Rating",
+        "+36 Stamina",
+        "+16 Strength"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "CGOTI",
+      "req": 70
+    },
+    {
+      "id": 28524,
+      "name": "Emerald Ripper",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Daggers",
+      "stats": [
+        "+19 Agility",
+        "+36 Attack Power",
+        "+36 Ranged Attack Power",
+        "+18 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "ER",
+      "req": 70
+    },
+    {
+      "id": 28568,
+      "name": "Idol of the Avian Heart",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Idols",
+      "stats": [],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "IOTAH",
+      "req": 70
+    },
+    {
+      "id": 22559,
+      "name": "Formula: Enchant Weapon - Mongoose",
+      "rarity": "Rare",
+      "ilevel": 75,
+      "bind": "Binds when picked up",
+      "type": "Recipes - Enchanting Formulae",
+      "stats": [],
+      "equip": null,
+      "use": "",
+      "flavor": null,
+      "acronym": "FEW-M",
+      "req": 70
+    }
+  ],
+  "maiden": [
+    {
+      "id": 28516,
+      "name": "Barbed Choker of Discipline",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Amulets",
+      "stats": [
+        "+21 Dodge Rating",
+        "+39 Stamina"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BCOD",
+      "req": 70
+    },
+    {
+      "id": 28511,
+      "name": "Bands of Indwelling",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+18 Intellect",
+        "+20 Spirit",
+        "+46 Healing",
+        "+22 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOI",
+      "req": 70
+    },
+    {
+      "id": 28515,
+      "name": "Bands of Nefarious Deeds",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+22 Intellect",
+        "+32 Healing",
+        "+27 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOND",
+      "req": 70
+    },
+    {
+      "id": 28517,
+      "name": "Boots of Foretelling",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+23 Intellect",
+        "+26 Healing",
+        "+27 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOF",
+      "req": 70
+    },
+    {
+      "id": 28514,
+      "name": "Bracers of Maliciousness",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+50 Attack Power",
+        "+50 Ranged Attack Power",
+        "+25 Stamina"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOM",
+      "req": 70
+    },
+    {
+      "id": 28521,
+      "name": "Mitts of the Treemender",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+22 Intellect",
+        "+14 Spirit",
+        "+64 Healing",
+        "+25 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "MOTT",
+      "req": 70
+    },
+    {
+      "id": 28520,
+      "name": "Gloves of Centering",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+20 Intellect",
+        "+6 Mana Regen",
+        "+62 Healing",
+        "+25 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "GOC",
+      "req": 70
+    },
+    {
+      "id": 28519,
+      "name": "Gloves of Quickening",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+24 Intellect",
+        "+4 Mana Regen",
+        "+52 Attack Power",
+        "+52 Ranged Attack Power",
+        "+22 Stamina"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "GOQ",
+      "req": 70
+    },
+    {
+      "id": 28512,
+      "name": "Bracers of Justice",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+22 Intellect",
+        "+46 Healing",
+        "+22 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOJ",
+      "req": 70
+    },
+    {
+      "id": 28518,
+      "name": "Iron Gauntlets of the Maiden",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+17 Block Rating",
+        "+39 Stamina"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "IGOTM",
+      "req": 70
+    },
+    {
+      "id": 28522,
+      "name": "Shard of the Virtuous",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - One-Handed Maces",
+      "stats": [
+        "+20 Intellect",
+        "+6 Mana Regen",
+        "+348 Healing",
+        "+22 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SOTV",
+      "req": 70
+    },
+    {
+      "id": 28523,
+      "name": "Totem of Healing Rains",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Totems",
+      "stats": [],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "TOHR",
+      "req": 70
+    }
+  ],
+  "opera": [
+    {
+      "id": 28590,
+      "name": "Ribbon of Sacrifice",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Trinkets",
+      "stats": [
+        "+73 Healing"
+      ],
+      "equip": "",
+      "use": "",
+      "flavor": null,
+      "acronym": "ROS",
+      "req": 70
+    },
+    {
+      "id": 28594,
+      "name": "Trial-Fire Trousers",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+40 Intellect",
+        "+49 Healing",
+        "+42 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "TT",
+      "req": 70
+    },
+    {
+      "id": 28591,
+      "name": "Earthsoul Leggings",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+30 Intellect",
+        "+24 Spirit",
+        "+81 Healing",
+        "+25 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "EL",
+      "req": 70
+    },
+    {
+      "id": 28589,
+      "name": "Beastmaw Pauldrons",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+24 Agility",
+        "+23 Intellect",
+        "+8 Mana Regen",
+        "+46 Attack Power",
+        "+46 Ranged Attack Power",
+        "+22 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "BP",
+      "req": 70
+    },
+    {
+      "id": 28593,
+      "name": "Eternium Greathelm",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+48 Stamina",
+        "+31 Strength"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "EG",
+      "req": 70
+    },
+    {
+      "id": 28592,
+      "name": "Libram of Souls Redeemed",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Librams",
+      "stats": [],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "LOSR",
+      "req": 70
+    },
+    {
+      "id": 28585,
+      "name": "Ruby Slippers",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+29 Intellect",
+        "+35 Healing",
+        "+33 Stamina"
+      ],
+      "equip": "Improves spell hit rating by",
+      "use": "",
+      "flavor": "&quot;There's no place like home.&quot;",
+      "acronym": "RS",
+      "req": 70
+    },
+    {
+      "id": 28586,
+      "name": "Wicked Witch's Hat",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+38 Intellect",
+        "+43 Healing",
+        "+37 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "WWH",
+      "req": 70
+    },
+    {
+      "id": 28587,
+      "name": "Legacy",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Two-Handed Axes",
+      "stats": [
+        "+40 Agility",
+        "+8 Mana Regen",
+        "+80 Attack Power",
+        "+80 Ranged Attack Power",
+        "+46 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": "&quot;Legend tells of this axe being wielded by Draenei exarchs since the time of their banishment from Argus.&quot;",
+      "acronym": "L",
+      "req": 70
+    },
+    {
+      "id": 28588,
+      "name": "Blue Diamond Witchwand",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Wands",
+      "stats": [
+        "+13 Intellect",
+        "+11 Spirit",
+        "+29 Healing"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "BDW",
+      "req": 70
+    },
+    {
+      "id": 28581,
+      "name": "Wolfslayer Sniper Rifle",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Guns",
+      "stats": [
+        "+15 Agility",
+        "+32 Attack Power",
+        "+32 Ranged Attack Power"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "WSR",
+      "req": 70
+    },
+    {
+      "id": 28582,
+      "name": "Red Riding Hood's Cloak",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloaks",
+      "stats": [
+        "+22 Intellect",
+        "+7 Mana Regen",
+        "+48 Healing",
+        "+16 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "RRHC",
+      "req": 70
+    },
+    {
+      "id": 28583,
+      "name": "Big Bad Wolf's Head",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+40 Intellect",
+        "+47 Healing",
+        "+42 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BBWH",
+      "req": 70
+    },
+    {
+      "id": 28584,
+      "name": "Big Bad Wolf's Paw",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Fist Weapons",
+      "stats": [
+        "+17 Agility",
+        "+18 Stamina"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BBWP",
+      "req": 70
+    },
+    {
+      "id": 28572,
+      "name": "Blade of the Unrequited",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Daggers",
+      "stats": [
+        "+18 Attack Power",
+        "+18 Ranged Attack Power",
+        "+13 Stamina"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOTU",
+      "req": 70
+    },
+    {
+      "id": 28573,
+      "name": "Despair",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Two-Handed Swords",
+      "stats": [
+        "+52 Strength"
+      ],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "D",
+      "req": 70
+    },
+    {
+      "id": 28578,
+      "name": "Masquerade Gown",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+32 Intellect",
+        "+88 Healing",
+        "+34 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "MG",
+      "req": 70
+    },
+    {
+      "id": 28579,
+      "name": "Romulo's Poison Vial",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Trinkets",
+      "stats": [],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "RPV",
+      "req": 70
+    },
+    {
+      "id": 28785,
+      "name": "The Lightning Capacitor",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Trinkets",
+      "stats": [],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "TLC",
+      "req": 70
+    }
+  ],
+  "curator": [
+    {
+      "id": 29756,
+      "name": "Gloves of the Fallen Hero",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Armor Tokens",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "GOTFH",
+      "req": 70
+    },
+    {
+      "id": 29757,
+      "name": "Gloves of the Fallen Champion",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Armor Tokens",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "GOTFC",
+      "req": 70
+    },
+    {
+      "id": 29758,
+      "name": "Gloves of the Fallen Defender",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Armor Tokens",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "GOTFD",
+      "req": 70
+    },
+    {
+      "id": 28649,
+      "name": "Garona's Signet Ring",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Rings",
+      "stats": [
+        "+20 Agility",
+        "+40 Attack Power",
+        "+40 Ranged Attack Power",
+        "+25 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "GSR",
+      "req": 70
+    },
+    {
+      "id": 28612,
+      "name": "Pauldrons of the Solace-Giver",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+28 Intellect",
+        "+10 Mana Regen",
+        "+22 Spirit",
+        "+57 Healing"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "POTS",
+      "req": 70
+    },
+    {
+      "id": 28647,
+      "name": "Forest Wind Shoulderpads",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+28 Intellect",
+        "+24 Spirit",
+        "+66 Healing",
+        "+22 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "FWS",
+      "req": 70
+    },
+    {
+      "id": 28631,
+      "name": "Dragon-Quake Shoulderguards",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+28 Intellect",
+        "+8 Mana Regen",
+        "+64 Healing",
+        "+28 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "DS",
+      "req": 70
+    },
+    {
+      "id": 28621,
+      "name": "Wrynn Dynasty Greaves",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+29 Dodge Rating",
+        "+48 Stamina",
+        "+24 Strength"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "WDG",
+      "req": 70
+    },
+    {
+      "id": 28633,
+      "name": "Staff of Infinite Mysteries",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Staves",
+      "stats": [
+        "+51 Intellect",
+        "+185 Healing",
+        "+61 Stamina"
+      ],
+      "equip": "Improves spell hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "SOIM",
+      "req": 70
+    }
+  ],
+  "illhoof": [
+    {
+      "id": 28785,
+      "name": "The Lightning Capacitor",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Trinkets",
+      "stats": [],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "TLC",
+      "req": 70
+    },
+    {
+      "id": 28661,
+      "name": "Mender's Heart-Ring",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Rings",
+      "stats": [
+        "+21 Intellect",
+        "+19 Spirit",
+        "+44 Healing",
+        "+18 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "MH",
+      "req": 70
+    },
+    {
+      "id": 28660,
+      "name": "Gilded Thorium Cloak",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloaks",
+      "stats": [
+        "+30 Stamina"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "GTC",
+      "req": 70
+    },
+    {
+      "id": 28653,
+      "name": "Shadowvine Cloak of Infusion",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloaks",
+      "stats": [
+        "+21 Intellect",
+        "+9 Mana Regen",
+        "+22 Spirit"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SCOI",
+      "req": 70
+    },
+    {
+      "id": 28652,
+      "name": "Cincture of Will",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+28 Intellect",
+        "+25 Spirit",
+        "+59 Healing",
+        "+24 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "COW",
+      "req": 70
+    },
+    {
+      "id": 28654,
+      "name": "Malefic Girdle",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+26 Intellect",
+        "+37 Healing",
+        "+27 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "MG",
+      "req": 70
+    },
+    {
+      "id": 28655,
+      "name": "Cord of Nature's Sustenance",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+30 Intellect",
+        "+6 Mana Regen",
+        "+16 Spirit",
+        "+64 Healing",
+        "+24 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "CONS",
+      "req": 70
+    },
+    {
+      "id": 28656,
+      "name": "Girdle of the Prowler",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+25 Agility",
+        "+22 Intellect",
+        "+6 Mana Regen",
+        "+48 Attack Power",
+        "+48 Ranged Attack Power",
+        "+21 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "GOTP",
+      "req": 70
+    },
+    {
+      "id": 28662,
+      "name": "Breastplate of the Lightbinder",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+40 Intellect",
+        "+13 Mana Regen",
+        "+88 Healing",
+        "+28 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOTL",
+      "req": 70
+    },
+    {
+      "id": 28657,
+      "name": "Fool's Bane",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - One-Handed Maces",
+      "stats": [
+        "+30 Attack Power",
+        "+30 Ranged Attack Power"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "FB",
+      "req": 70
+    },
+    {
+      "id": 28659,
+      "name": "Xavian Stiletto",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Thrown",
+      "stats": [],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "XS",
+      "req": 70
+    },
+    {
+      "id": 28658,
+      "name": "Terestian's Stranglestaff",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Staves",
+      "stats": [
+        "+37 Agility",
+        "+48 Stamina",
+        "+38 Strength"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "TS",
+      "req": 70
+    }
+  ],
+  "aran": [
+    {
+      "id": 28727,
+      "name": "Pendant of the Violet Eye",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Trinkets",
+      "stats": [
+        "+40 Intellect"
+      ],
+      "equip": null,
+      "use": "",
+      "flavor": null,
+      "acronym": "POTVE",
+      "req": 70
+    },
+    {
+      "id": 28675,
+      "name": "Shermanar Great-Ring",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Rings",
+      "stats": [
+        "+36 Stamina"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "SG",
+      "req": 70
+    },
+    {
+      "id": 28674,
+      "name": "Saberclaw Talisman",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Amulets",
+      "stats": [
+        "+21 Agility",
+        "+46 Attack Power",
+        "+46 Ranged Attack Power",
+        "+33 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "ST",
+      "req": 70
+    },
+    {
+      "id": 28672,
+      "name": "Drape of the Dark Reavers",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloaks",
+      "stats": [
+        "+24 Agility",
+        "+34 Attack Power",
+        "+34 Ranged Attack Power",
+        "+21 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "DOTDR",
+      "req": 70
+    },
+    {
+      "id": 28663,
+      "name": "Boots of the Incorrupt",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+24 Intellect",
+        "+8 Mana Regen",
+        "+23 Spirit",
+        "+57 Healing",
+        "+24 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOTI",
+      "req": 70
+    },
+    {
+      "id": 28670,
+      "name": "Boots of the Infernal Coven",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+27 Intellect",
+        "+23 Spirit",
+        "+34 Healing",
+        "+27 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "BOTIC",
+      "req": 70
+    },
+    {
+      "id": 28726,
+      "name": "Mantle of the Mind Flayer",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+29 Intellect",
+        "+35 Healing",
+        "+33 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "MOTMF",
+      "req": 70
+    },
+    {
+      "id": 28669,
+      "name": "Rapscallion Boots",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+82 Attack Power",
+        "+82 Ranged Attack Power",
+        "+26 Stamina"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "RB",
+      "req": 70
+    },
+    {
+      "id": 28671,
+      "name": "Steelspine Faceguard",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+36 Agility",
+        "+34 Intellect",
+        "+9 Mana Regen",
+        "+62 Attack Power",
+        "+62 Ranged Attack Power",
+        "+34 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SF",
+      "req": 70
+    },
+    {
+      "id": 28666,
+      "name": "Pauldrons of the Justice-Seeker",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+26 Intellect",
+        "+7 Mana Regen",
+        "+57 Healing",
+        "+23 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "POTJ",
+      "req": 70
+    },
+    {
+      "id": 28728,
+      "name": "Aran's Soothing Sapphire",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Off-hand Frills",
+      "stats": [
+        "+22 Intellect",
+        "+8 Mana Regen",
+        "+51 Healing"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "ASS",
+      "req": 70
+    },
+    {
+      "id": 28673,
+      "name": "Tirisfal Wand of Ascendancy",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Wands",
+      "stats": [
+        "+9 Intellect",
+        "+15 Healing",
+        "+10 Stamina"
+      ],
+      "equip": "Improves spell hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "TWOA",
+      "req": 70
+    },
+    {
+      "id": 22560,
+      "name": "Formula: Enchant Weapon - Sunfire",
+      "rarity": "Rare",
+      "ilevel": 75,
+      "bind": "Binds when picked up",
+      "type": "Recipes - Enchanting Formulae",
+      "stats": [],
+      "equip": null,
+      "use": "",
+      "flavor": null,
+      "acronym": "FEW-S",
+      "req": 70
+    }
+  ],
+  "netherspite": [
+    {
+      "id": 28730,
+      "name": "Mithril Band of the Unscarred",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Rings",
+      "stats": [
+        "+24 Stamina",
+        "+26 Strength"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "MBOTU",
+      "req": 70
+    },
+    {
+      "id": 28731,
+      "name": "Shining Chain of the Afterworld",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Amulets",
+      "stats": [
+        "+21 Intellect",
+        "+19 Spirit",
+        "+46 Healing",
+        "+18 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SCOTA",
+      "req": 70
+    },
+    {
+      "id": 28744,
+      "name": "Uni-Mind Headdress",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+40 Intellect",
+        "+46 Healing",
+        "+31 Stamina"
+      ],
+      "equip": "Improves spell hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "UH",
+      "req": 70
+    },
+    {
+      "id": 28742,
+      "name": "Pantaloons of Repentance",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+34 Intellect",
+        "+26 Spirit",
+        "+68 Healing",
+        "+27 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "POR",
+      "req": 70
+    },
+    {
+      "id": 28732,
+      "name": "Cowl of Defiance",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+34 Agility",
+        "+100 Attack Power",
+        "+100 Ranged Attack Power",
+        "+33 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "COD",
+      "req": 70
+    },
+    {
+      "id": 28741,
+      "name": "Skulker's Greaves",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+32 Agility",
+        "+64 Attack Power",
+        "+64 Ranged Attack Power",
+        "+28 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "SG",
+      "req": 70
+    },
+    {
+      "id": 28735,
+      "name": "Earthblood Chestguard",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+41 Intellect",
+        "+11 Mana Regen",
+        "+86 Healing",
+        "+40 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "EC",
+      "req": 70
+    },
+    {
+      "id": 28740,
+      "name": "Rip-Flayer Leggings",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+30 Intellect",
+        "+8 Mana Regen",
+        "+56 Attack Power",
+        "+56 Ranged Attack Power",
+        "+18 Stamina"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "RL",
+      "req": 70
+    },
+    {
+      "id": 28743,
+      "name": "Mantle of Abrahmis",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+43 Stamina",
+        "+21 Strength"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "MOA",
+      "req": 70
+    },
+    {
+      "id": 28733,
+      "name": "Girdle of Truth",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+29 Intellect",
+        "+8 Mana Regen",
+        "+66 Healing",
+        "+28 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "GOT",
+      "req": 70
+    },
+    {
+      "id": 28729,
+      "name": "Spiteblade",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - One-Handed Swords",
+      "stats": [
+        "+14 Agility",
+        "+46 Attack Power",
+        "+46 Ranged Attack Power",
+        "+16 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "S",
+      "req": 70
+    },
+    {
+      "id": 28734,
+      "name": "Jewel of Infinite Possibilities",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Off-hand Frills",
+      "stats": [
+        "+18 Intellect",
+        "+23 Healing",
+        "+19 Stamina"
+      ],
+      "equip": "Improves spell hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "JOIP",
+      "req": 70
+    }
+  ],
+  "chess": [
+    {
+      "id": 28753,
+      "name": "Ring of Recurrence",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Rings",
+      "stats": [
+        "+15 Intellect",
+        "+32 Healing",
+        "+15 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "ROR",
+      "req": 70
+    },
+    {
+      "id": 28745,
+      "name": "Mithril Chain of Heroism",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Amulets",
+      "stats": [
+        "+22 Agility",
+        "+22 Stamina",
+        "+28 Strength"
+      ],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "MCOH",
+      "req": 70
+    },
+    {
+      "id": 28756,
+      "name": "Headdress of the High Potentate",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+38 Intellect",
+        "+32 Spirit",
+        "+81 Healing",
+        "+37 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "HOTHP",
+      "req": 70
+    },
+    {
+      "id": 28755,
+      "name": "Bladed Shoulderpads of the Merciless",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+58 Attack Power",
+        "+58 Ranged Attack Power",
+        "+30 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BSOTM",
+      "req": 70
+    },
+    {
+      "id": 28752,
+      "name": "Forestlord Striders",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+27 Intellect",
+        "+16 Spirit",
+        "+55 Healing",
+        "+24 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "FS",
+      "req": 70
+    },
+    {
+      "id": 28750,
+      "name": "Girdle of Treachery",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+18 Agility",
+        "+58 Attack Power",
+        "+58 Ranged Attack Power",
+        "+37 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "GOT",
+      "req": 70
+    },
+    {
+      "id": 28746,
+      "name": "Fiend Slayer Boots",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+26 Agility",
+        "+16 Intellect",
+        "+34 Attack Power",
+        "+34 Ranged Attack Power",
+        "+24 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "FSB",
+      "req": 70
+    },
+    {
+      "id": 28751,
+      "name": "Heart-Flame Leggings",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+33 Intellect",
+        "+90 Healing",
+        "+36 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "HL",
+      "req": 70
+    },
+    {
+      "id": 28748,
+      "name": "Legplates of the Innocent",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+32 Intellect",
+        "+8 Mana Regen",
+        "+66 Healing",
+        "+24 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "LOTI",
+      "req": 70
+    },
+    {
+      "id": 28747,
+      "name": "Battlescar Boots",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+21 Parry Rating",
+        "+28 Stamina",
+        "+18 Strength"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "BB",
+      "req": 70
+    },
+    {
+      "id": 28754,
+      "name": "Triptych Shield of the Ancients",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Shields",
+      "stats": [
+        "+21 Intellect",
+        "+8 Mana Regen",
+        "+42 Healing",
+        "+24 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "TSOTA",
+      "req": 70
+    },
+    {
+      "id": 28749,
+      "name": "King's Defender",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - One-Handed Swords",
+      "stats": [
+        "+28 Stamina"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "KD",
+      "req": 70
+    }
+  ],
+  "prince": [
+    {
+      "id": 29759,
+      "name": "Helm of the Fallen Hero",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Armor Tokens",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "HOTFH",
+      "req": 70
+    },
+    {
+      "id": 29761,
+      "name": "Helm of the Fallen Defender",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Armor Tokens",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "HOTFD",
+      "req": 70
+    },
+    {
+      "id": 29760,
+      "name": "Helm of the Fallen Champion",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Armor Tokens",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "HOTFC",
+      "req": 70
+    },
+    {
+      "id": 28764,
+      "name": "Farstrider Wildercloak",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloaks",
+      "stats": [
+        "+70 Attack Power",
+        "+70 Ranged Attack Power",
+        "+36 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "FW",
+      "req": 70
+    },
+    {
+      "id": 28766,
+      "name": "Ruby Drape of the Mysticant",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloaks",
+      "stats": [
+        "+21 Intellect",
+        "+30 Healing",
+        "+22 Stamina"
+      ],
+      "equip": "Improves spell hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "RDOTM",
+      "req": 70
+    },
+    {
+      "id": 28765,
+      "name": "Stainless Cloak of the Pure Hearted",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloaks",
+      "stats": [
+        "+23 Intellect",
+        "+7 Mana Regen",
+        "+53 Healing",
+        "+22 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SCOTP",
+      "req": 70
+    },
+    {
+      "id": 28763,
+      "name": "Jade Ring of the Everliving",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Armor - Rings",
+      "stats": [
+        "+12 Mana Regen",
+        "+68 Healing"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "JROTE",
+      "req": 70
+    },
+    {
+      "id": 28757,
+      "name": "Ring of a Thousand Marks",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Armor - Rings",
+      "stats": [
+        "+44 Attack Power",
+        "+44 Ranged Attack Power",
+        "+21 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "ROATM",
+      "req": 70
+    },
+    {
+      "id": 28762,
+      "name": "Adornment of Stolen Souls",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Armor - Amulets",
+      "stats": [
+        "+20 Intellect",
+        "+28 Healing",
+        "+18 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "AOSS",
+      "req": 70
+    },
+    {
+      "id": 28768,
+      "name": "Malchazeen",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Daggers",
+      "stats": [
+        "+50 Attack Power",
+        "+50 Ranged Attack Power",
+        "+16 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "M",
+      "req": 70
+    },
+    {
+      "id": 28770,
+      "name": "Nathrezim Mindblade",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Daggers",
+      "stats": [
+        "+18 Intellect",
+        "+203 Healing",
+        "+18 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "NM",
+      "req": 70
+    },
+    {
+      "id": 28767,
+      "name": "The Decapitator",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Weapons - One-Handed Axes",
+      "stats": [],
+      "equip": "Improves critical strike rating by",
+      "use": "",
+      "flavor": null,
+      "acronym": "TD",
+      "req": 70
+    },
+    {
+      "id": 28771,
+      "name": "Light's Justice",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Weapons - One-Handed Maces",
+      "stats": [
+        "+21 Intellect",
+        "+20 Spirit",
+        "+382 Healing",
+        "+16 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "LJ",
+      "req": 70
+    },
+    {
+      "id": 28773,
+      "name": "Gorehowl",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Two-Handed Axes",
+      "stats": [
+        "+43 Agility",
+        "+51 Stamina",
+        "+49 Strength"
+      ],
+      "equip": null,
+      "use": null,
+      "flavor": "&quot;The axe of Grom Hellscream has sown terror across hundreds of battlefields.&quot;",
+      "acronym": "G",
+      "req": 70
+    },
+    {
+      "id": 28772,
+      "name": "Sunfury Bow of the Phoenix",
+      "rarity": "Epic",
+      "ilevel": 125,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Bows",
+      "stats": [
+        "+19 Agility",
+        "+34 Attack Power",
+        "+34 Ranged Attack Power"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SBOTP",
+      "req": 70
+    },
+    {
+      "id": 29753,
+      "name": "Chestguard of the Fallen Defender",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Armor Tokens",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "COTFD",
+      "req": 70
+    },
+    {
+      "id": 29754,
+      "name": "Chestguard of the Fallen Champion",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Armor Tokens",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "COTFC",
+      "req": 70
+    },
+    {
+      "id": 29755,
+      "name": "Chestguard of the Fallen Hero",
+      "rarity": "Epic",
+      "ilevel": 70,
+      "bind": "Binds when picked up",
+      "type": "Miscellaneous - Armor Tokens",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "COTFH",
+      "req": 70
+    }
+  ],
+  "nightbane": [
+    {
+      "id": 28609,
+      "name": "Emberspur Talisman",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Amulets",
+      "stats": [
+        "+11 Mana Regen",
+        "+66 Healing"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "ET",
+      "req": 70
+    },
+    {
+      "id": 28602,
+      "name": "Robe of the Elder Scribes",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Cloth Armor",
+      "stats": [
+        "+29 Intellect",
+        "+24 Spirit",
+        "+32 Healing",
+        "+27 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "ROTES",
+      "req": 70
+    },
+    {
+      "id": 28600,
+      "name": "Stonebough Jerkin",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+35 Intellect",
+        "+9 Mana Regen",
+        "+31 Spirit",
+        "+77 Healing",
+        "+34 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "SJ",
+      "req": 70
+    },
+    {
+      "id": 28601,
+      "name": "Chestguard of the Conniver",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Leather Armor",
+      "stats": [
+        "+37 Agility",
+        "+90 Attack Power",
+        "+90 Ranged Attack Power",
+        "+36 Stamina"
+      ],
+      "equip": "Improves hit rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "COTC",
+      "req": 70
+    },
+    {
+      "id": 28599,
+      "name": "Scaled Breastplate of Carnage",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+38 Intellect",
+        "+8 Mana Regen",
+        "+80 Attack Power",
+        "+80 Ranged Attack Power",
+        "+33 Stamina"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "SBOC",
+      "req": 70
+    },
+    {
+      "id": 28610,
+      "name": "Ferocious Swift-Kickers",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Mail Armor",
+      "stats": [
+        "+21 Intellect",
+        "+58 Attack Power",
+        "+58 Ranged Attack Power",
+        "+22 Stamina"
+      ],
+      "equip": "Improves critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "FS",
+      "req": 70
+    },
+    {
+      "id": 28608,
+      "name": "Ironstriders of Urgency",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+20 Agility",
+        "+28 Stamina",
+        "+33 Strength"
+      ],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "IOU",
+      "req": 70
+    },
+    {
+      "id": 28597,
+      "name": "Panzar'Thar Breastplate",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Plate Armor",
+      "stats": [
+        "+24 Block Rating",
+        "+51 Stamina"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "PB",
+      "req": 70
+    },
+    {
+      "id": 28604,
+      "name": "Nightstaff of the Everliving",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Weapons - Staves",
+      "stats": [
+        "+34 Intellect",
+        "+55 Spirit",
+        "+348 Healing",
+        "+33 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "NOTE",
+      "req": 70
+    },
+    {
+      "id": 28603,
+      "name": "Talisman of Nightbane",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Off-hand Frills",
+      "stats": [
+        "+19 Intellect",
+        "+28 Healing",
+        "+19 Stamina"
+      ],
+      "equip": "Improves spell critical strike rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "TON",
+      "req": 70
+    },
+    {
+      "id": 28611,
+      "name": "Dragonheart Flameshield",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Shields",
+      "stats": [
+        "+21 Intellect",
+        "+7 Mana Regen",
+        "+23 Healing",
+        "+19 Stamina"
+      ],
+      "equip": "",
+      "use": null,
+      "flavor": null,
+      "acronym": "DF",
+      "req": 70
+    },
+    {
+      "id": 28606,
+      "name": "Shield of Impenetrable Darkness",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "bind": "Binds when picked up",
+      "type": "Armor - Shields",
+      "stats": [
+        "+33 Stamina"
+      ],
+      "equip": "Increases defense rating by",
+      "use": null,
+      "flavor": null,
+      "acronym": "SOID",
+      "req": 70
+    },
+    {
+      "id": 31751,
+      "name": "Blazing Signet",
+      "rarity": "Common",
+      "ilevel": 1,
+      "bind": "Binds when picked up",
+      "type": "None - None",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "BS",
+      "req": 70
+    },
+    {
+      "id": 24139,
+      "name": "Faint Arcane Essence",
+      "rarity": "Common",
+      "ilevel": 1,
+      "bind": "Binds when picked up",
+      "type": "None - None",
+      "stats": [],
+      "equip": null,
+      "use": null,
+      "flavor": null,
+      "acronym": "FAE",
+      "req": 70
+    }
+  ]
+}
