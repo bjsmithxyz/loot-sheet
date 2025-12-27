@@ -342,6 +342,9 @@ body {
 
 .rarity-epic { border-color: var(--rarity-epic); box-shadow: 0 0 10px rgba(163, 53, 238, 0.2); }
 .rarity-legendary { border-color: var(--rarity-legendary); box-shadow: 0 0 15px rgba(255, 128, 0, 0.4); }
+.rarity-rare { border-color: var(--rarity-rare); box-shadow: 0 0 10px rgba(0, 112, 221, 0.2); }
+.rarity-uncommon { border-color: var(--rarity-uncommon); }
+.rarity-common { border-color: var(--rarity-common); }
 
 .remove-item {
   position: absolute;
@@ -566,9 +569,11 @@ textarea {
 .wow-green { color: #1eff00 !important; }
 .wow-flavor { color: #ffd100; font-size: 0.85rem; font-style: italic; margin-top: 6px; }
 
-.rarity-text-epic { color: #a335ee; }
-.rarity-text-legendary { color: #ff8000; }
-.rarity-text-rare { color: #0070dd; }
+.rarity-text-epic { color: var(--rarity-epic); }
+.rarity-text-legendary { color: var(--rarity-legendary); }
+.rarity-text-rare { color: var(--rarity-rare); }
+.rarity-text-uncommon { color: var(--rarity-uncommon); }
+.rarity-text-common { color: var(--rarity-common); }
 
 .token-classes-row {
     display: inline-flex;
