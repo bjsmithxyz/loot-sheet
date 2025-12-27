@@ -31,7 +31,7 @@
         "+42 Ranged Attack Power",
         "+21 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 17",
       "use": null,
       "flavor": null,
       "acronym": "WCN",
@@ -68,7 +68,7 @@
         "+35 Healing",
         "+24 Stamina"
       ],
-      "equip": "Improves spell hit rating by",
+      "equip": "Improves spell hit rating by 14",
       "use": null,
       "flavor": null,
       "acronym": "HOFT",
@@ -199,7 +199,7 @@
       "stats": [
         "+33 Stamina"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 15",
       "use": null,
       "flavor": null,
       "acronym": "VOC",
@@ -216,7 +216,7 @@
         "+30 Attack Power",
         "+30 Ranged Attack Power"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 16",
       "use": null,
       "flavor": null,
       "acronym": "SC",
@@ -262,7 +262,7 @@
       "stats": [
         "+38 Dodge Rating"
       ],
-      "equip": "Increases your dodge rating by",
+      "equip": "Increases your dodge rating by 38",
       "use": "",
       "flavor": null,
       "acronym": "MLPW",
@@ -280,7 +280,7 @@
         "+26 Healing",
         "+24 Stamina"
       ],
-      "equip": "Improves spell hit rating by",
+      "equip": "Improves spell hit rating by 15",
       "use": null,
       "flavor": null,
       "acronym": "BOUF",
@@ -316,7 +316,7 @@
         "+31 Stamina",
         "+26 Strength"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 16",
       "use": null,
       "flavor": null,
       "acronym": "RCOAK",
@@ -372,7 +372,7 @@
         "+44 Ranged Attack Power",
         "+28 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 13",
       "use": null,
       "flavor": null,
       "acronym": "EL",
@@ -409,7 +409,7 @@
         "+55 Healing",
         "+28 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 25",
       "use": null,
       "flavor": null,
       "acronym": "BOV",
@@ -427,7 +427,7 @@
         "+36 Stamina",
         "+16 Strength"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 24",
       "use": null,
       "flavor": null,
       "acronym": "CGOTI",
@@ -493,7 +493,7 @@
         "+21 Dodge Rating",
         "+39 Stamina"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 17",
       "use": null,
       "flavor": null,
       "acronym": "BCOD",
@@ -548,7 +548,7 @@
         "+26 Healing",
         "+27 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 19",
       "use": null,
       "flavor": null,
       "acronym": "BOF",
@@ -566,7 +566,7 @@
         "+50 Ranged Attack Power",
         "+25 Stamina"
       ],
-      "equip": "Improves critical strike rating by",
+      "equip": "Improves critical strike rating by 30",
       "use": null,
       "flavor": null,
       "acronym": "BOM",
@@ -624,7 +624,7 @@
         "+52 Ranged Attack Power",
         "+22 Stamina"
       ],
-      "equip": "Improves critical strike rating by",
+      "equip": "Improves critical strike rating by 17",
       "use": null,
       "flavor": null,
       "acronym": "GOQ",
@@ -642,7 +642,7 @@
         "+46 Healing",
         "+22 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 13",
       "use": null,
       "flavor": null,
       "acronym": "BOJ",
@@ -659,7 +659,7 @@
         "+17 Block Rating",
         "+39 Stamina"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 16",
       "use": null,
       "flavor": null,
       "acronym": "IGOTM",
@@ -785,7 +785,7 @@
         "+48 Stamina",
         "+31 Strength"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 34",
       "use": null,
       "flavor": null,
       "acronym": "EG",
@@ -817,7 +817,7 @@
         "+35 Healing",
         "+33 Stamina"
       ],
-      "equip": "Improves spell hit rating by",
+      "equip": "Improves spell hit rating by 16",
       "use": "",
       "flavor": "&quot;There's no place like home.&quot;",
       "acronym": "RS",
@@ -835,7 +835,7 @@
         "+43 Healing",
         "+37 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 35",
       "use": null,
       "flavor": null,
       "acronym": "WWH",
@@ -928,7 +928,7 @@
         "+47 Healing",
         "+42 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 28",
       "use": null,
       "flavor": null,
       "acronym": "BBWH",
@@ -945,7 +945,7 @@
         "+17 Agility",
         "+18 Stamina"
       ],
-      "equip": "Improves critical strike rating by",
+      "equip": "Improves critical strike rating by 20",
       "use": null,
       "flavor": null,
       "acronym": "BBWP",
@@ -963,7 +963,7 @@
         "+18 Ranged Attack Power",
         "+13 Stamina"
       ],
-      "equip": "Improves critical strike rating by",
+      "equip": "Improves critical strike rating by 21",
       "use": null,
       "flavor": null,
       "acronym": "BOTU",
@@ -1011,7 +1011,7 @@
       "bind": "Binds when picked up",
       "type": "Armor - Trinkets",
       "stats": [],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 35",
       "use": null,
       "flavor": null,
       "acronym": "RPV",
@@ -1072,7 +1072,7 @@
       "equip": null,
       "use": null,
       "flavor": null,
-      "acronym": "GOTFD",
+      "acronym": "Tier",
       "req": 70
     },
     {
@@ -1088,7 +1088,7 @@
         "+40 Ranged Attack Power",
         "+25 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 18",
       "use": null,
       "flavor": null,
       "acronym": "GSR",
@@ -1163,7 +1163,7 @@
         "+48 Stamina",
         "+24 Strength"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 24",
       "use": null,
       "flavor": null,
       "acronym": "WDG",
@@ -1181,7 +1181,7 @@
         "+185 Healing",
         "+61 Stamina"
       ],
-      "equip": "Improves spell hit rating by",
+      "equip": "Improves spell hit rating by 20",
       "use": null,
       "flavor": null,
       "acronym": "SOIM",
@@ -1232,7 +1232,7 @@
       "stats": [
         "+30 Stamina"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 24",
       "use": null,
       "flavor": null,
       "acronym": "GTC",
@@ -1287,7 +1287,7 @@
         "+37 Healing",
         "+27 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 21",
       "use": null,
       "flavor": null,
       "acronym": "MG",
@@ -1328,7 +1328,7 @@
         "+48 Ranged Attack Power",
         "+21 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 17",
       "use": null,
       "flavor": null,
       "acronym": "GOTP",
@@ -1364,7 +1364,7 @@
         "+30 Attack Power",
         "+30 Ranged Attack Power"
       ],
-      "equip": "Improves critical strike rating by",
+      "equip": "Improves critical strike rating by 24",
       "use": null,
       "flavor": null,
       "acronym": "FB",
@@ -1378,7 +1378,7 @@
       "bind": "Binds when picked up",
       "type": "Weapons - Thrown",
       "stats": [],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 15",
       "use": null,
       "flavor": null,
       "acronym": "XS",
@@ -1396,7 +1396,7 @@
         "+48 Stamina",
         "+38 Strength"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 25",
       "use": null,
       "flavor": null,
       "acronym": "TS",
@@ -1430,7 +1430,7 @@
       "stats": [
         "+36 Stamina"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 19",
       "use": null,
       "flavor": null,
       "acronym": "SG",
@@ -1468,7 +1468,7 @@
         "+34 Ranged Attack Power",
         "+21 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 17",
       "use": null,
       "flavor": null,
       "acronym": "DOTDR",
@@ -1543,7 +1543,7 @@
         "+82 Ranged Attack Power",
         "+26 Stamina"
       ],
-      "equip": "Improves critical strike rating by",
+      "equip": "Improves critical strike rating by 24",
       "use": null,
       "flavor": null,
       "acronym": "RB",
@@ -1583,7 +1583,7 @@
         "+57 Healing",
         "+23 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 22",
       "use": null,
       "flavor": null,
       "acronym": "POTJ",
@@ -1619,7 +1619,7 @@
         "+15 Healing",
         "+10 Stamina"
       ],
-      "equip": "Improves spell hit rating by",
+      "equip": "Improves spell hit rating by 9",
       "use": null,
       "flavor": null,
       "acronym": "TWOA",
@@ -1652,7 +1652,7 @@
         "+24 Stamina",
         "+26 Strength"
       ],
-      "equip": "Improves critical strike rating by",
+      "equip": "Improves critical strike rating by 22",
       "use": null,
       "flavor": null,
       "acronym": "MBOTU",
@@ -1689,7 +1689,7 @@
         "+46 Healing",
         "+31 Stamina"
       ],
-      "equip": "Improves spell hit rating by",
+      "equip": "Improves spell hit rating by 23",
       "use": null,
       "flavor": null,
       "acronym": "UH",
@@ -1727,7 +1727,7 @@
         "+100 Ranged Attack Power",
         "+33 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 24",
       "use": null,
       "flavor": null,
       "acronym": "COD",
@@ -1746,7 +1746,7 @@
         "+64 Ranged Attack Power",
         "+28 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 19",
       "use": null,
       "flavor": null,
       "acronym": "SG",
@@ -1785,7 +1785,7 @@
         "+56 Ranged Attack Power",
         "+18 Stamina"
       ],
-      "equip": "Improves critical strike rating by",
+      "equip": "Improves critical strike rating by 25",
       "use": null,
       "flavor": null,
       "acronym": "RL",
@@ -1802,7 +1802,7 @@
         "+43 Stamina",
         "+21 Strength"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 23",
       "use": null,
       "flavor": null,
       "acronym": "MOA",
@@ -1858,7 +1858,7 @@
         "+23 Healing",
         "+19 Stamina"
       ],
-      "equip": "Improves spell hit rating by",
+      "equip": "Improves spell hit rating by 21",
       "use": null,
       "flavor": null,
       "acronym": "JOIP",
@@ -1878,7 +1878,7 @@
         "+32 Healing",
         "+15 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 16",
       "use": null,
       "flavor": null,
       "acronym": "ROR",
@@ -1933,7 +1933,7 @@
         "+58 Ranged Attack Power",
         "+30 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 13",
       "use": null,
       "flavor": null,
       "acronym": "BSOTM",
@@ -1991,7 +1991,7 @@
         "+34 Ranged Attack Power",
         "+24 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 17",
       "use": null,
       "flavor": null,
       "acronym": "FSB",
@@ -2028,7 +2028,7 @@
         "+66 Healing",
         "+24 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 25",
       "use": null,
       "flavor": null,
       "acronym": "LOTI",
@@ -2046,7 +2046,7 @@
         "+28 Stamina",
         "+18 Strength"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 19",
       "use": null,
       "flavor": null,
       "acronym": "BB",
@@ -2081,7 +2081,7 @@
       "stats": [
         "+28 Stamina"
       ],
-      "equip": "Increases defense rating by",
+      "equip": "Increases defense rating by 13",
       "use": null,
       "flavor": null,
       "acronym": "KD",
@@ -2100,7 +2100,7 @@
       "equip": null,
       "use": null,
       "flavor": null,
-      "acronym": "HOTFH",
+      "acronym": "Tier",
       "req": 70
     },
     {
@@ -2114,7 +2114,7 @@
       "equip": null,
       "use": null,
       "flavor": null,
-      "acronym": "HOTFD",
+      "acronym": "Tier",
       "req": 70
     },
     {
@@ -2128,7 +2128,7 @@
       "equip": null,
       "use": null,
       "flavor": null,
-      "acronym": "HOTFC",
+      "acronym": "TIer",
       "req": 70
     },
     {
@@ -2161,7 +2161,7 @@
         "+30 Healing",
         "+22 Stamina"
       ],
-      "equip": "Improves spell hit rating by",
+      "equip": "Improves spell hit rating by 18",
       "use": null,
       "flavor": null,
       "acronym": "RDOTM",
@@ -2215,7 +2215,7 @@
         "+44 Ranged Attack Power",
         "+21 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 19",
       "use": null,
       "flavor": null,
       "acronym": "ROATM",
@@ -2233,7 +2233,7 @@
         "+28 Healing",
         "+18 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 20",
       "use": null,
       "flavor": null,
       "acronym": "AOSS",
@@ -2251,7 +2251,7 @@
         "+50 Ranged Attack Power",
         "+16 Stamina"
       ],
-      "equip": "Improves hit rating by",
+      "equip": "Improves hit rating by 14",
       "use": null,
       "flavor": null,
       "acronym": "M",
@@ -2269,7 +2269,7 @@
         "+203 Healing",
         "+18 Stamina"
       ],
-      "equip": "Improves spell critical strike rating by",
+      "equip": "Improves spell critical strike rating by 23",
       "use": null,
       "flavor": null,
       "acronym": "NM",
@@ -2283,7 +2283,7 @@
       "bind": "Binds when picked up",
       "type": "Weapons - One-Handed Axes",
       "stats": [],
-      "equip": "Improves critical strike rating by",
+      "equip": "Improves critical strike rating by 27",
       "use": "",
       "flavor": null,
       "acronym": "TD",
@@ -2322,8 +2322,8 @@
       ],
       "equip": null,
       "use": null,
-      "flavor": "&quot;The axe of Grom Hellscream has sown terror across hundreds of battlefields.&quot;",
-      "acronym": "G",
+      "flavor": "The axe of Grom Hellscream has sown terror across hundreds of battlefields.",
+      "acronym": "GH",
       "req": 70
     },
     {
@@ -2355,7 +2355,7 @@
       "equip": null,
       "use": null,
       "flavor": null,
-      "acronym": "COTFD",
+      "acronym": "Tier",
       "req": 70
     },
     {
@@ -2369,7 +2369,7 @@
       "equip": null,
       "use": null,
       "flavor": null,
-      "acronym": "COTFC",
+      "acronym": "Tier",
       "req": 70
     },
     {
@@ -2383,7 +2383,7 @@
       "equip": null,
       "use": null,
       "flavor": null,
-      "acronym": "COTFH",
+      "acronym": "Tier",
       "req": 70
     }
   ],
