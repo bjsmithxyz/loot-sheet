@@ -9,19 +9,10 @@ import BOSS_LOOT from '../data/loot.json';
 const VIEWPORT_MARGIN = 12;
 const POPUP_OFFSET_X = 50;
 
-function getMaxPopupHeight() {
-    return Math.min(window.innerHeight - VIEWPORT_MARGIN * 2, 520);
-}
-
 function getInitialPosition(position) {
-    const maxHeight = getMaxPopupHeight();
-    let top = position.y;
-    if (top + maxHeight > window.innerHeight - VIEWPORT_MARGIN) {
-        top = window.innerHeight - VIEWPORT_MARGIN - maxHeight;
-    }
     return {
         left: position.x + POPUP_OFFSET_X,
-        top: Math.max(VIEWPORT_MARGIN, top),
+        top: position.y,
     };
 }
 
@@ -35,29 +26,27 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
         const popup = popupRef.current;
         if (!popup) return;
 
-        const rect = popup.getBoundingClientRect();
-        let { left, top } = getInitialPosition(position);
+        const clampPosition = () => {
+            const rect = popup.getBoundingClientRect();
+            let { left, top } = getInitialPosition(position);
 
-        if (rect.bottom > window.innerHeight - VIEWPORT_MARGIN) {
-            top = Math.max(VIEWPORT_MARGIN, window.innerHeight - VIEWPORT_MARGIN - rect.height);
-        }
-        if (rect.top < VIEWPORT_MARGIN) {
-            top = VIEWPORT_MARGIN;
-        }
+            if (rect.bottom > window.innerHeight - VIEWPORT_MARGIN) {
+                top = Math.max(VIEWPORT_MARGIN, window.innerHeight - VIEWPORT_MARGIN - rect.height);
+            }
+            if (rect.top < VIEWPORT_MARGIN) {
+                top = VIEWPORT_MARGIN;
+            }
 
-        const maxLeft = window.innerWidth - rect.width - VIEWPORT_MARGIN;
-        left = Math.min(Math.max(VIEWPORT_MARGIN, left), maxLeft);
+            const maxLeft = window.innerWidth - rect.width - VIEWPORT_MARGIN;
+            left = Math.min(Math.max(VIEWPORT_MARGIN, left), maxLeft);
 
-        setPopupStyle({ left, top });
-    }, [position, loot.length]);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setPopupStyle(getInitialPosition(position));
+            setPopupStyle({ left, top });
         };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [position]);
+
+        clampPosition();
+        window.addEventListener('resize', clampPosition);
+        return () => window.removeEventListener('resize', clampPosition);
+    }, [position, loot.length]);
 
     useEffect(() => {
         const handleClickOutside = () => {
@@ -86,7 +75,6 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
                 left: popupStyle.left,
                 top: popupStyle.top,
                 zIndex: 1000,
-                maxHeight: getMaxPopupHeight(),
             }}
             onClick={(e) => e.stopPropagation()}
         >

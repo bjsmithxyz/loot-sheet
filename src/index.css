@@ -953,21 +953,20 @@ textarea {
 /* LootPopUp */
 .loot-popup {
   padding: 10px;
-  min-width: 220px;
+  width: max-content;
+  max-width: calc(100vw - 24px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   border: 1px solid var(--accent);
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .loot-list {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  overflow-y: auto;
-  min-height: 0;
 }
 
 .loot-item {
@@ -978,6 +977,7 @@ textarea {
   border-radius: 0;
   cursor: pointer;
   transition: background 0.2s;
+  white-space: nowrap;
 }
 
 .loot-item:hover {
@@ -987,8 +987,10 @@ textarea {
 .item-name {
   font-weight: 500;
   font-size: 0.75rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .token-classes-row.small {
