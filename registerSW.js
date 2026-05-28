@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/loot-sheet/sw.js', { scope: '/loot-sheet/' })})}
