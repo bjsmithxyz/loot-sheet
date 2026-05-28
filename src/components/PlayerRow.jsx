@@ -5,7 +5,7 @@ import { CLASS_COLORS } from '../utils/wow-constants';
 import ItemIcon from './ItemIcon';
 import RoleIcon from './RoleIcon';
 
-export default function PlayerRow({
+function PlayerRow({
     player,
     isEditing,
     onStartEdit,
@@ -96,3 +96,5 @@ export default function PlayerRow({
         </div>
     );
 }
+
+export default React.memo(PlayerRow);

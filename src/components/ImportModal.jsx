@@ -16,11 +16,11 @@ export default function ImportModal({ onImport, onClose }) {
                 className="import-modal glass-panel"
             >
                 <h2>Addon import</h2>
-                <p>Paste your addon export string below:</p>
+                <p>Paste your addon export string below (<code>Name:Class|Name:Class</code>):</p>
                 <textarea
                     value={importText}
                     onChange={(e) => setImportText(e.target.value)}
-                    placeholder="Name:Class:Spec|Name:Class:Spec..."
+                    placeholder="Tanky:Warrior|Healy:Priest|Mmchunt:Hunter"
                 />
                 <div className="modal-actions-import">
                     <button className="skip-btn" onClick={onClose}>Skip</button>

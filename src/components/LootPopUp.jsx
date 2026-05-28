@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useMemo, useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CLASS_COLORS, getTokenClasses } from '../utils/wow-constants';
 import { rarityClass } from '../utils/import-parser';
@@ -17,7 +17,7 @@ function getInitialPosition(position) {
 }
 
 export default function LootPopUp({ bossId, position, onSelect, onClose }) {
-    const loot = BOSS_LOOT[bossId] || [];
+    const loot = useMemo(() => BOSS_LOOT[bossId] || [], [bossId]);
     const [hoveredItem, setHoveredItem] = useState(null);
     const popupRef = useRef(null);
     const [popupStyle, setPopupStyle] = useState(() => getInitialPosition(position));

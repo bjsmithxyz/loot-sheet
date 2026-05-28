@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Import, Download, Users, Sun, Moon } from 'lucide-react';
 import RAIDS from './data/raids.json';
@@ -65,7 +65,7 @@ function App() {
         }
         setPlayers(prev => prev.map(p => {
             if (p.id === playerId) {
-                return { ...p, items: [...p.items, { ...normalizedItem, instanceId: Date.now() }] };
+                return { ...p, items: [...p.items, { ...normalizedItem, instanceId: crypto.randomUUID() }] };
             }
             return p;
         }));
@@ -84,7 +84,7 @@ function App() {
     const handleAddManualPlayer = () => {
         if (!tempPlayer.name) return;
         const player = createPlayer(tempPlayer);
-        setPlayers([...players, player]);
+        setPlayers((prev) => [...prev, player]);
         setTempPlayer({ name: '', className: 'Warrior', role: 'dps' });
         setIsAddingPlayer(false);
     };
@@ -120,7 +120,12 @@ function App() {
         setTempPlayer({ name: player.name, className: player.className, role: player.role || 'dps' });
     };
 
-    const exportData = formatPlayersForSpreadsheet(players, RAIDS[activeRaid].name);
+    const clearHoveredGridItem = useCallback(() => setHoveredGridItem(null), []);
+
+    const exportData = useMemo(
+        () => formatPlayersForSpreadsheet(players, RAIDS[activeRaid].name),
+        [players, activeRaid]
+    );
 
     return (
         <div className="app-container">
@@ -208,7 +213,7 @@ function App() {
                                 onRemoveItem={removeItem}
                                 onShowLootMenu={setShowLootMenu}
                                 onHoverItem={setHoveredGridItem}
-                                onLeaveItem={() => setHoveredGridItem(null)}
+                                onLeaveItem={clearHoveredGridItem}
                             />
                         ))}
 
