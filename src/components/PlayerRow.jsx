@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Pencil, X, Plus } from 'lucide-react';
 import { CLASS_COLORS } from '../utils/wow-constants';
+import { useIsMobile } from '../hooks/useIsMobile';
 import ItemIcon from './ItemIcon';
 import RoleIcon from './RoleIcon';
 
@@ -12,13 +13,27 @@ function PlayerRow({
     onRemoveItem,
     onShowLootMenu,
     onHoverItem,
-    onLeaveItem
+    onLeaveItem,
+    onTapItem,
 }) {
+    const isMobile = useIsMobile();
+
     const handleEditClick = (e) => {
         e.stopPropagation();
         const row = e.currentTarget.closest('.player-row');
         const rect = row.getBoundingClientRect();
         onStartEdit(player, { x: rect.left, y: rect.top, height: rect.height });
+    };
+
+    const handleItemTap = (e, item) => {
+        e.stopPropagation();
+        const rect = e.currentTarget.getBoundingClientRect();
+        onTapItem({
+            item,
+            instanceId: item.instanceId,
+            x: rect.left,
+            y: rect.top,
+        });
     };
 
     return (
@@ -29,6 +44,7 @@ function PlayerRow({
                     className="edit-action-btn"
                     onClick={handleEditClick}
                     title="Edit player"
+                    aria-label={`Edit ${player.name}`}
                 >
                     <Pencil size={12} />
                 </button>
@@ -51,20 +67,34 @@ function PlayerRow({
                             exit={{ scale: 0, opacity: 0 }}
                             key={item.instanceId}
                             className="item-icon-slot"
-                            onMouseEnter={(e) => {
+                            onMouseEnter={!isMobile ? (e) => {
                                 const rect = e.currentTarget.getBoundingClientRect();
                                 onHoverItem({
                                     item,
                                     x: rect.left,
-                                    y: rect.top
+                                    y: rect.top,
                                 });
-                            }}
-                            onMouseLeave={onLeaveItem}
+                            } : undefined}
+                            onMouseLeave={!isMobile ? onLeaveItem : undefined}
                         >
-                            <ItemIcon item={item} size="medium" />
+                            {isMobile ? (
+                                <button
+                                    type="button"
+                                    className="item-icon-tap"
+                                    aria-label={`View ${item.name}`}
+                                    onClick={(e) => handleItemTap(e, item)}
+                                >
+                                    <ItemIcon item={item} size="medium" />
+                                </button>
+                            ) : (
+                                <ItemIcon item={item} size="medium" />
+                            )}
                             <button
+                                type="button"
                                 className="remove-item"
-                                onClick={() => {
+                                aria-label={`Remove ${item.name}`}
+                                onClick={(e) => {
+                                    e.stopPropagation();
                                     onRemoveItem(player.id, item.instanceId);
                                     onLeaveItem();
                                 }}
@@ -79,13 +109,14 @@ function PlayerRow({
                     <button
                         type="button"
                         className="add-item-btn"
+                        aria-label={`Add loot for ${player.name}`}
                         onClick={(e) => {
                             e.stopPropagation();
                             const rect = e.currentTarget.getBoundingClientRect();
                             onShowLootMenu({
                                 playerId: player.id,
                                 x: rect.left,
-                                y: rect.top
+                                y: rect.top,
                             });
                         }}
                     >

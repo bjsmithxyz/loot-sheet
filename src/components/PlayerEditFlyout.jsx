@@ -1,9 +1,8 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, Trash2 } from 'lucide-react';
-import { CLASSES, CLASS_COLORS } from '../utils/wow-constants';
-import { sanitizeName } from '../utils/import-parser';
-import RoleSelector from './RoleSelector';
+import { useIsMobile } from '../hooks/useIsMobile';
+import MobileSheet from './MobileSheet';
+import PlayerEditForm from './PlayerEditForm';
 
 const VIEWPORT_MARGIN = 12;
 
@@ -21,11 +20,15 @@ export default function PlayerEditFlyout({
     onDelete,
     onClose,
     position,
+    playerName,
 }) {
+    const isMobile = useIsMobile();
     const flyoutRef = useRef(null);
     const [flyoutStyle, setFlyoutStyle] = useState(() => getInitialPosition(position));
 
     useLayoutEffect(() => {
+        if (isMobile) return;
+
         const flyout = flyoutRef.current;
         if (!flyout) return;
 
@@ -41,9 +44,11 @@ export default function PlayerEditFlyout({
         left = Math.max(VIEWPORT_MARGIN, left);
 
         setFlyoutStyle({ left, top });
-    }, [position]);
+    }, [position, isMobile]);
 
     useEffect(() => {
+        if (isMobile) return;
+
         const timer = setTimeout(() => {
             window.addEventListener('click', onClose);
         }, 10);
@@ -51,7 +56,25 @@ export default function PlayerEditFlyout({
             clearTimeout(timer);
             window.removeEventListener('click', onClose);
         };
-    }, [onClose]);
+    }, [onClose, isMobile]);
+
+    if (isMobile) {
+        return (
+            <MobileSheet
+                title={playerName ? `Edit ${playerName}` : 'Edit player'}
+                onClose={onClose}
+                className="player-edit-sheet"
+            >
+                <PlayerEditForm
+                    tempPlayer={tempPlayer}
+                    setTempPlayer={setTempPlayer}
+                    onSave={onSave}
+                    onDelete={onDelete}
+                    size="small"
+                />
+            </MobileSheet>
+        );
+    }
 
     return (
         <motion.div
@@ -68,45 +91,13 @@ export default function PlayerEditFlyout({
             }}
             onClick={(e) => e.stopPropagation()}
         >
-            <input
-                type="text"
-                value={tempPlayer.name}
-                onChange={(e) => setTempPlayer({ ...tempPlayer, name: sanitizeName(e.target.value) })}
-                onKeyDown={(e) => e.key === 'Enter' && onSave()}
-                autoFocus
+            <PlayerEditForm
+                tempPlayer={tempPlayer}
+                setTempPlayer={setTempPlayer}
+                onSave={onSave}
+                onDelete={onDelete}
+                size="small"
             />
-            <div className="edit-options">
-                <div className="class-selector small">
-                    {CLASSES.map(c => (
-                        <button
-                            key={c}
-                            type="button"
-                            className={`class-circle small ${tempPlayer.className === c ? 'active' : ''}`}
-                            style={{ backgroundColor: CLASS_COLORS[c] }}
-                            onClick={() => setTempPlayer({ ...tempPlayer, className: c })}
-                            title={c}
-                        />
-                    ))}
-                </div>
-                <RoleSelector
-                    role={tempPlayer.role}
-                    onChange={(role) => setTempPlayer({ ...tempPlayer, role })}
-                    size="small"
-                />
-            </div>
-            <div className="edit-form-actions">
-                <button
-                    type="button"
-                    className="delete-player-btn"
-                    onClick={onDelete}
-                    title="Delete player"
-                >
-                    <Trash2 size={16} />
-                </button>
-                <button type="button" className="save-edit-btn" onClick={onSave} title="Save changes">
-                    <Check size={16} />
-                </button>
-            </div>
         </motion.div>
     );
 }

@@ -17,6 +17,8 @@ import Confetti from './components/Confetti';
 import AddPlayerForm from './components/AddPlayerForm';
 import { applyItemRarity, isLegendaryFlavorItem } from './utils/special-loot';
 import { applyTheme, getInitialTheme, toggleTheme } from './utils/theme';
+import { useIsMobile } from './hooks/useIsMobile';
+import MobileSheet from './components/MobileSheet';
 
 function App() {
     const [activeRaid, setActiveRaid] = useState('karazhan');
@@ -28,6 +30,8 @@ function App() {
     const [editingPlayerId, setEditingPlayerId] = useState(null);
     const [editFlyoutPosition, setEditFlyoutPosition] = useState(null);
     const [hoveredGridItem, setHoveredGridItem] = useState(null); // {item, x, y}
+    const [pinnedGridItem, setPinnedGridItem] = useState(null); // {item, instanceId, x, y}
+    const isMobile = useIsMobile();
 
     // New/Edit Player state
     const [isAddingPlayer, setIsAddingPlayer] = useState(false);
@@ -73,6 +77,9 @@ function App() {
     };
 
     const removeItem = (playerId, instanceId) => {
+        setPinnedGridItem((current) =>
+            current?.instanceId === instanceId ? null : current
+        );
         setPlayers(prev => prev.map(p => {
             if (p.id === playerId) {
                 return { ...p, items: p.items.filter(i => i.instanceId !== instanceId) };
@@ -115,12 +122,40 @@ function App() {
 
     const startEdit = (player, position) => {
         setShowLootMenu(null);
+        clearPinnedGridItem();
         setEditingPlayerId(player.id);
         setEditFlyoutPosition(position);
         setTempPlayer({ name: player.name, className: player.className, role: player.role || 'dps' });
     };
 
     const clearHoveredGridItem = useCallback(() => setHoveredGridItem(null), []);
+
+    const clearPinnedGridItem = useCallback(() => setPinnedGridItem(null), []);
+
+    const openLootMenu = useCallback((payload) => {
+        clearPinnedGridItem();
+        setShowLootMenu(payload);
+    }, [clearPinnedGridItem]);
+
+    const handleTapGridItem = useCallback((payload) => {
+        setPinnedGridItem((current) =>
+            current?.instanceId === payload.instanceId ? null : payload
+        );
+    }, []);
+
+    const activeBossName = useMemo(() => {
+        const raid = RAIDS[activeRaid];
+        if (!raid) return '';
+        const boss = raid.bosses.find((entry) => entry.id === activeBoss);
+        if (boss) return boss.name;
+        if (raid.trash?.id === activeBoss) return raid.trash.name;
+        return '';
+    }, [activeRaid, activeBoss]);
+
+    const editingPlayer = useMemo(
+        () => players.find((player) => player.id === editingPlayerId) ?? null,
+        [players, editingPlayerId]
+    );
 
     const exportData = useMemo(
         () => formatPlayersForSpreadsheet(players, RAIDS[activeRaid].name),
@@ -211,9 +246,10 @@ function App() {
                                 isEditing={editingPlayerId === player.id}
                                 onStartEdit={startEdit}
                                 onRemoveItem={removeItem}
-                                onShowLootMenu={setShowLootMenu}
+                                onShowLootMenu={openLootMenu}
                                 onHoverItem={setHoveredGridItem}
                                 onLeaveItem={clearHoveredGridItem}
+                                onTapItem={handleTapGridItem}
                             />
                         ))}
 
@@ -248,9 +284,9 @@ function App() {
                 )}
             </AnimatePresence>
 
-            {/* Grid Item Tooltip */}
+            {/* Grid Item Tooltip — desktop hover */}
             <AnimatePresence>
-                {hoveredGridItem && (
+                {!isMobile && hoveredGridItem && (
                     <div
                         className="grid-tooltip-wrapper"
                         style={{
@@ -258,11 +294,24 @@ function App() {
                             left: hoveredGridItem.x + 50,
                             top: Math.min(hoveredGridItem.y, window.innerHeight - 300),
                             zIndex: 2000,
-                            pointerEvents: 'none'
+                            pointerEvents: 'none',
                         }}
                     >
                         <ItemTooltip item={hoveredGridItem.item} className="grid-tooltip" />
                     </div>
+                )}
+            </AnimatePresence>
+
+            {/* Grid Item Tooltip — mobile tap */}
+            <AnimatePresence>
+                {isMobile && pinnedGridItem && (
+                    <MobileSheet
+                        title={pinnedGridItem.item.name}
+                        onClose={clearPinnedGridItem}
+                        className="item-tooltip-sheet"
+                    >
+                        <ItemTooltip item={pinnedGridItem.item} className="grid-tooltip" />
+                    </MobileSheet>
                 )}
             </AnimatePresence>
 
@@ -271,6 +320,7 @@ function App() {
                 {showLootMenu && (
                     <LootPopUp
                         bossId={activeBoss}
+                        bossName={activeBossName}
                         position={showLootMenu}
                         onSelect={(item) => addItem(showLootMenu.playerId, item)}
                         onClose={() => setShowLootMenu(null)}
@@ -286,6 +336,7 @@ function App() {
                         onSave={handleSaveEdit}
                         onDelete={() => handleDeletePlayer(editingPlayerId)}
                         position={editFlyoutPosition}
+                        playerName={editingPlayer?.name}
                         onClose={cancelEdit}
                     />
                 )}

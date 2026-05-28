@@ -2,8 +2,10 @@ import React, { useMemo, useState, useEffect, useLayoutEffect, useRef } from 're
 import { motion, AnimatePresence } from 'framer-motion';
 import { CLASS_COLORS, getTokenClasses } from '../utils/wow-constants';
 import { rarityClass } from '../utils/import-parser';
+import { useIsMobile } from '../hooks/useIsMobile';
 import ItemIcon from './ItemIcon';
 import ItemTooltip from './ItemTooltip';
+import MobileSheet from './MobileSheet';
 import BOSS_LOOT from '../data/loot.json';
 
 const VIEWPORT_MARGIN = 12;
@@ -16,13 +18,72 @@ function getInitialPosition(position) {
     };
 }
 
-export default function LootPopUp({ bossId, position, onSelect, onClose }) {
+function LootList({
+    loot,
+    previewItem,
+    onSelect,
+    onPreviewItem,
+    onHoverItem,
+    onLeaveHover,
+    isMobile,
+}) {
+    return (
+        <div className="loot-list">
+            {loot.map((item) => (
+                <div
+                    key={item.id}
+                    className={`loot-item ${previewItem?.id === item.id ? 'is-previewing' : ''}`}
+                    onClick={() => onSelect(item)}
+                    onMouseEnter={() => !isMobile && onHoverItem(item)}
+                    onMouseLeave={() => !isMobile && onLeaveHover()}
+                >
+                    {isMobile ? (
+                        <button
+                            type="button"
+                            className="loot-item-icon-btn"
+                            aria-label={`Preview ${item.name}`}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                onPreviewItem(item);
+                            }}
+                        >
+                            <ItemIcon item={item} size="small" />
+                        </button>
+                    ) : (
+                        <ItemIcon item={item} size="small" />
+                    )}
+                    <span className={`item-name rarity-text-${rarityClass(item.rarity)}`}>
+                        {item.name}
+                        {getTokenClasses(item.name) && (
+                            <span className="token-classes-row small">
+                                {getTokenClasses(item.name).map((c) => (
+                                    <span
+                                        key={c}
+                                        className="token-class-dot small"
+                                        style={{ backgroundColor: CLASS_COLORS[c] }}
+                                    />
+                                ))}
+                            </span>
+                        )}
+                    </span>
+                </div>
+            ))}
+            {loot.length === 0 && <div className="no-loot">No loot recorded.</div>}
+        </div>
+    );
+}
+
+export default function LootPopUp({ bossId, position, onSelect, onClose, bossName }) {
+    const isMobile = useIsMobile();
     const loot = useMemo(() => BOSS_LOOT[bossId] || [], [bossId]);
     const [hoveredItem, setHoveredItem] = useState(null);
+    const [previewItem, setPreviewItem] = useState(null);
     const popupRef = useRef(null);
     const [popupStyle, setPopupStyle] = useState(() => getInitialPosition(position));
 
     useLayoutEffect(() => {
+        if (isMobile) return;
+
         const popup = popupRef.current;
         if (!popup) return;
 
@@ -46,12 +107,12 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
         clampPosition();
         window.addEventListener('resize', clampPosition);
         return () => window.removeEventListener('resize', clampPosition);
-    }, [position, loot.length]);
+    }, [position, loot.length, isMobile]);
 
     useEffect(() => {
-        const handleClickOutside = () => {
-            onClose();
-        };
+        if (isMobile) return;
+
+        const handleClickOutside = () => onClose();
 
         const timer = setTimeout(() => {
             window.addEventListener('click', handleClickOutside);
@@ -61,7 +122,48 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
             clearTimeout(timer);
             window.removeEventListener('click', handleClickOutside);
         };
-    }, [onClose]);
+    }, [onClose, isMobile]);
+
+    const handlePreviewItem = (item) => {
+        setPreviewItem((current) => (current?.id === item.id ? null : item));
+    };
+
+    const lootList = (
+        <LootList
+            loot={loot}
+            previewItem={isMobile ? previewItem : hoveredItem}
+            onSelect={onSelect}
+            onPreviewItem={handlePreviewItem}
+            onHoverItem={setHoveredItem}
+            onLeaveHover={() => setHoveredItem(null)}
+            isMobile={isMobile}
+        />
+    );
+
+    if (isMobile) {
+        return (
+            <MobileSheet
+                title={bossName ? `Assign loot — ${bossName}` : 'Assign loot'}
+                onClose={onClose}
+                className="loot-popup-sheet"
+            >
+                <AnimatePresence>
+                    {previewItem && (
+                        <motion.div
+                            key={previewItem.id}
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="loot-mobile-preview"
+                        >
+                            <ItemTooltip item={previewItem} className="grid-tooltip" />
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+                {lootList}
+            </MobileSheet>
+        );
+    }
 
     return (
         <motion.div
@@ -78,35 +180,7 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
             }}
             onClick={(e) => e.stopPropagation()}
         >
-            <div className="loot-list">
-                {loot.map(item => (
-                    <div
-                        key={item.id}
-                        className="loot-item"
-                        onClick={() => onSelect(item)}
-                        onMouseEnter={() => setHoveredItem(item)}
-                        onMouseLeave={() => setHoveredItem(null)}
-                    >
-                        <ItemIcon item={item} size="small" />
-                        <span className={`item-name rarity-text-${rarityClass(item.rarity)}`}>
-                            {item.name}
-                            {getTokenClasses(item.name) && (
-                                <div className="token-classes-row small">
-                                    {getTokenClasses(item.name).map(c => (
-                                        <div
-                                            key={c}
-                                            className="token-class-dot small"
-                                            style={{ backgroundColor: CLASS_COLORS[c] }}
-                                        />
-                                    ))}
-                                </div>
-                            )}
-                        </span>
-                    </div>
-                ))}
-                {loot.length === 0 && <div className="no-loot">No loot recorded.</div>}
-            </div>
-
+            {lootList}
             <AnimatePresence>
                 {hoveredItem && (
                     <motion.div
