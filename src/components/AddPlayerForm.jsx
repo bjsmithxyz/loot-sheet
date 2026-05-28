@@ -1,4 +1,5 @@
 import React from 'react';
+import { sanitizeName } from '../utils/import-parser';
 import { motion } from 'framer-motion';
 import { UserPlus } from 'lucide-react';
 import { CLASS_COLORS, CLASSES, CLASS_SPECS } from '../utils/wow-constants';
@@ -34,7 +35,7 @@ export default function AddPlayerForm({
                     type="text"
                     placeholder="Player Name"
                     value={tempPlayer.name}
-                    onChange={(e) => setTempPlayer({ ...tempPlayer, name: e.target.value })}
+                    onChange={(e) => setTempPlayer({ ...tempPlayer, name: sanitizeName(e.target.value) })}
                     onKeyDown={(e) => e.key === 'Enter' && onAddPlayer()}
                     className="name-input"
                     autoFocus

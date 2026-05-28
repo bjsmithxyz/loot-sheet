@@ -1,6 +1,6 @@
 ## Interface: 20504
 ## Title: LootTracker Export
-## Notes: Export raid members for the Loot Tracker Web App.
+## Notes: Export raid members for the Loot Sheet web app.
 ## Author: Antigravity
 ## Version: 1.0
 

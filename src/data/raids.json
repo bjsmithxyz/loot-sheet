@@ -1,31 +1,51 @@
 {
   "karazhan": {
-    "name": "Karazhan",
+    "name": "Kara",
     "bosses": [
-      { "id": "attumen", "name": "Attumen the Huntsman" },
+      { "id": "attumen", "name": "Attumen" },
       { "id": "moroes", "name": "Moroes" },
-      { "id": "maiden", "name": "Maiden of Virtue" },
-      { "id": "opera", "name": "Opera Event" },
-      { "id": "curator", "name": "The Curator" },
-      { "id": "illhoof", "name": "Terestian Illhoof" },
-      { "id": "shade", "name": "Shade of Aran" },
+      { "id": "maiden", "name": "Maiden" },
+      { "id": "opera", "name": "Opera" },
+      { "id": "curator", "name": "Curator" },
+      { "id": "illhoof", "name": "Terestian" },
+      { "id": "shade", "name": "Shade" },
       { "id": "netherspite", "name": "Netherspite" },
-      { "id": "chess", "name": "Chess Event" },
-      { "id": "prince", "name": "Prince Malchezaar" },
+      { "id": "chess", "name": "Chess" },
+      { "id": "prince", "name": "Prince" },
       { "id": "nightbane", "name": "Nightbane" }
     ]
   },
   "gruul": {
-    "name": "Gruul's Lair",
+    "name": "Gruul",
     "bosses": [
       { "id": "maulgar", "name": "High King Maulgar" },
-      { "id": "gruul", "name": "Gruul the Dragonkiller" }
+      { "id": "gruul", "name": "Gruul" }
     ]
   },
   "magtheridon": {
-    "name": "Magtheridon's Lair",
+    "name": "Mag",
     "bosses": [
       { "id": "magtheridon", "name": "Magtheridon" }
+    ]
+  },
+  "ssc": {
+    "name": "SSC",
+    "bosses": [
+      { "id": "hydross", "name": "Hydross" },
+      { "id": "lurker", "name": "Lurker" },
+      { "id": "leotheras", "name": "Leotheras" },
+      { "id": "karathress", "name": "Fathom-Lord" },
+      { "id": "morogrim", "name": "Morogrim" },
+      { "id": "vashj", "name": "Vashj" }
+    ]
+  },
+  "tk": {
+    "name": "TK",
+    "bosses": [
+      { "id": "alar", "name": "Al'ar" },
+      { "id": "voidreaver", "name": "Void Reaver" },
+      { "id": "solarian", "name": "Solarian" },
+      { "id": "kaelthas", "name": "Kael" }
     ]
   }
 }

@@ -1,8 +1,8 @@
-# Technical Design Document: TBC Loot Tracker
+# Technical Design Document: Loot Sheet
 
 ## 1. Overview
 
-The TBC Loot Tracker is a Single Page Application (SPA) built with React and Vite. It serves as a visual utility for World of Warcraft raid leaders to track loot distribution during raids. The application emphasizes visual aesthetics (Glassmorphism), interactivity (Framer Motion), and speed.
+The Loot Sheet is a Single Page Application (SPA) built with React and Vite. It serves as a visual utility for World of Warcraft raid leaders to track loot distribution during raids. The application emphasizes visual aesthetics (Glassmorphism), interactivity (Framer Motion), and speed.
 
 ## 2. Architecture
 

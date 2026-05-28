@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CLASS_COLORS, getTokenClasses } from '../utils/wow-constants';
-import TooltipContent from './TooltipContent';
+import { rarityClass } from '../utils/import-parser';
+import ItemIcon from './ItemIcon';
+import ItemTooltip from './ItemTooltip';
 import BOSS_LOOT from '../data/loot.json';
 
 export default function LootPopUp({ bossId, position, onSelect, onClose }) {
@@ -46,10 +48,8 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
                         onMouseEnter={() => setHoveredItem(item)}
                         onMouseLeave={() => setHoveredItem(null)}
                     >
-                        <div className={`item-icon-small rarity-${item.rarity.toLowerCase()}`}>
-                            {item.name[0]}
-                        </div>
-                        <span className={`item-name rarity-text-${item.rarity.toLowerCase()}`}>
+                        <ItemIcon item={item} size="small" />
+                        <span className={`item-name rarity-text-${rarityClass(item.rarity)}`}>
                             {item.name}
                             {getTokenClasses(item.name) && (
                                 <div className="token-classes-row small">
@@ -75,10 +75,10 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
                         initial={{ opacity: 0, x: 10 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 10 }}
-                        className="item-tooltip-wow"
+                        className="loot-popup-tooltip"
                         style={{ position: 'absolute', top: 0, left: '100%', marginLeft: '15px' }}
                     >
-                        <TooltipContent item={hoveredItem} />
+                        <ItemTooltip item={hoveredItem} />
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Pencil, Check, X, Plus } from 'lucide-react';
+import { Pencil, Check, X, Plus, Trash2 } from 'lucide-react';
 import { CLASS_COLORS, CLASSES, CLASS_SPECS } from '../utils/wow-constants';
+import { sanitizeName } from '../utils/import-parser';
+import ItemIcon from './ItemIcon';
 import RoleIcon from './RoleIcon';
 
 export default function PlayerRow({
@@ -10,6 +12,7 @@ export default function PlayerRow({
     tempPlayer,
     setTempPlayer,
     onSaveEdit,
+    onDeletePlayer,
     onStartEdit,
     onRemoveItem,
     onShowLootMenu,
@@ -24,7 +27,7 @@ export default function PlayerRow({
                         <input
                             type="text"
                             value={tempPlayer.name}
-                            onChange={(e) => setTempPlayer({ ...tempPlayer, name: e.target.value })}
+                            onChange={(e) => setTempPlayer({ ...tempPlayer, name: sanitizeName(e.target.value) })}
                             onKeyDown={(e) => e.key === 'Enter' && onSaveEdit()}
                             autoFocus
                         />
@@ -51,7 +54,18 @@ export default function PlayerRow({
                                 ))}
                             </div>
                         </div>
-                        <button className="save-edit-btn" onClick={onSaveEdit}><Check size={16} /></button>
+                        <div className="edit-form-actions">
+                            <button
+                                className="delete-player-btn"
+                                onClick={() => onDeletePlayer(player.id)}
+                                title="Delete player"
+                            >
+                                <Trash2 size={16} />
+                            </button>
+                            <button className="save-edit-btn" onClick={onSaveEdit} title="Save changes">
+                                <Check size={16} />
+                            </button>
+                        </div>
                     </div>
                 ) : (
                     <>
@@ -81,7 +95,7 @@ export default function PlayerRow({
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0, opacity: 0 }}
                             key={item.instanceId}
-                            className={`item-icon rarity-${item.rarity.toLowerCase()}`}
+                            className="item-icon-slot"
                             onMouseEnter={(e) => {
                                 const rect = e.currentTarget.getBoundingClientRect();
                                 onHoverItem({
@@ -92,7 +106,7 @@ export default function PlayerRow({
                             }}
                             onMouseLeave={onLeaveItem}
                         >
-                            <div className="item-inner">{item.acronym || item.name[0]}</div>
+                            <ItemIcon item={item} size="medium" />
                             <button
                                 className="remove-item"
                                 onClick={() => {

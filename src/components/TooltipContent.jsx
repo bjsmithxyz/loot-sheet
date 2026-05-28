@@ -1,11 +1,13 @@
 import React from 'react';
 import { getTokenClasses, CLASS_COLORS } from '../utils/wow-constants';
+import { rarityClass } from '../utils/import-parser';
 
 export default function TooltipContent({ item }) {
     const tokenClasses = getTokenClasses(item.name);
+
     return (
         <>
-            <div className={`wow-name rarity-text-${item.rarity.toLowerCase()}`}>
+            <div className={`wow-name rarity-text-${rarityClass(item.rarity)}`}>
                 {item.name}
             </div>
             {tokenClasses && (
@@ -18,14 +20,22 @@ export default function TooltipContent({ item }) {
                 </div>
             )}
             {item.ilevel && <div className="wow-ilevel">Item Level {item.ilevel}</div>}
-            {item.bind && <div className="wow-bind">{item.bind}</div>}
-            {item.type && <div className="wow-type">{item.type}</div>}
+            {(item.hand || item.weaponType) && (
+                <div className="wow-slot">
+                    {[item.hand, item.weaponType].filter(Boolean).join(' · ')}
+                </div>
+            )}
+            {item.damage && (
+                <div className="wow-damage">
+                    {item.damage}
+                    {item.speed ? ` Speed ${item.speed}` : ''}
+                </div>
+            )}
+            {item.dps && <div className="wow-dps">({item.dps})</div>}
 
             {item.stats && item.stats.map((stat, i) => (
                 <div key={i} className="wow-stat">{stat}</div>
             ))}
-
-            {item.req && <div className="wow-req">Requires Level {item.req}</div>}
 
             {item.equip && (
                 <div className="wow-equip wow-green">

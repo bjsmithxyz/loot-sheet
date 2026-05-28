@@ -1,80 +1,80 @@
-# TBC Loot Tracker
+# Loot Sheet
 
-A modern, visual loot tracking application for World of Warcraft: The Burning Crusade Classic. This tool helps Loot Councils and Guild Masters track loot distribution, visualise assignments, and manage raid rosters efficiently.
+A visual loot tracking sheet for World of Warcraft: The Burning Crusade Classic. Built for loot councils and guild masters to track assignments, manage rosters, and export results to a spreadsheet.
 
 ## Features
 
--   **Visual Loot Assignment**: Drag-and-drop or click-to-assign interface (currently click-based).
--   **Raid Support**: Currently supports **Karazhan**, with expandable architecture for Gruul, Magtheridon, SSC, and TK.
--   **Boss Loot Tables**: Built-in loot data for all implemented bosses.
--   **Player Management**:
-    -   Import rosters via string (compatible with common addon export formats).
-    -   Manual player addition and editing.
-    -   Class and Spec tracking with role identification.
--   **Rich Tooltips**: Detailed item tooltips including stats, requirements, and class restrictions.
--   **Responsive Design**: Glassmorphic UI with smooth animations powered by Framer Motion.
+- **Visual Loot Assignment**: Click-to-assign interface with Wowhead item icons
+- **Raid Support**: Kara, Gruul, Mag, SSC, and TK
+- **Boss Loot Tables**: Built-in loot data for all implemented bosses
+- **Player Management**:
+  - Import rosters via addon export string
+  - Manual player addition, editing, and deletion
+  - Class and spec tracking with role identification
+- **Rich Tooltips**: Item stats, weapon damage, and class token indicators
+- **Spreadsheet Export**: Tab-separated export with class-coloured player cells
 
 ## Technology Stack
 
--   **Frontend**: React 18, Vite
--   **Styling**: Vanilla CSS (Variables, Glassmorphism), Lucide React (Icons)
--   **Animations**: Framer Motion
--   **Data**: JSON-based loot and raid definitions
+- **Frontend**: React 18, Vite
+- **Styling**: Vanilla CSS (glassmorphism), Lucide React
+- **Animations**: Framer Motion
+- **Data**: JSON loot and raid definitions, Wowhead icons
 
 ## Getting Started
 
 ### Prerequisites
 
--   Node.js (v16 or higher recommended)
--   npm or yarn
+- Node.js (v16 or higher recommended)
+- npm or yarn
 
 ### Installation
 
-1.  Clone the repository.
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
+```bash
+git clone https://github.com/bjsmithxyz/loot-sheet.git
+cd loot-sheet
+npm install
+```
 
 ### Running the App
 
-Start the development server:
 ```bash
 npm run dev
 ```
-Open your browser to the URL shown (usually `http://localhost:5173`).
+
+Open the URL shown in the terminal (usually `http://localhost:5173`).
+
+### Deploy
+
+```bash
+npm run deploy
+```
+
+GitHub Pages deploys to `/loot-sheet/`.
 
 ## Project Structure
 
 ```
 .
-├── docs/           # Documentation and Design Documents
+├── docs/           # Documentation
+├── scripts/        # Loot data enrichment scripts
+├── addon/          # WoW addon for roster export
 └── src/
-    ├── components/ # Reusable UI components (LootPopUp, PlayerRow, etc.)
-    ├── data/       # Static data files (loot.json, raids.json)
-    ├── utils/      # Helper functions and constants (wow-constants.js)
-    ├── App.jsx     # Main application controller
-    └── index.css   # Global styles and variables
+    ├── components/
+    ├── data/       # loot.json, raids.json
+    ├── utils/
+    └── App.jsx
 ```
-
-## Documentation
-
-For a detailed overview of the component architecture and data flow, please refer to the [Technical Design Document](docs/technical_design.md).
 
 ## Import Format
 
-The import feature accepts a pipe-separated list of players in the format:
+Pipe-separated player list:
+
 `Name:Class:Spec|Name:Class:Spec`
 
 Example:
+
 `Tanky:Warrior:Protection|Healy:Priest:Holy|Dpser:Mage:Fire`
-
-## Future Plans
-
--   Persist data to local storage or backend.
--   Add more raids (T5/T6 content).
--   Drag and drop loot assignment.
--   Export loot history.
 
 ## Credits
 

@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { Import, Users } from 'lucide-react';
+import { Import, Download, Users } from 'lucide-react';
 import RAIDS from './data/raids.json';
+import ItemTooltip from './components/ItemTooltip';
+import { parseImportText, createPlayer } from './utils/import-parser';
 import RaidSelector from './components/RaidSelector';
 import BossSlider from './components/BossSlider';
 import ImportModal from './components/ImportModal';
+import ExportModal from './components/ExportModal';
 import LootPopUp from './components/LootPopUp';
 import PlayerRow from './components/PlayerRow';
+import { formatPlayersForSpreadsheet } from './utils/export-formatter';
+import { pickRandomTbcIcon, getHeaderIconUrl } from './utils/header-icon';
+import Confetti from './components/Confetti';
 import AddPlayerForm from './components/AddPlayerForm';
+import { applyItemRarity, isLegendaryFlavorItem } from './utils/special-loot';
 
 function App() {
     const [activeRaid, setActiveRaid] = useState('karazhan');
     const [activeBoss, setActiveBoss] = useState(RAIDS['karazhan'].bosses[0].id);
     const [players, setPlayers] = useState([]);
     const [showImport, setShowImport] = useState(true);
+    const [showExport, setShowExport] = useState(false);
     const [showLootMenu, setShowLootMenu] = useState(null); // {playerId, x, y}
     const [editingPlayerId, setEditingPlayerId] = useState(null);
     const [hoveredGridItem, setHoveredGridItem] = useState(null); // {item, x, y}
@@ -21,27 +29,31 @@ function App() {
     // New/Edit Player state
     const [isAddingPlayer, setIsAddingPlayer] = useState(false);
     const [tempPlayer, setTempPlayer] = useState({ name: '', className: 'Warrior', spec: 'Arms' });
+    const [headerIcon, setHeaderIcon] = useState(() => pickRandomTbcIcon());
+    const [iconShaking, setIconShaking] = useState(false);
+    const [showConfetti, setShowConfetti] = useState(false);
+
+    const handleHeaderIconClick = () => {
+        setIconShaking(true);
+        setHeaderIcon((current) => pickRandomTbcIcon(current));
+        window.setTimeout(() => setIconShaking(false), 400);
+    };
 
     const handleImport = (importText) => {
-        if (!importText) return;
-        const playerData = importText.split('|').map(p => {
-            const [name, className, spec] = p.split(':');
-            return {
-                id: Math.random().toString(36).substr(2, 9),
-                name,
-                className: className || 'Warrior',
-                spec: spec || 'None',
-                items: []
-            };
-        });
+        const playerData = parseImportText(importText).map(createPlayer);
+        if (playerData.length === 0) return;
         setPlayers(playerData);
         setShowImport(false);
     };
 
     const addItem = (playerId, item) => {
+        const normalizedItem = applyItemRarity(item);
+        if (isLegendaryFlavorItem(item)) {
+            setShowConfetti(true);
+        }
         setPlayers(prev => prev.map(p => {
             if (p.id === playerId) {
-                return { ...p, items: [...p.items, { ...item, instanceId: Date.now() }] };
+                return { ...p, items: [...p.items, { ...normalizedItem, instanceId: Date.now() }] };
             }
             return p;
         }));
@@ -59,11 +71,7 @@ function App() {
 
     const handleAddManualPlayer = () => {
         if (!tempPlayer.name) return;
-        const player = {
-            id: Math.random().toString(36).substr(2, 9),
-            ...tempPlayer,
-            items: []
-        };
+        const player = createPlayer(tempPlayer);
         setPlayers([...players, player]);
         setTempPlayer({ name: '', className: 'Warrior', spec: 'Arms' });
         setIsAddingPlayer(false);
@@ -72,7 +80,7 @@ function App() {
     const handleSaveEdit = () => {
         setPlayers(prev => prev.map(p => {
             if (p.id === editingPlayerId) {
-                return { ...p, ...tempPlayer };
+                return createPlayer({ ...tempPlayer, id: p.id, items: p.items });
             }
             return p;
         }));
@@ -80,17 +88,47 @@ function App() {
         setTempPlayer({ name: '', className: 'Warrior', spec: 'Arms' });
     };
 
+    const handleDeletePlayer = (playerId) => {
+        setPlayers(prev => prev.filter(p => p.id !== playerId));
+        setEditingPlayerId(null);
+        setTempPlayer({ name: '', className: 'Warrior', spec: 'Arms' });
+        if (showLootMenu?.playerId === playerId) {
+            setShowLootMenu(null);
+        }
+    };
+
     const startEdit = (player) => {
         setEditingPlayerId(player.id);
         setTempPlayer({ name: player.name, className: player.className, spec: player.spec });
     };
 
+    const exportData = formatPlayersForSpreadsheet(players, RAIDS[activeRaid].name);
+
     return (
         <div className="app-container">
+            <Confetti active={showConfetti} onComplete={() => setShowConfetti(false)} />
             {/* Header */}
             <header className="main-header glass-panel">
                 <div className="logo">
-                    <h1>TBC LOOT <span className="accent">TRACKER</span></h1>
+                    <h1>
+                        {headerIcon && (
+                            <button
+                                type="button"
+                                className="logo-icon-btn"
+                                onClick={handleHeaderIconClick}
+                                aria-label="Random loot icon"
+                                title=""
+                            >
+                                <img
+                                    src={getHeaderIconUrl(headerIcon)}
+                                    alt=""
+                                    className={`logo-icon ${iconShaking ? 'shaking' : ''}`}
+                                    draggable={false}
+                                />
+                            </button>
+                        )}
+                        LOOT <span className="accent">SHEET</span>
+                    </h1>
                 </div>
                 <RaidSelector
                     activeRaid={activeRaid}
@@ -102,6 +140,13 @@ function App() {
                 <div className="header-actions">
                     <button className="import-btn-header" onClick={() => setShowImport(true)}>
                         <Import size={18} /> <span>Import</span>
+                    </button>
+                    <button
+                        className="import-btn-header"
+                        onClick={() => setShowExport(true)}
+                        disabled={players.length === 0}
+                    >
+                        <Download size={18} /> <span>Export</span>
                     </button>
                 </div>
             </header>
@@ -135,6 +180,7 @@ function App() {
                                 tempPlayer={tempPlayer}
                                 setTempPlayer={setTempPlayer}
                                 onSaveEdit={handleSaveEdit}
+                                onDeletePlayer={handleDeletePlayer}
                                 onStartEdit={startEdit}
                                 onRemoveItem={removeItem}
                                 onShowLootMenu={setShowLootMenu}
@@ -165,11 +211,20 @@ function App() {
                 )}
             </AnimatePresence>
 
+            <AnimatePresence>
+                {showExport && (
+                    <ExportModal
+                        exportData={exportData}
+                        onClose={() => setShowExport(false)}
+                    />
+                )}
+            </AnimatePresence>
+
             {/* Grid Item Tooltip */}
             <AnimatePresence>
                 {hoveredGridItem && (
                     <div
-                        className="item-tooltip-wow grid-tooltip"
+                        className="grid-tooltip-wrapper"
                         style={{
                             position: 'fixed',
                             left: hoveredGridItem.x + 50,
@@ -178,9 +233,7 @@ function App() {
                             pointerEvents: 'none'
                         }}
                     >
-                        <div className={`wow-name rarity-text-${hoveredGridItem.item.rarity.toLowerCase()}`}>
-                            {hoveredGridItem.item.name}
-                        </div>
+                        <ItemTooltip item={hoveredGridItem.item} className="grid-tooltip" />
                     </div>
                 )}
             </AnimatePresence>

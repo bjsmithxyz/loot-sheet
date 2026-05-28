@@ -1,4 +1,26 @@
 -- LootTracker.lua
+local CLASS_MAP = {
+    WARRIOR = "Warrior",
+    PALADIN = "Paladin",
+    HUNTER = "Hunter",
+    ROGUE = "Rogue",
+    PRIEST = "Priest",
+    SHAMAN = "Shaman",
+    MAGE = "Mage",
+    WARLOCK = "Warlock",
+    DRUID = "Druid",
+}
+
+local function NormalizeClass(classToken)
+    if CLASS_MAP[classToken] then
+        return CLASS_MAP[classToken]
+    end
+    if classToken and classToken:len() > 0 then
+        return classToken:sub(1, 1):upper() .. classToken:sub(2):lower()
+    end
+    return "Warrior"
+end
+
 local function GetPlayerSpec()
     local numTabs = GetNumTalentTabs()
     local maxPoints = 0
@@ -23,7 +45,7 @@ local function GenerateExport()
         local name = UnitName("player")
         local _, class = UnitClass("player")
         local spec = GetPlayerSpec()
-        table.insert(players, string.format("%s:%s:%s", name, class, spec))
+        table.insert(players, string.format("%s:%s:%s", name, NormalizeClass(class), spec))
     else
         for i = 1, numMembers do
             local name, rank, subgroup, level, class, fileName, zone, online, isDead, role, isML = GetRaidRosterInfo(i)
@@ -34,7 +56,7 @@ local function GenerateExport()
                 if name == UnitName("player") then
                     spec = GetPlayerSpec()
                 end
-                table.insert(players, string.format("%s:%s:%s", name, fileName, spec))
+                table.insert(players, string.format("%s:%s:%s", name, NormalizeClass(fileName), spec))
             end
         end
     end
