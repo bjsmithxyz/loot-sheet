@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { Import, Download, Users } from 'lucide-react';
+import { Import, Download, Users, Sun, Moon } from 'lucide-react';
 import RAIDS from './data/raids.json';
 import ItemTooltip from './components/ItemTooltip';
 import { parseImportText, createPlayer } from './utils/import-parser';
@@ -15,6 +15,7 @@ import { pickRandomTbcIcon, getHeaderIconUrl } from './utils/header-icon';
 import Confetti from './components/Confetti';
 import AddPlayerForm from './components/AddPlayerForm';
 import { applyItemRarity, isLegendaryFlavorItem } from './utils/special-loot';
+import { applyTheme, getInitialTheme, toggleTheme } from './utils/theme';
 
 function App() {
     const [activeRaid, setActiveRaid] = useState('karazhan');
@@ -32,6 +33,15 @@ function App() {
     const [headerIcon, setHeaderIcon] = useState(() => pickRandomTbcIcon());
     const [iconShaking, setIconShaking] = useState(false);
     const [showConfetti, setShowConfetti] = useState(false);
+    const [theme, setTheme] = useState(getInitialTheme);
+
+    const handleThemeToggle = () => {
+        setTheme((current) => {
+            const next = toggleTheme(current);
+            applyTheme(next);
+            return next;
+        });
+    };
 
     const handleHeaderIconClick = () => {
         setIconShaking(true);
@@ -147,6 +157,15 @@ function App() {
                         disabled={players.length === 0}
                     >
                         <Download size={18} /> <span>Export</span>
+                    </button>
+                    <button
+                        type="button"
+                        className="import-btn-header icon-only"
+                        onClick={handleThemeToggle}
+                        aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                        title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+                    >
+                        {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                     </button>
                 </div>
             </header>

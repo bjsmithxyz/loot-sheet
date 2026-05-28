@@ -34,6 +34,35 @@
 
   --glass: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
+  --surface-input: #000;
+  --surface-tooltip: #070c21;
+  --surface-item: #111;
+  --border-item: #333;
+  --border-tooltip: #353959;
+  --text-on-accent: #000;
+  --modal-overlay: rgba(0, 0, 0, 0.85);
+  --panel-shadow: rgba(0, 0, 0, 0.8);
+  --row-hover: rgba(255, 255, 255, 0.03);
+  --loot-hover: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] {
+  --bg-primary: #eef0f4;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e4e7ee;
+  --text-primary: #151515;
+  --text-secondary: #5c5c5c;
+  --glass: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(0, 0, 0, 0.12);
+  --surface-input: #ffffff;
+  --surface-item: #f3f4f8;
+  --border-item: #c5c9d2;
+  --text-on-accent: #000;
+  --modal-overlay: rgba(0, 0, 0, 0.45);
+  --panel-shadow: rgba(0, 0, 0, 0.12);
+  --row-hover: rgba(0, 0, 0, 0.04);
+  --loot-hover: rgba(0, 0, 0, 0.05);
+  --rarity-common: #333333;
 }
 
 * {
@@ -81,7 +110,7 @@ body {
 
 .btn-primary {
   background: var(--accent);
-  color: #000;
+  color: var(--text-on-accent);
   border: none;
   padding: 8px 16px;
   border-radius: 0;
@@ -114,7 +143,7 @@ body {
 .logo h1 {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   margin: 0;
   font-size: 1.5rem;
 }
@@ -131,6 +160,7 @@ body {
   background: none;
   border: none;
   padding: 0;
+  margin-right: 8px;
   cursor: pointer;
   line-height: 0;
   border-radius: 0;
@@ -173,7 +203,7 @@ body {
 
 .raid-btn.active {
   background: var(--accent);
-  color: #000;
+  color: var(--text-on-accent);
   border-color: var(--accent);
 }
 
@@ -199,6 +229,12 @@ body {
 .import-btn-header:disabled {
   opacity: 0.45;
   cursor: not-allowed;
+}
+
+.import-btn-header.icon-only {
+  padding: 8px;
+  min-width: 36px;
+  justify-content: center;
 }
 
 .header-actions {
@@ -275,7 +311,7 @@ body {
 }
 
 .player-row:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--row-hover);
   transform: translateX(4px);
 }
 
@@ -315,14 +351,14 @@ body {
   padding: 15px;
   border-radius: 0;
   border: 1px solid var(--accent);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 40px var(--panel-shadow);
   z-index: 50;
 }
 
 .inline-edit-form input {
-  background: #000;
+  background: var(--surface-input);
   border: 1px solid var(--glass-border);
-  color: #fff;
+  color: var(--text-primary);
   padding: 8px 12px;
   border-radius: 0;
   font-size: 1rem;
@@ -366,7 +402,7 @@ body {
 
 .save-edit-btn {
   background: var(--accent);
-  color: #000;
+  color: var(--text-on-accent);
   border: none;
   border-radius: 0;
   padding: 4px;
@@ -447,8 +483,8 @@ body {
   position: relative;
   flex-shrink: 0;
   overflow: hidden;
-  background: #111;
-  border: 2px solid #333;
+  background: var(--surface-item);
+  border: 2px solid var(--border-item);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -508,8 +544,8 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 0;
-  background: #111;
-  border: 2px solid #333;
+  background: var(--surface-item);
+  border: 2px solid var(--border-item);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -628,9 +664,9 @@ body {
 }
 
 .name-input {
-  background: #000;
+  background: var(--surface-input);
   border: 1px solid var(--glass-border);
-  color: #fff;
+  color: var(--text-primary);
   padding: 10px 15px;
   border-radius: 0;
   width: 100%;
@@ -679,7 +715,7 @@ body {
 
 .spec-btn.active {
   background: var(--accent);
-  color: #000;
+  color: var(--text-on-accent);
   border-color: var(--accent);
   font-weight: 700;
 }
@@ -693,7 +729,7 @@ body {
 
 .confirm-add {
   background: var(--accent);
-  color: #000;
+  color: var(--text-on-accent);
   border: none;
   padding: 8px 24px;
   border-radius: 0;
@@ -715,7 +751,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: var(--modal-overlay);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -748,7 +784,7 @@ body {
 
 .import-btn-main {
   background: var(--accent);
-  color: #000;
+  color: var(--text-on-accent);
   border: none;
   padding: 8px 24px;
   border-radius: 0;
@@ -757,9 +793,9 @@ body {
 }
 
 textarea {
-  background: #000;
+  background: var(--surface-input);
   border: 1px solid var(--glass-border);
-  color: #fff;
+  color: var(--text-primary);
   padding: 15px;
   border-radius: 0;
   min-height: 150px;
@@ -801,7 +837,7 @@ textarea {
 }
 
 .loot-item:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--loot-hover);
 }
 
 .item-name {
@@ -824,8 +860,9 @@ textarea {
 }
 
 .item-tooltip-wow {
-  width: auto;
-  min-width: 280px;
+  width: 300px;
+  max-width: min(300px, calc(100vw - 24px));
+  box-sizing: border-box;
   padding: 12px;
   z-index: 1100;
   pointer-events: none;
@@ -835,8 +872,10 @@ textarea {
   border-radius: 0;
   font-family: 'Inter', sans-serif;
   line-height: 1.4;
-  color: #fff;
+  color: #e0e0e0;
   text-align: left;
+  --text-primary: #e0e0e0;
+  --rarity-common: #ffffff;
 }
 
 .item-tooltip-layout {
@@ -852,13 +891,19 @@ textarea {
 
 .item-tooltip-details {
   min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .item-tooltip-wow.grid-tooltip {
-  min-width: 240px;
-  background: rgba(7, 12, 33, 0.95);
+  width: 300px;
+  max-width: min(300px, calc(100vw - 24px));
   border: 1px solid var(--accent);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="light"] .inline-edit-form {
+  background: var(--bg-secondary);
 }
 
 .loot-popup-tooltip {
@@ -874,6 +919,8 @@ textarea {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 2px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .wow-ilevel {
@@ -884,7 +931,7 @@ textarea {
 .wow-slot,
 .wow-damage,
 .wow-dps {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.85rem;
 }
 
@@ -893,31 +940,33 @@ textarea {
 }
 
 .wow-bind {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.85rem;
 }
 
 .wow-type {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.85rem;
 }
 
 .wow-stat {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.85rem;
 }
 
 .wow-req {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.85rem;
   margin-top: 4px;
 }
 
 .wow-equip,
 .wow-use {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.85rem;
   margin-top: 6px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .wow-green {
@@ -929,6 +978,8 @@ textarea {
   font-size: 0.85rem;
   font-style: italic;
   margin-top: 6px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .rarity-text-epic {
