@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import { ExportIcon } from './ActionIcons';
+import { hapticSuccess } from '../utils/haptics';
 
 export default function ExportModal({ exportData, onClose }) {
     const textareaRef = useRef(null);
@@ -19,16 +21,19 @@ export default function ExportModal({ exportData, onClose }) {
                 }),
             ]);
             setCopied(true);
+            hapticSuccess();
             setTimeout(() => setCopied(false), 2000);
         } catch {
             try {
                 await navigator.clipboard.writeText(exportData.plain);
                 setCopied(true);
+                hapticSuccess();
                 setTimeout(() => setCopied(false), 2000);
             } catch {
                 textareaRef.current?.select();
                 document.execCommand('copy');
                 setCopied(true);
+                hapticSuccess();
                 setTimeout(() => setCopied(false), 2000);
             }
         }
@@ -50,7 +55,8 @@ export default function ExportModal({ exportData, onClose }) {
                 />
                 <div className="modal-actions-import">
                     <button className="skip-btn" onClick={onClose}>Close</button>
-                    <button className="import-btn-main" onClick={handleCopy}>
+                    <button className="import-btn-main export-copy-btn" onClick={handleCopy}>
+                        <ExportIcon size={18} strokeWidth={2.25} />
                         {copied ? 'Copied!' : 'Copy to Clipboard'}
                     </button>
                 </div>

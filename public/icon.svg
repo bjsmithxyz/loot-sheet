@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Loot Sheet">
+  <rect width="512" height="512" fill="#0a0a0c"/>
+  <rect x="96" y="176" width="320" height="224" rx="12" fill="#d4af37"/>
+  <rect x="128" y="144" width="256" height="48" rx="8" fill="#b8922e"/>
+  <rect x="224" y="120" width="64" height="40" rx="6" fill="#e8c547"/>
+  <path d="M176 256h160v32H176z" fill="#0a0a0c" opacity="0.35"/>
+</svg>

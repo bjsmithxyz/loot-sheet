@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Pencil, X, Plus } from 'lucide-react';
+import { Pencil, X, Plus, ChevronDown } from 'lucide-react';
 import { CLASS_COLORS } from '../utils/wow-constants';
 import { useIsMobile } from '../hooks/useIsMobile';
 import ItemIcon from './ItemIcon';
@@ -17,6 +17,7 @@ function PlayerRow({
     onTapItem,
 }) {
     const isMobile = useIsMobile();
+    const [collapsed, setCollapsed] = useState(false);
 
     const handleEditClick = (e) => {
         e.stopPropagation();
@@ -36,8 +37,34 @@ function PlayerRow({
         });
     };
 
+    const toggleCollapsed = () => {
+        setCollapsed((current) => !current);
+    };
+
+    const playerMeta = (
+        <>
+            <span
+                className="player-name-top"
+                style={{ color: CLASS_COLORS[player.className] || '#fff' }}
+            >
+                {player.name}
+            </span>
+            <RoleIcon role={player.role} />
+            {isMobile && player.items.length > 0 && (
+                <span className="player-loot-count">{player.items.length}</span>
+            )}
+            {isMobile && (
+                <ChevronDown
+                    size={16}
+                    className={`player-row-chevron ${collapsed ? 'is-collapsed' : ''}`}
+                    aria-hidden="true"
+                />
+            )}
+        </>
+    );
+
     return (
-        <div className={`player-row ${isEditing ? 'is-editing' : ''}`}>
+        <div className={`player-row ${isEditing ? 'is-editing' : ''} ${collapsed ? 'is-collapsed' : ''}`}>
             <div className="player-meta-container">
                 <button
                     type="button"
@@ -48,82 +75,88 @@ function PlayerRow({
                 >
                     <Pencil size={12} />
                 </button>
-                <div className="player-meta">
-                    <span
-                        className="player-name-top"
-                        style={{ color: CLASS_COLORS[player.className] || '#fff' }}
+                {isMobile ? (
+                    <button
+                        type="button"
+                        className="player-meta player-meta-toggle"
+                        onClick={toggleCollapsed}
+                        aria-expanded={!collapsed}
+                        aria-label={`${collapsed ? 'Expand' : 'Collapse'} loot for ${player.name}`}
                     >
-                        {player.name}
-                    </span>
-                    <RoleIcon role={player.role} />
-                </div>
+                        {playerMeta}
+                    </button>
+                ) : (
+                    <div className="player-meta">{playerMeta}</div>
+                )}
             </div>
-            <div className="player-items">
-                <AnimatePresence>
-                    {player.items.map(item => (
-                        <motion.div
-                            initial={{ scale: 0, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0, opacity: 0 }}
-                            key={item.instanceId}
-                            className="item-icon-slot"
-                            onMouseEnter={!isMobile ? (e) => {
+            {!collapsed && (
+                <div className="player-items">
+                    <AnimatePresence>
+                        {player.items.map(item => (
+                            <motion.div
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0, opacity: 0 }}
+                                key={item.instanceId}
+                                className="item-icon-slot"
+                                onMouseEnter={!isMobile ? (e) => {
+                                    const rect = e.currentTarget.getBoundingClientRect();
+                                    onHoverItem({
+                                        item,
+                                        x: rect.left,
+                                        y: rect.top,
+                                    });
+                                } : undefined}
+                                onMouseLeave={!isMobile ? onLeaveItem : undefined}
+                            >
+                                {isMobile ? (
+                                    <button
+                                        type="button"
+                                        className="item-icon-tap"
+                                        aria-label={`View ${item.name}`}
+                                        onClick={(e) => handleItemTap(e, item)}
+                                    >
+                                        <ItemIcon item={item} size="medium" />
+                                    </button>
+                                ) : (
+                                    <ItemIcon item={item} size="medium" />
+                                )}
+                                <button
+                                    type="button"
+                                    className="remove-item"
+                                    aria-label={`Remove ${item.name}`}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        onRemoveItem(player.id, item.instanceId);
+                                        onLeaveItem();
+                                    }}
+                                >
+                                    <X size={10} />
+                                </button>
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+
+                    <div className="add-item-container">
+                        <button
+                            type="button"
+                            className="add-item-btn"
+                            aria-label={`Add loot for ${player.name}`}
+                            onClick={(e) => {
+                                e.stopPropagation();
                                 const rect = e.currentTarget.getBoundingClientRect();
-                                onHoverItem({
-                                    item,
+                                onShowLootMenu({
+                                    playerId: player.id,
                                     x: rect.left,
                                     y: rect.top,
                                 });
-                            } : undefined}
-                            onMouseLeave={!isMobile ? onLeaveItem : undefined}
+                            }}
                         >
-                            {isMobile ? (
-                                <button
-                                    type="button"
-                                    className="item-icon-tap"
-                                    aria-label={`View ${item.name}`}
-                                    onClick={(e) => handleItemTap(e, item)}
-                                >
-                                    <ItemIcon item={item} size="medium" />
-                                </button>
-                            ) : (
-                                <ItemIcon item={item} size="medium" />
-                            )}
-                            <button
-                                type="button"
-                                className="remove-item"
-                                aria-label={`Remove ${item.name}`}
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    onRemoveItem(player.id, item.instanceId);
-                                    onLeaveItem();
-                                }}
-                            >
-                                <X size={10} />
-                            </button>
-                        </motion.div>
-                    ))}
-                </AnimatePresence>
-
-                <div className="add-item-container">
-                    <button
-                        type="button"
-                        className="add-item-btn"
-                        aria-label={`Add loot for ${player.name}`}
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            const rect = e.currentTarget.getBoundingClientRect();
-                            onShowLootMenu({
-                                playerId: player.id,
-                                x: rect.left,
-                                y: rect.top,
-                            });
-                        }}
-                    >
-                        <Plus size={16} />
-                    </button>
+                            <Plus size={16} />
+                        </button>
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 }

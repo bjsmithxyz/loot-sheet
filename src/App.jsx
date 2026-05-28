@@ -1,6 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { Import, Download, Users, Sun, Moon } from 'lucide-react';
+import { ImportIcon, ExportIcon } from './components/ActionIcons';
+import { Users, Sun, Moon } from 'lucide-react';
 import RAIDS from './data/raids.json';
 import ItemTooltip from './components/ItemTooltip';
 import { parseImportText, createPlayer } from './utils/import-parser';
@@ -17,6 +18,7 @@ import Confetti from './components/Confetti';
 import AddPlayerForm from './components/AddPlayerForm';
 import { applyItemRarity, isLegendaryFlavorItem } from './utils/special-loot';
 import { applyTheme, getInitialTheme, toggleTheme } from './utils/theme';
+import { hapticSuccess, hapticTap } from './utils/haptics';
 import { useIsMobile } from './hooks/useIsMobile';
 import MobileSheet from './components/MobileSheet';
 
@@ -73,6 +75,7 @@ function App() {
             }
             return p;
         }));
+        hapticSuccess();
         setShowLootMenu(null);
     };
 
@@ -86,6 +89,7 @@ function App() {
             }
             return p;
         }));
+        hapticTap();
     };
 
     const handleAddManualPlayer = () => {
@@ -109,12 +113,14 @@ function App() {
             }
             return p;
         }));
+        hapticTap();
         cancelEdit();
     };
 
     const handleDeletePlayer = (playerId) => {
         setPlayers(prev => prev.filter(p => p.id !== playerId));
         cancelEdit();
+        hapticTap();
         if (showLootMenu?.playerId === playerId) {
             setShowLootMenu(null);
         }
@@ -196,15 +202,22 @@ function App() {
                     }}
                 />
                 <div className="header-actions">
-                    <button className="import-btn-header" onClick={() => setShowImport(true)}>
-                        <Import size={18} /> <span>Import</span>
+                    <button
+                        className="import-btn-header"
+                        onClick={() => setShowImport(true)}
+                        title="Import roster"
+                        aria-label="Import roster"
+                    >
+                        <ImportIcon size={20} strokeWidth={2.25} /> <span>Import</span>
                     </button>
                     <button
                         className="import-btn-header"
                         onClick={() => setShowExport(true)}
                         disabled={players.length === 0}
+                        title="Export loot sheet"
+                        aria-label="Export loot sheet"
                     >
-                        <Download size={18} /> <span>Export</span>
+                        <ExportIcon size={20} strokeWidth={2.25} /> <span>Export</span>
                     </button>
                     <button
                         type="button"

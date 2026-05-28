@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { ImportIcon, ExportIcon } from './ActionIcons';
 
 export default function ImportModal({ onImport, onClose }) {
     const [importText, setImportText] = useState('');
@@ -24,7 +25,10 @@ export default function ImportModal({ onImport, onClose }) {
                 />
                 <div className="modal-actions-import">
                     <button className="skip-btn" onClick={onClose}>Skip</button>
-                    <button className="import-btn-main" onClick={handleImport}>Import</button>
+                    <button className="import-btn-main import-action-btn" onClick={handleImport}>
+                        <ImportIcon size={18} strokeWidth={2.25} />
+                        Import
+                    </button>
                 </div>
             </motion.div>
         </div>

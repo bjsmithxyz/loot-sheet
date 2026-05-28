@@ -281,6 +281,22 @@ body {
   transition: all 0.2s;
 }
 
+.import-btn-header svg {
+  flex-shrink: 0;
+}
+
+.export-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.import-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .import-btn-header:hover:not(:disabled) {
   background: var(--bg-tertiary);
   border-color: var(--accent);
@@ -530,6 +546,44 @@ body {
   align-items: center;
   gap: 8px;
   min-width: 0;
+  flex: 1;
+}
+
+.player-meta-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+}
+
+.player-loot-count {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 2px 8px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.player-row-chevron {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  transition: transform 0.2s ease;
+}
+
+.player-row-chevron.is-collapsed {
+  transform: rotate(-90deg);
+}
+
+.player-row.is-collapsed .player-meta-container {
+  width: 100%;
 }
 
 .player-name-top {
@@ -1425,6 +1479,7 @@ textarea {
   max-height: min(85dvh, 720px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   border-bottom: none;
   border-left: none;
   border-right: none;
