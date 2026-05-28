@@ -2,6 +2,13 @@ import React from 'react';
 import { getTokenClasses, CLASS_COLORS } from '../utils/wow-constants';
 import { rarityClass } from '../utils/import-parser';
 
+function cleanStatText(text) {
+  return String(text)
+    .replace(/Requires Level \d+/gi, '')
+    .replace(/Sell Price:.+$/i, '')
+    .trim();
+}
+
 export default function TooltipContent({ item }) {
     const tokenClasses = getTokenClasses(item.name);
 
@@ -33,9 +40,11 @@ export default function TooltipContent({ item }) {
             )}
             {item.dps && <div className="wow-dps">({item.dps})</div>}
 
-            {item.stats && item.stats.map((stat, i) => (
-                <div key={i} className="wow-stat">{stat}</div>
-            ))}
+            {item.stats && item.stats.map((stat, i) => {
+                const cleaned = cleanStatText(stat);
+                if (!cleaned) return null;
+                return <div key={i} className="wow-stat">{cleaned}</div>;
+            })}
 
             {item.equip && (
                 <div className="wow-equip wow-green">

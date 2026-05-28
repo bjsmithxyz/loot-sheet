@@ -1,4 +1,5 @@
--- LootTracker.lua
+-- LootTracker.lua — export roster for Loot Sheet (TBC Classic)
+
 local CLASS_MAP = {
     WARRIOR = "Warrior",
     PALADIN = "Paladin",
@@ -21,63 +22,80 @@ local function NormalizeClass(classToken)
     return "Warrior"
 end
 
-local function GetPlayerSpec()
-    local numTabs = GetNumTalentTabs()
-    local maxPoints = 0
-    local mainSpec = "Unknown"
-    
-    for i = 1, numTabs do
-        local name, icon, pointsSpent = GetTalentTabInfo(i)
-        if pointsSpent > maxPoints then
-            maxPoints = pointsSpent
-            mainSpec = name
-        end
+local function StripRealm(name)
+    if not name then
+        return name
     end
-    return mainSpec
+    return name:match("^([^%-]+)") or name
+end
+
+local function AppendPlayer(players, name, classFile)
+    if not name or name == "" then
+        return
+    end
+    table.insert(
+        players,
+        string.format("%s:%s", StripRealm(name), NormalizeClass(classFile))
+    )
 end
 
 local function GenerateExport()
     local players = {}
-    local numMembers = GetNumGroupMembers()
-    
-    if numMembers == 0 then
-        -- Solo testing
-        local name = UnitName("player")
-        local _, class = UnitClass("player")
-        local spec = GetPlayerSpec()
-        table.insert(players, string.format("%s:%s:%s", name, NormalizeClass(class), spec))
-    else
-        for i = 1, numMembers do
-            local name, rank, subgroup, level, class, fileName, zone, online, isDead, role, isML = GetRaidRosterInfo(i)
-            if name then
-                -- Note: Spec is hard to get for others without inspection. 
-                -- We'll use 'None' or 'Check Talent' as placeholder if not player.
-                local spec = "Role-" .. (role or "None")
-                if name == UnitName("player") then
-                    spec = GetPlayerSpec()
-                end
-                table.insert(players, string.format("%s:%s:%s", name, NormalizeClass(fileName), spec))
+
+    if IsInRaid() then
+        for i = 1, 40 do
+            local name, _, _, _, _, fileName = GetRaidRosterInfo(i)
+            if name and fileName then
+                AppendPlayer(players, name, fileName)
             end
         end
+    elseif IsInGroup() then
+        local _, playerClass = UnitClass("player")
+        AppendPlayer(players, UnitName("player"), playerClass)
+
+        for i = 1, 4 do
+            local unit = "party" .. i
+            if UnitExists(unit) then
+                local _, classFile = UnitClass(unit)
+                AppendPlayer(players, UnitName(unit), classFile)
+            end
+        end
+    else
+        local _, classFile = UnitClass("player")
+        AppendPlayer(players, UnitName("player"), classFile)
     end
-    
+
     return table.concat(players, "|")
 end
 
--- Create UI
 local frame = CreateFrame("Frame", "LootTrackerFrame", UIParent, "BasicFrameTemplateWithInset")
-frame:SetSize(400, 200)
+frame:SetSize(460, 260)
 frame:SetPoint("CENTER")
 frame:Hide()
+
 frame.title = frame:CreateFontString(nil, "OVERLAY")
 frame.title:SetFontObject("GameFontHighlight")
-frame.title:SetPoint("CENTER", frame.TitleBg, "CENTER", 0, 0)
-frame.title:SetText("LootTracker Export")
+frame.title:SetPoint("TOP", frame.TitleBg, "TOP", 0, -4)
+frame.title:SetText("Loot Sheet Export")
 
-local editBox = CreateFrame("EditBox", nil, frame, "InputBoxTemplate")
-editBox:SetSize(350, 30)
-editBox:SetPoint("CENTER", 0, 0)
+local hint = frame:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
+hint:SetPoint("TOP", frame, "TOP", 0, -28)
+hint:SetText("Copy the string below into Loot Sheet → Addon import")
+
+local scrollFrame = CreateFrame("ScrollFrame", nil, frame, "UIPanelScrollFrameTemplate")
+scrollFrame:SetPoint("TOPLEFT", frame, "TOPLEFT", 16, -48)
+scrollFrame:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -36, 16)
+
+local editBox = CreateFrame("EditBox", nil, scrollFrame)
+editBox:SetMultiLine(true)
 editBox:SetAutoFocus(false)
+editBox:SetFontObject("ChatFontNormal")
+editBox:SetWidth(380)
+editBox:SetScript("OnEscapePressed", function()
+    editBox:ClearFocus()
+    frame:Hide()
+end)
+scrollFrame:SetScrollChild(editBox)
 
 frame:SetScript("OnShow", function()
     local exportString = GenerateExport()
@@ -86,10 +104,10 @@ frame:SetScript("OnShow", function()
     editBox:SetFocus()
 end)
 
--- Slash Command
 SLASH_LOOTTRACKER1 = "/lt"
+SLASH_LOOTTRACKER2 = "/lootsheet"
 SlashCmdList["LOOTTRACKER"] = function()
     frame:Show()
 end
 
-print("|cFFD4AF37LootTracker loaded. Type /lt to export raid.|r")
+print("|cFFD4AF37Loot Sheet Export loaded. Type /lt to export your roster.|r")

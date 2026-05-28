@@ -1,81 +1,119 @@
 # Loot Sheet
 
-A visual loot tracking sheet for World of Warcraft: The Burning Crusade Classic. Built for loot councils and guild masters to track assignments, manage rosters, and export results to a spreadsheet.
+A visual loot tracking sheet for World of Warcraft: The Burning Crusade Classic Anniversary. Built for loot councils to track assignments, manage rosters, and export results to a spreadsheet.
+
+**Live app:** [https://bjsmithxyz.github.io/loot-sheet/](https://bjsmithxyz.github.io/loot-sheet/)
 
 ## Features
 
-- **Visual Loot Assignment**: Click-to-assign interface with Wowhead item icons
-- **Raid Support**: Kara, Gruul, Mag, SSC, and TK
-- **Boss Loot Tables**: Built-in loot data for all implemented bosses
-- **Player Management**:
-  - Import rosters via addon export string
-  - Manual player addition, editing, and deletion
-  - Class and spec tracking with role identification
-- **Rich Tooltips**: Item stats, weapon damage, and class token indicators
-- **Spreadsheet Export**: Tab-separated export with class-coloured player cells
+- **Visual loot assignment** — click **+** on a player row to assign boss or trash loot with Wowhead item icons
+- **Raid support** — Kara, Gruul, Mag, SSC, and TK (Hyjal, BT, SWP shown as coming soon)
+- **Boss & trash loot tables** — curated TBC loot data with rich item tooltips
+- **Player management**
+  - Import rosters from the in-game addon export string
+  - Add, edit, and delete players manually
+  - Class colours on player names; optional tank / healer / DPS role
+- **Light & dark mode** — toggle in the header (sun / moon icon)
+- **Spreadsheet export** — tab-separated text plus HTML clipboard with class-coloured player cells
 
-## Technology Stack
+## In-Game Addon
 
-- **Frontend**: React 18, Vite
-- **Styling**: Vanilla CSS (glassmorphism), Lucide React
-- **Animations**: Framer Motion
-- **Data**: JSON loot and raid definitions, Wowhead icons
+The **Loot Sheet Export** addon copies your party or raid roster from WoW into a string you paste into the web app.
 
-## Getting Started
+### Download
+
+1. Clone or download this repository.
+2. The addon lives in [`addon/LootTracker/`](addon/LootTracker/).
+
+Alternatively, copy only the `LootTracker` folder from the repo.
+
+### Install (TBC Anniversary)
+
+1. Locate your WoW install folder.
+2. Copy the `LootTracker` folder into:
+
+   ```
+   World of Warcraft/_anniversary_/Interface/AddOns/LootTracker/
+   ```
+
+   The folder must contain `LootTracker.toc` and `LootTracker.lua`.
+
+3. Restart WoW or `/reload` if already logged in.
+4. On the character select screen, click **AddOns** and ensure **Loot Sheet Export** is enabled.
+
+### Use in game
+
+1. Join a party or raid (or stand solo to export yourself).
+2. Type **`/lt`** or **`/lootsheet`**.
+3. Copy the export string from the popup.
+4. In Loot Sheet, click **Import** and paste the string.
+
+The addon exports `Name:Class` entries separated by `|`. Class is detected automatically; spec is not included.
+
+## Web App — Getting Started
 
 ### Prerequisites
 
-- Node.js (v16 or higher recommended)
-- npm or yarn
+- Node.js 16+ (18+ recommended)
+- npm
 
-### Installation
+### Install & run locally
 
 ```bash
 git clone https://github.com/bjsmithxyz/loot-sheet.git
 cd loot-sheet
 npm install
-```
-
-### Running the App
-
-```bash
 npm run dev
 ```
 
 Open the URL shown in the terminal (usually `http://localhost:5173`).
 
-### Deploy
+### Deploy to GitHub Pages
 
 ```bash
 npm run deploy
 ```
 
-GitHub Pages deploys to `/loot-sheet/`.
-
-## Project Structure
-
-```
-.
-├── docs/           # Documentation
-├── scripts/        # Loot data enrichment scripts
-├── addon/          # WoW addon for roster export
-└── src/
-    ├── components/
-    ├── data/       # loot.json, raids.json
-    ├── utils/
-    └── App.jsx
-```
+The app is published under `/loot-sheet/`.
 
 ## Import Format
 
 Pipe-separated player list:
 
-`Name:Class:Spec|Name:Class:Spec`
+```
+Name:Class|Name:Class|Name:Class
+```
 
 Example:
 
-`Tanky:Warrior:Protection|Healy:Priest:Holy|Dpser:Mage:Fire`
+```
+Tanky:Warrior|Healy:Priest|Mmchunt:Hunter|Firemage:Mage
+```
+
+Legacy three-part strings (`Name:Class:Spec`) still import; the spec field is ignored.
+
+## Project Structure
+
+```
+.
+├── addon/LootTracker/   # WoW addon (/lt roster export)
+├── docs/                # Design notes
+├── scripts/             # Loot data generation & enrichment
+└── src/
+    ├── components/      # UI components
+    ├── data/            # loot.json, raids.json
+    ├── utils/           # Import/export, icons, theme
+    └── App.jsx
+```
+
+## Data Scripts
+
+```bash
+npm run generate:trash   # Regenerate trash loot tables from Wowhead
+```
+
+Boss loot can be regenerated with `node scripts/generate-loot.mjs <boss-id>`.
 
 ## Credits
 
-Built for the TBC Classic community.
+Built for **GT**.

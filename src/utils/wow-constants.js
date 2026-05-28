@@ -10,29 +10,7 @@ export const CLASS_COLORS = {
     Druid: 'var(--color-druid)'
 };
 
-export const CLASS_SPECS = {
-    Warrior: ['Arms', 'Fury', 'Protection'],
-    Paladin: ['Holy', 'Protection', 'Retribution'],
-    Hunter: ['Beast Mastery', 'Marksmanship', 'Survival'],
-    Rogue: ['Assassination', 'Combat', 'Subtlety'],
-    Priest: ['Discipline', 'Holy', 'Shadow'],
-    Shaman: ['Elemental', 'Enhancement', 'Restoration'],
-    Mage: ['Arcane', 'Fire', 'Frost'],
-    Warlock: ['Affliction', 'Demonology', 'Destruction'],
-    Druid: ['Balance', 'Feral', 'Restoration']
-};
-
-export const SPEC_TO_ROLE = {
-    'Protection': 'tank',
-    'Holy': 'healer',
-    'Restoration': 'healer',
-    'Discipline': 'healer',
-    'Feral': 'tank',
-    'Guardian': 'tank',
-    'Restoration Shaman': 'healer',
-    'Restoration Druid': 'healer',
-    'Holy Paladin': 'healer'
-};
+export const ROLES = ['tank', 'healer', 'dps'];
 
 export const CLASSES = Object.keys(CLASS_COLORS);
 

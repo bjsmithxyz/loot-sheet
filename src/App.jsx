@@ -10,6 +10,7 @@ import ImportModal from './components/ImportModal';
 import ExportModal from './components/ExportModal';
 import LootPopUp from './components/LootPopUp';
 import PlayerRow from './components/PlayerRow';
+import PlayerEditFlyout from './components/PlayerEditFlyout';
 import { formatPlayersForSpreadsheet } from './utils/export-formatter';
 import { pickRandomTbcIcon, getHeaderIconUrl } from './utils/header-icon';
 import Confetti from './components/Confetti';
@@ -25,11 +26,12 @@ function App() {
     const [showExport, setShowExport] = useState(false);
     const [showLootMenu, setShowLootMenu] = useState(null); // {playerId, x, y}
     const [editingPlayerId, setEditingPlayerId] = useState(null);
+    const [editFlyoutPosition, setEditFlyoutPosition] = useState(null);
     const [hoveredGridItem, setHoveredGridItem] = useState(null); // {item, x, y}
 
     // New/Edit Player state
     const [isAddingPlayer, setIsAddingPlayer] = useState(false);
-    const [tempPlayer, setTempPlayer] = useState({ name: '', className: 'Warrior', spec: 'Arms' });
+    const [tempPlayer, setTempPlayer] = useState({ name: '', className: 'Warrior', role: 'dps' });
     const [headerIcon, setHeaderIcon] = useState(() => pickRandomTbcIcon());
     const [iconShaking, setIconShaking] = useState(false);
     const [showConfetti, setShowConfetti] = useState(false);
@@ -83,8 +85,14 @@ function App() {
         if (!tempPlayer.name) return;
         const player = createPlayer(tempPlayer);
         setPlayers([...players, player]);
-        setTempPlayer({ name: '', className: 'Warrior', spec: 'Arms' });
+        setTempPlayer({ name: '', className: 'Warrior', role: 'dps' });
         setIsAddingPlayer(false);
+    };
+
+    const cancelEdit = () => {
+        setEditingPlayerId(null);
+        setEditFlyoutPosition(null);
+        setTempPlayer({ name: '', className: 'Warrior', role: 'dps' });
     };
 
     const handleSaveEdit = () => {
@@ -94,22 +102,22 @@ function App() {
             }
             return p;
         }));
-        setEditingPlayerId(null);
-        setTempPlayer({ name: '', className: 'Warrior', spec: 'Arms' });
+        cancelEdit();
     };
 
     const handleDeletePlayer = (playerId) => {
         setPlayers(prev => prev.filter(p => p.id !== playerId));
-        setEditingPlayerId(null);
-        setTempPlayer({ name: '', className: 'Warrior', spec: 'Arms' });
+        cancelEdit();
         if (showLootMenu?.playerId === playerId) {
             setShowLootMenu(null);
         }
     };
 
-    const startEdit = (player) => {
+    const startEdit = (player, position) => {
+        setShowLootMenu(null);
         setEditingPlayerId(player.id);
-        setTempPlayer({ name: player.name, className: player.className, spec: player.spec });
+        setEditFlyoutPosition(position);
+        setTempPlayer({ name: player.name, className: player.className, role: player.role || 'dps' });
     };
 
     const exportData = formatPlayersForSpreadsheet(players, RAIDS[activeRaid].name);
@@ -196,10 +204,6 @@ function App() {
                                 key={player.id}
                                 player={player}
                                 isEditing={editingPlayerId === player.id}
-                                tempPlayer={tempPlayer}
-                                setTempPlayer={setTempPlayer}
-                                onSaveEdit={handleSaveEdit}
-                                onDeletePlayer={handleDeletePlayer}
                                 onStartEdit={startEdit}
                                 onRemoveItem={removeItem}
                                 onShowLootMenu={setShowLootMenu}
@@ -265,6 +269,19 @@ function App() {
                         position={showLootMenu}
                         onSelect={(item) => addItem(showLootMenu.playerId, item)}
                         onClose={() => setShowLootMenu(null)}
+                    />
+                )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+                {editingPlayerId && editFlyoutPosition && (
+                    <PlayerEditFlyout
+                        tempPlayer={tempPlayer}
+                        setTempPlayer={setTempPlayer}
+                        onSave={handleSaveEdit}
+                        onDelete={() => handleDeletePlayer(editingPlayerId)}
+                        position={editFlyoutPosition}
+                        onClose={cancelEdit}
                     />
                 )}
             </AnimatePresence>

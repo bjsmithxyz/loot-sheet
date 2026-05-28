@@ -13,7 +13,8 @@
       { "id": "chess", "name": "Chess" },
       { "id": "prince", "name": "Prince" },
       { "id": "nightbane", "name": "Nightbane" }
-    ]
+    ],
+    "trash": { "id": "karazhan-trash", "name": "Trash" }
   },
   "gruul": {
     "name": "Gruul",
@@ -37,7 +38,8 @@
       { "id": "karathress", "name": "Fathom-Lord" },
       { "id": "morogrim", "name": "Morogrim" },
       { "id": "vashj", "name": "Vashj" }
-    ]
+    ],
+    "trash": { "id": "ssc-trash", "name": "Trash" }
   },
   "tk": {
     "name": "TK",
@@ -46,6 +48,7 @@
       { "id": "voidreaver", "name": "Void Reaver" },
       { "id": "solarian", "name": "Solarian" },
       { "id": "kaelthas", "name": "Kael" }
-    ]
+    ],
+    "trash": { "id": "tk-trash", "name": "Trash" }
   }
 }

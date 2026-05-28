@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CLASS_COLORS, getTokenClasses } from '../utils/wow-constants';
 import { rarityClass } from '../utils/import-parser';
@@ -6,9 +6,58 @@ import ItemIcon from './ItemIcon';
 import ItemTooltip from './ItemTooltip';
 import BOSS_LOOT from '../data/loot.json';
 
+const VIEWPORT_MARGIN = 12;
+const POPUP_OFFSET_X = 50;
+
+function getMaxPopupHeight() {
+    return Math.min(window.innerHeight - VIEWPORT_MARGIN * 2, 520);
+}
+
+function getInitialPosition(position) {
+    const maxHeight = getMaxPopupHeight();
+    let top = position.y;
+    if (top + maxHeight > window.innerHeight - VIEWPORT_MARGIN) {
+        top = window.innerHeight - VIEWPORT_MARGIN - maxHeight;
+    }
+    return {
+        left: position.x + POPUP_OFFSET_X,
+        top: Math.max(VIEWPORT_MARGIN, top),
+    };
+}
+
 export default function LootPopUp({ bossId, position, onSelect, onClose }) {
     const loot = BOSS_LOOT[bossId] || [];
     const [hoveredItem, setHoveredItem] = useState(null);
+    const popupRef = useRef(null);
+    const [popupStyle, setPopupStyle] = useState(() => getInitialPosition(position));
+
+    useLayoutEffect(() => {
+        const popup = popupRef.current;
+        if (!popup) return;
+
+        const rect = popup.getBoundingClientRect();
+        let { left, top } = getInitialPosition(position);
+
+        if (rect.bottom > window.innerHeight - VIEWPORT_MARGIN) {
+            top = Math.max(VIEWPORT_MARGIN, window.innerHeight - VIEWPORT_MARGIN - rect.height);
+        }
+        if (rect.top < VIEWPORT_MARGIN) {
+            top = VIEWPORT_MARGIN;
+        }
+
+        const maxLeft = window.innerWidth - rect.width - VIEWPORT_MARGIN;
+        left = Math.min(Math.max(VIEWPORT_MARGIN, left), maxLeft);
+
+        setPopupStyle({ left, top });
+    }, [position, loot.length]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setPopupStyle(getInitialPosition(position));
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [position]);
 
     useEffect(() => {
         const handleClickOutside = () => {
@@ -27,15 +76,17 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
 
     return (
         <motion.div
+            ref={popupRef}
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             className="loot-popup glass-panel"
             style={{
                 position: 'fixed',
-                left: position.x + 50,
-                top: Math.min(position.y, window.innerHeight - 300),
-                zIndex: 1000
+                left: popupStyle.left,
+                top: popupStyle.top,
+                zIndex: 1000,
+                maxHeight: getMaxPopupHeight(),
             }}
             onClick={(e) => e.stopPropagation()}
         >
@@ -68,7 +119,6 @@ export default function LootPopUp({ bossId, position, onSelect, onClose }) {
                 {loot.length === 0 && <div className="no-loot">No loot recorded.</div>}
             </div>
 
-            {/* Stats Tooltip */}
             <AnimatePresence>
                 {hoveredItem && (
                     <motion.div

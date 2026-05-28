@@ -1,7 +1,7 @@
-## Interface: 20504
-## Title: LootTracker Export
-## Notes: Export raid members for the Loot Sheet web app.
-## Author: Antigravity
-## Version: 1.0
+## Interface: 20505
+## Title: Loot Sheet Export
+## Notes: Export raid or party roster for the Loot Sheet web app. Type /lt in game.
+## Author: Loot Sheet
+## Version: 1.1
 
 LootTracker.lua

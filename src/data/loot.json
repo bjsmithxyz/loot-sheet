@@ -14,7 +14,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BWS",
-      "req": null,
       "icon": "inv_bracer_02"
     },
     {
@@ -31,7 +30,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SWB",
-      "req": null,
       "icon": "inv_bracer_02"
     },
     {
@@ -48,7 +46,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HB",
-      "req": null,
       "icon": "inv_bracer_13"
     },
     {
@@ -64,7 +61,6 @@
       "use": null,
       "flavor": null,
       "acronym": "VC",
-      "req": null,
       "icon": "inv_bracer_19"
     },
     {
@@ -80,7 +76,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WB",
-      "req": null,
       "icon": "inv_bracer_02"
     },
     {
@@ -93,7 +88,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SC",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Crossbow",
       "damage": "155 - 288 Damage",
@@ -114,7 +108,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GRH",
-      "req": null,
       "icon": "inv_gauntlets_25"
     },
     {
@@ -130,7 +123,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GDM",
-      "req": null,
       "icon": "inv_gauntlets_28"
     },
     {
@@ -146,7 +138,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HFT",
-      "req": null,
       "icon": "inv_gauntlets_17"
     },
     {
@@ -163,7 +154,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GSB",
-      "req": null,
       "icon": "inv_gauntlets_17"
     },
     {
@@ -172,13 +162,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+21 StaminaRequires Level 70"
+        "+21 Stamina"
       ],
       "equip": "Improves hit rating by 17. Increases attack power by 42.",
       "use": null,
       "flavor": null,
       "acronym": "WCN",
-      "req": null,
       "icon": "inv_jewelry_necklace_22"
     },
     {
@@ -187,13 +176,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+24 IntellectRequires Level 70"
+        "+24 Intellect"
       ],
       "equip": "Increases spell power by 29.",
       "use": null,
       "flavor": null,
       "acronym": "SBI",
-      "req": null,
       "icon": "inv_jewelry_ring_31"
     },
     {
@@ -206,7 +194,6 @@
       "use": "Teaches you how to summon Attumen the Huntsman's steed.  This is a very fast mount.",
       "flavor": null,
       "acronym": "FWR",
-      "req": null,
       "icon": "ability_mount_dreadsteed"
     }
   ],
@@ -224,7 +211,6 @@
       "use": null,
       "flavor": null,
       "acronym": "ER",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Dagger",
       "damage": "126 - 189 Damage",
@@ -239,13 +225,12 @@
       "ilevel": 115,
       "stats": [
         "+21 Intellect",
-        "+22 SpiritRequires Level 70"
+        "+22 Spirit"
       ],
       "equip": "Increases spell power by 20.",
       "use": null,
       "flavor": null,
       "acronym": "SUF",
-      "req": null,
       "icon": "inv_jewelry_ring_60"
     },
     {
@@ -258,7 +243,6 @@
       "use": "Increases dodge rating by 300 for 10 sec. (2 Min Cooldown)",
       "flavor": null,
       "acronym": "MLPW",
-      "req": null,
       "icon": "inv_misc_pocketwatch_02"
     },
     {
@@ -268,13 +252,12 @@
       "ilevel": 115,
       "stats": [
         "+26 Strength",
-        "+31 StaminaRequires Level 70"
+        "+31 Stamina"
       ],
       "equip": "Improves hit rating by 16.",
       "use": null,
       "flavor": null,
       "acronym": "RCAK",
-      "req": null,
       "icon": "inv_misc_cape_10"
     },
     {
@@ -283,13 +266,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+21 IntellectRequires Level 70"
+        "+21 Intellect"
       ],
       "equip": "Improves hit rating by 15. Increases spell power by 26.",
       "use": null,
       "flavor": null,
       "acronym": "BUF",
-      "req": null,
       "icon": "inv_jewelry_necklace_ahnqiraj_04"
     },
     {
@@ -305,7 +287,6 @@
       "use": null,
       "flavor": null,
       "acronym": "EL",
-      "req": null,
       "icon": "inv_boots_plate_06"
     },
     {
@@ -322,7 +303,6 @@
       "use": null,
       "flavor": null,
       "acronym": "NG",
-      "req": null,
       "icon": "inv_belt_08"
     },
     {
@@ -338,7 +318,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CGI",
-      "req": null,
       "icon": "inv_belt_27"
     },
     {
@@ -354,7 +333,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BGF",
-      "req": null,
       "icon": "inv_belt_22"
     },
     {
@@ -367,7 +345,6 @@
       "use": null,
       "flavor": null,
       "acronym": "IAH",
-      "req": null,
       "icon": "inv_misc_thegoldencheep"
     },
     {
@@ -383,7 +360,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BV",
-      "req": null,
       "icon": "inv_boots_chain_05"
     },
     {
@@ -393,13 +369,12 @@
       "ilevel": 115,
       "stats": [
         "+19 Stamina",
-        "+18 IntellectRequires Level 70"
+        "+18 Intellect"
       ],
       "equip": "Increases spell power by 36.",
       "use": null,
       "flavor": null,
       "acronym": "SD",
-      "req": null,
       "icon": "inv_misc_cape_20"
     }
   ],
@@ -418,7 +393,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BI",
-      "req": null,
       "icon": "inv_bracer_13"
     },
     {
@@ -434,7 +408,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BJ",
-      "req": null,
       "icon": "inv_bracer_02"
     },
     {
@@ -449,7 +422,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BM",
-      "req": null,
       "icon": "inv_bracer_15"
     },
     {
@@ -465,7 +437,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BND",
-      "req": null,
       "icon": "inv_bracer_13"
     },
     {
@@ -478,7 +449,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BCD",
-      "req": null,
       "icon": "inv_jewelry_necklace_ahnqiraj_02"
     },
     {
@@ -494,7 +464,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BF",
-      "req": null,
       "icon": "inv_boots_cloth_05"
     },
     {
@@ -509,7 +478,6 @@
       "use": null,
       "flavor": null,
       "acronym": "IGM",
-      "req": null,
       "icon": "inv_gauntlets_31"
     },
     {
@@ -525,7 +493,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GQ",
-      "req": null,
       "icon": "inv_gauntlets_25"
     },
     {
@@ -541,7 +508,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GC",
-      "req": null,
       "icon": "inv_gauntlets_25"
     },
     {
@@ -558,7 +524,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MT",
-      "req": null,
       "icon": "inv_gauntlets_25"
     },
     {
@@ -574,7 +539,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SV",
-      "req": null,
       "hand": "Main Hand",
       "weaponType": "Mace",
       "damage": "28 - 129 Damage",
@@ -592,7 +556,6 @@
       "use": null,
       "flavor": "Counts as an Air, Earth, Fire, and Water totem.",
       "acronym": "THR",
-      "req": null,
       "icon": "spell_nature_giftofthewaterspirit"
     }
   ],
@@ -609,7 +572,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BU",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Dagger",
       "damage": "112 - 168 Damage",
@@ -629,7 +591,6 @@
       "use": null,
       "flavor": null,
       "acronym": "D",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Sword",
       "damage": "319 - 479 Damage",
@@ -650,7 +611,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MG",
-      "req": null,
       "icon": "inv_chest_cloth_43"
     },
     {
@@ -663,7 +623,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RPV",
-      "req": null,
       "icon": "inv_poison_mindnumbing"
     },
     {
@@ -678,7 +637,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WSR",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Gun",
       "damage": "149 - 278 Damage",
@@ -693,13 +651,12 @@
       "ilevel": 115,
       "stats": [
         "+16 Stamina",
-        "+22 IntellectRequires Level 70"
+        "+22 Intellect"
       ],
       "equip": "Increases spell power by 26. Restores 9 mana per 5 sec.",
       "use": null,
       "flavor": null,
       "acronym": "RRHC",
-      "req": null,
       "icon": "inv_misc_cape_18"
     },
     {
@@ -715,7 +672,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BBWH",
-      "req": null,
       "icon": "inv_helmet_04"
     },
     {
@@ -731,7 +687,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BBWP",
-      "req": null,
       "hand": "Main Hand",
       "weaponType": "Fist Weapon",
       "damage": "153 - 285 Damage",
@@ -752,7 +707,6 @@
       "use": "Returns you to &lt;Hearthstone Location&gt;.  Speak to an Innkeeper in a different place to change your home location. (30 Min Cooldown)",
       "flavor": "There's no place like home.",
       "acronym": "RS",
-      "req": null,
       "icon": "inv_boots_cloth_09"
     },
     {
@@ -768,7 +722,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WWH",
-      "req": null,
       "icon": "inv_helmet_30"
     },
     {
@@ -784,7 +737,6 @@
       "use": null,
       "flavor": "Legend tells of this axe being wielded by Draenei exarchs since the time of their banishment from Argus.",
       "acronym": "L",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Axe",
       "damage": "319 - 479 Damage",
@@ -805,7 +757,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BDW",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Wand",
       "damage": "169 - 314 Shadow Damage",
@@ -827,7 +778,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BP",
-      "req": null,
       "icon": "inv_shoulder_36"
     },
     {
@@ -840,7 +790,6 @@
       "use": "For the next 20 sec, your direct heals grant Fecundity to your target, increasing the healing received by the target by up to 30.  Fecundity lasts 10 sec and stacks up to 5 times. (2 Min Cooldown)",
       "flavor": null,
       "acronym": "RS",
-      "req": null,
       "icon": "inv_misc_bandage_16"
     },
     {
@@ -857,7 +806,6 @@
       "use": null,
       "flavor": null,
       "acronym": "EL",
-      "req": null,
       "icon": "inv_pants_mail_15"
     },
     {
@@ -870,7 +818,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LSR",
-      "req": null,
       "icon": "inv_relics_libramofgrace"
     },
     {
@@ -886,7 +833,6 @@
       "use": null,
       "flavor": null,
       "acronym": "EG",
-      "req": null,
       "icon": "inv_helmet_03"
     },
     {
@@ -902,7 +848,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TT",
-      "req": null,
       "icon": "inv_pants_cloth_05"
     }
   ],
@@ -920,7 +865,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PS",
-      "req": null,
       "icon": "inv_shoulder_25"
     },
     {
@@ -936,7 +880,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WDG",
-      "req": null,
       "icon": "inv_pants_plate_05"
     },
     {
@@ -952,7 +895,6 @@
       "use": null,
       "flavor": null,
       "acronym": "DS",
-      "req": null,
       "icon": "inv_shoulder_14"
     },
     {
@@ -968,7 +910,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SIM",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Staff",
       "damage": "143 - 290 Damage",
@@ -990,7 +931,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FWS",
-      "req": null,
       "icon": "inv_shoulder_01"
     },
     {
@@ -999,13 +939,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+25 StaminaRequires Level 70"
+        "+25 Stamina"
       ],
       "equip": "Improves hit rating by 18. Increases attack power by 40.",
       "use": null,
       "flavor": null,
       "acronym": "GSR",
-      "req": null,
       "icon": "inv_jewelry_ring_47"
     },
     {
@@ -1018,7 +957,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GFH",
-      "req": null,
       "icon": "inv_gauntlets_27"
     },
     {
@@ -1031,7 +969,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GFC",
-      "req": null,
       "icon": "inv_gauntlets_27"
     },
     {
@@ -1044,7 +981,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GFD",
-      "req": null,
       "icon": "inv_gauntlets_27"
     }
   ],
@@ -1063,7 +999,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CW",
-      "req": null,
       "icon": "inv_belt_08"
     },
     {
@@ -1073,13 +1008,12 @@
       "ilevel": 115,
       "stats": [
         "+21 Intellect",
-        "+22 SpiritRequires Level 70"
+        "+22 Spirit"
       ],
       "equip": "Restores 11 mana per 5 sec.",
       "use": null,
       "flavor": null,
       "acronym": "SCI",
-      "req": null,
       "icon": "inv_misc_cape_05"
     },
     {
@@ -1095,7 +1029,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MG",
-      "req": null,
       "icon": "inv_belt_03"
     },
     {
@@ -1112,7 +1045,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CNS",
-      "req": null,
       "icon": "inv_belt_22"
     },
     {
@@ -1129,7 +1061,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GP",
-      "req": null,
       "icon": "inv_belt_22"
     },
     {
@@ -1142,7 +1073,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FB",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Mace",
       "damage": "159 - 296 Damage",
@@ -1163,7 +1093,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TS",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Staff",
       "damage": "273 - 411 Damage",
@@ -1181,7 +1110,6 @@
       "use": null,
       "flavor": null,
       "acronym": "XS",
-      "req": null,
       "weaponType": "Thrown",
       "damage": "127 - 192 Damage",
       "speed": 1.4,
@@ -1195,13 +1123,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+30 StaminaRequires Level 70"
+        "+30 Stamina"
       ],
       "equip": "Increases defense rating by 24.",
       "use": null,
       "flavor": null,
       "acronym": "GTC",
-      "req": null,
       "icon": "inv_misc_cape_20"
     },
     {
@@ -1211,13 +1138,12 @@
       "ilevel": 115,
       "stats": [
         "+21 Intellect",
-        "+19 SpiritRequires Level 70"
+        "+19 Spirit"
       ],
       "equip": "Increases spell power by 23.",
       "use": null,
       "flavor": null,
       "acronym": "MH",
-      "req": null,
       "icon": "inv_jewelry_ring_36"
     },
     {
@@ -1233,7 +1159,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BL",
-      "req": null,
       "icon": "inv_chest_plate03"
     },
     {
@@ -1246,7 +1171,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LC",
-      "req": null,
       "icon": "inv_trinket_naxxramas06"
     }
   ],
@@ -1264,7 +1188,6 @@
       "use": null,
       "flavor": null,
       "acronym": "S",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Sword",
       "damage": "165 - 308 Damage",
@@ -1278,13 +1201,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+24 StaminaRequires Level 70"
+        "+24 Stamina"
       ],
       "equip": "Improves critical strike rating by 22.",
       "use": null,
       "flavor": null,
       "acronym": "MBU",
-      "req": null,
       "icon": "inv_jewelry_ring_24"
     },
     {
@@ -1294,13 +1216,12 @@
       "ilevel": 115,
       "stats": [
         "+21 Intellect",
-        "+19 SpiritRequires Level 70"
+        "+19 Spirit"
       ],
       "equip": "Increases spell power by 25.",
       "use": null,
       "flavor": null,
       "acronym": "SCA",
-      "req": null,
       "icon": "inv_jewelry_necklace_32"
     },
     {
@@ -1316,7 +1237,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CD",
-      "req": null,
       "icon": "inv_helmet_58"
     },
     {
@@ -1332,7 +1252,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GT",
-      "req": null,
       "icon": "inv_belt_22"
     },
     {
@@ -1341,13 +1260,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+18 IntellectRequires Level 70"
+        "+18 Intellect"
       ],
       "equip": "Improves hit rating by 21. Increases spell power by 23.",
       "use": null,
       "flavor": null,
       "acronym": "JIP",
-      "req": null,
       "icon": "inv_misc_gem_ebondraenite_02"
     },
     {
@@ -1363,7 +1281,6 @@
       "use": null,
       "flavor": null,
       "acronym": "EC",
-      "req": null,
       "icon": "inv_chest_plate08"
     },
     {
@@ -1379,7 +1296,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RL",
-      "req": null,
       "icon": "inv_pants_plate_02"
     },
     {
@@ -1395,7 +1311,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SG",
-      "req": null,
       "icon": "inv_pants_leather_13"
     },
     {
@@ -1412,7 +1327,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PR",
-      "req": null,
       "icon": "inv_pants_cloth_13"
     },
     {
@@ -1428,7 +1342,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MA",
-      "req": null,
       "icon": "inv_shoulder_29"
     },
     {
@@ -1444,7 +1357,6 @@
       "use": null,
       "flavor": null,
       "acronym": "UH",
-      "req": null,
       "icon": "inv_helmet_53"
     }
   ],
@@ -1463,7 +1375,6 @@
       "use": null,
       "flavor": null,
       "acronym": "ROR",
-      "req": 70,
       "icon": "inv_jewelry_ring_15"
     },
     {
@@ -1480,7 +1391,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MCOH",
-      "req": 70,
       "icon": "inv_jewelry_necklace_06"
     },
     {
@@ -1498,7 +1408,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HOTHP",
-      "req": 70,
       "icon": "inv_crown_01"
     },
     {
@@ -1515,7 +1424,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BSOTM",
-      "req": 70,
       "icon": "inv_shoulder_29"
     },
     {
@@ -1533,7 +1441,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FS",
-      "req": 70,
       "icon": "inv_boots_chain_05"
     },
     {
@@ -1551,7 +1458,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GOT",
-      "req": 70,
       "icon": "inv_belt_26"
     },
     {
@@ -1570,7 +1476,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FSB",
-      "req": 70,
       "icon": "inv_boots_chain_05"
     },
     {
@@ -1587,7 +1492,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HL",
-      "req": 70,
       "icon": "inv_pants_mail_15"
     },
     {
@@ -1605,7 +1509,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LOTI",
-      "req": 70,
       "icon": "inv_pants_plate_18"
     },
     {
@@ -1622,7 +1525,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BB",
-      "req": 70,
       "icon": "inv_boots_plate_06"
     },
     {
@@ -1640,7 +1542,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TSOTA",
-      "req": 70,
       "hand": "Off Hand",
       "weaponType": "Shield",
       "icon": "inv_shield_31"
@@ -1657,7 +1558,6 @@
       "use": null,
       "flavor": null,
       "acronym": "KD",
-      "req": 70,
       "hand": "One-Hand",
       "weaponType": "Sword",
       "damage": "98 - 182 Damage",
@@ -1677,7 +1577,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RTM",
-      "req": null,
       "icon": "inv_jewelry_ring_ahnqiraj_05"
     },
     {
@@ -1686,13 +1585,12 @@
       "rarity": "Epic",
       "ilevel": 125,
       "stats": [
-        "+20 IntellectRequires Level 70"
+        "+20 Intellect"
       ],
       "equip": "Improves critical strike rating by 23. Increases spell power by 28.",
       "use": null,
       "flavor": null,
       "acronym": "ASS",
-      "req": null,
       "icon": "inv_jewelry_necklace_29naxxramas"
     },
     {
@@ -1705,7 +1603,6 @@
       "use": null,
       "flavor": null,
       "acronym": "JRE",
-      "req": null,
       "icon": "inv_jewelry_ring_08"
     },
     {
@@ -1714,13 +1611,12 @@
       "rarity": "Epic",
       "ilevel": 125,
       "stats": [
-        "+36 StaminaRequires Level 70"
+        "+36 Stamina"
       ],
       "equip": "Increases attack power by 70.",
       "use": null,
       "flavor": null,
       "acronym": "FW",
-      "req": null,
       "icon": "inv_misc_cape_17"
     },
     {
@@ -1730,13 +1626,12 @@
       "ilevel": 125,
       "stats": [
         "+22 Stamina",
-        "+23 IntellectRequires Level 70"
+        "+23 Intellect"
       ],
       "equip": "Increases spell power by 28. Restores 9 mana per 5 sec.",
       "use": null,
       "flavor": null,
       "acronym": "SCPH",
-      "req": null,
       "icon": "inv_misc_cape_06"
     },
     {
@@ -1746,13 +1641,12 @@
       "ilevel": 125,
       "stats": [
         "+22 Stamina",
-        "+21 IntellectRequires Level 70"
+        "+21 Intellect"
       ],
       "equip": "Improves hit rating by 18. Increases spell power by 30.",
       "use": null,
       "flavor": null,
       "acronym": "RDM",
-      "req": null,
       "icon": "inv_misc_cape_18"
     },
     {
@@ -1765,7 +1659,6 @@
       "use": "Hurls your axe in an attempt to decapitate your target causing 513 to 567 damage. (3 Min Cooldown)",
       "flavor": null,
       "acronym": "D",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Axe",
       "damage": "167 - 312 Damage",
@@ -1785,7 +1678,6 @@
       "use": null,
       "flavor": null,
       "acronym": "M",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Dagger",
       "damage": "132 - 199 Damage",
@@ -1806,7 +1698,6 @@
       "use": null,
       "flavor": null,
       "acronym": "NM",
-      "req": null,
       "hand": "Main Hand",
       "weaponType": "Dagger",
       "damage": "25 - 125 Damage",
@@ -1828,7 +1719,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LJ",
-      "req": null,
       "hand": "Main Hand",
       "weaponType": "Mace",
       "damage": "25 - 125 Damage",
@@ -1848,7 +1738,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SBP",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Bow",
       "damage": "169 - 314 Damage",
@@ -1870,7 +1759,6 @@
       "use": null,
       "flavor": "The axe of Grom Hellscream has sown terror across hundreds of battlefields.",
       "acronym": "G",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Axe",
       "damage": "345 - 518 Damage",
@@ -1888,7 +1776,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HFH",
-      "req": null,
       "icon": "inv_helmet_24"
     },
     {
@@ -1901,7 +1788,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HFC",
-      "req": null,
       "icon": "inv_helmet_24"
     },
     {
@@ -1914,24 +1800,10 @@
       "use": null,
       "flavor": null,
       "acronym": "HFD",
-      "req": null,
       "icon": "inv_helmet_24"
     }
   ],
   "nightbane": [
-    {
-      "id": 24139,
-      "name": "Faint Arcane Essence",
-      "rarity": "Common",
-      "ilevel": 1,
-      "stats": [],
-      "equip": "",
-      "use": null,
-      "flavor": null,
-      "acronym": "FAE",
-      "req": null,
-      "icon": "inv_enchant_essencemagicsmall"
-    },
     {
       "id": 28597,
       "name": "Panzar'Thar Breastplate",
@@ -1945,7 +1817,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PB",
-      "req": null,
       "icon": "inv_chest_plate02"
     },
     {
@@ -1961,7 +1832,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SBC",
-      "req": null,
       "icon": "inv_chest_chain_07"
     },
     {
@@ -1978,7 +1848,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SJ",
-      "req": null,
       "icon": "inv_chest_leather_07"
     },
     {
@@ -1994,7 +1863,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CC",
-      "req": null,
       "icon": "inv_chest_leather_06"
     },
     {
@@ -2011,7 +1879,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RES",
-      "req": null,
       "icon": "inv_chest_cloth_12"
     },
     {
@@ -2020,13 +1887,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+19 IntellectRequires Level 70"
+        "+19 Intellect"
       ],
       "equip": "Improves critical strike rating by 17. Increases spell power by 28.",
       "use": null,
       "flavor": null,
       "acronym": "TN",
-      "req": null,
       "icon": "inv_offhand_outlandraid_01"
     },
     {
@@ -2043,7 +1909,6 @@
       "use": null,
       "flavor": null,
       "acronym": "NE",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Staff",
       "damage": "143 - 290 Damage",
@@ -2065,7 +1930,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SID",
-      "req": null,
       "hand": "Off Hand",
       "weaponType": "Shield",
       "icon": "inv_shield_29"
@@ -2084,7 +1948,6 @@
       "use": null,
       "flavor": null,
       "acronym": "IU",
-      "req": null,
       "icon": "inv_boots_plate_04"
     },
     {
@@ -2097,7 +1960,6 @@
       "use": null,
       "flavor": null,
       "acronym": "ET",
-      "req": null,
       "icon": "inv_jewelry_necklace_17"
     },
     {
@@ -2113,7 +1975,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FS",
-      "req": null,
       "icon": "inv_boots_chain_04"
     },
     {
@@ -2130,23 +1991,9 @@
       "use": null,
       "flavor": null,
       "acronym": "DF",
-      "req": null,
       "hand": "Off Hand",
       "weaponType": "Shield",
       "icon": "inv_shield_37"
-    },
-    {
-      "id": 31751,
-      "name": "Blazing Signet",
-      "rarity": "Common",
-      "ilevel": 1,
-      "stats": [],
-      "equip": "",
-      "use": null,
-      "flavor": null,
-      "acronym": "BS",
-      "req": null,
-      "icon": "spell_fire_burnout"
     }
   ],
   "shade": [
@@ -2164,7 +2011,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BI",
-      "req": null,
       "icon": "inv_boots_fabric_01"
     },
     {
@@ -2180,7 +2026,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PJ",
-      "req": null,
       "icon": "inv_shoulder_35"
     },
     {
@@ -2195,7 +2040,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RB",
-      "req": null,
       "icon": "inv_boots_plate_06"
     },
     {
@@ -2212,7 +2056,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BIC",
-      "req": null,
       "icon": "inv_boots_05"
     },
     {
@@ -2229,7 +2072,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SF",
-      "req": null,
       "icon": "inv_helmet_05"
     },
     {
@@ -2239,13 +2081,12 @@
       "ilevel": 115,
       "stats": [
         "+24 Agility",
-        "+21 StaminaRequires Level 70"
+        "+21 Stamina"
       ],
       "equip": "Improves hit rating by 17. Increases attack power by 34.",
       "use": null,
       "flavor": null,
       "acronym": "DDR",
-      "req": null,
       "icon": "inv_misc_cape_10"
     },
     {
@@ -2261,7 +2102,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TWA",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Wand",
       "damage": "169 - 314 Shadow Damage",
@@ -2275,13 +2115,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+33 StaminaRequires Level 70"
+        "+33 Stamina"
       ],
       "equip": "Increases attack power by 46.",
       "use": null,
       "flavor": null,
       "acronym": "ST",
-      "req": null,
       "icon": "inv_jewelry_necklace_34"
     },
     {
@@ -2290,13 +2129,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+36 StaminaRequires Level 70"
+        "+36 Stamina"
       ],
       "equip": "Increases defense rating by 23.",
       "use": null,
       "flavor": null,
       "acronym": "SG",
-      "req": null,
       "icon": "inv_jewelry_ring_19"
     },
     {
@@ -2312,7 +2150,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MMF",
-      "req": null,
       "icon": "inv_shoulder_25"
     },
     {
@@ -2325,7 +2162,6 @@
       "use": "Each spell cast within 20 seconds will grant a stacking bonus of 21 mana regen per 5 sec. Expires after 20 seconds.  Abilities with no mana cost will not trigger this trinket. (2 Min Cooldown)",
       "flavor": null,
       "acronym": "PVE",
-      "req": null,
       "icon": "inv_trinket_naxxramas02"
     },
     {
@@ -2338,7 +2174,6 @@
       "use": null,
       "flavor": null,
       "acronym": "ASS",
-      "req": null,
       "icon": "inv_misc_gem_sapphire_02"
     }
   ],
@@ -2356,7 +2191,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BW",
-      "req": null,
       "icon": "inv_bracer_15"
     },
     {
@@ -2371,7 +2205,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MMS",
-      "req": null,
       "icon": "inv_helmet_58"
     },
     {
@@ -2381,13 +2214,12 @@
       "ilevel": 125,
       "stats": [
         "+18 Stamina",
-        "+20 IntellectRequires Level 70"
+        "+20 Intellect"
       ],
       "equip": "Improves critical strike rating by 23. Increases spell power by 28.",
       "use": null,
       "flavor": null,
       "acronym": "BCO",
-      "req": null,
       "icon": "inv_misc_cape_16"
     },
     {
@@ -2403,7 +2235,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BDI",
-      "req": null,
       "icon": "inv_belt_03"
     },
     {
@@ -2420,7 +2251,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HN",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Mace",
       "damage": "345 - 518 Damage",
@@ -2441,7 +2271,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MW",
-      "req": null,
       "icon": "inv_helmet_23"
     },
     {
@@ -2454,7 +2283,6 @@
       "use": "Restores 7200 mana over 30 sec.  Must remain seated while drinking.",
       "flavor": null,
       "acronym": "TCWI",
-      "req": 65,
       "icon": "inv_misc_book_07"
     },
     {
@@ -2467,7 +2295,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PFH",
-      "req": null,
       "icon": "inv_shoulder_22"
     },
     {
@@ -2480,7 +2307,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PFC",
-      "req": null,
       "icon": "inv_shoulder_22"
     },
     {
@@ -2493,7 +2319,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PFD",
-      "req": null,
       "icon": "inv_shoulder_22"
     }
   ],
@@ -2510,7 +2335,6 @@
       "use": null,
       "flavor": null,
       "acronym": "AGL",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Axe",
       "damage": "345 - 518 Damage",
@@ -2531,7 +2355,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BM",
-      "req": null,
       "hand": "Main Hand",
       "weaponType": "Sword",
       "damage": "36 - 136 Damage",
@@ -2553,7 +2376,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CNB",
-      "req": null,
       "icon": "inv_helmet_15"
     },
     {
@@ -2569,7 +2391,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CC",
-      "req": null,
       "icon": "inv_helmet_27"
     },
     {
@@ -2585,7 +2406,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WB",
-      "req": null,
       "icon": "inv_boots_chain_05"
     },
     {
@@ -2594,13 +2414,12 @@
       "rarity": "Epic",
       "ilevel": 125,
       "stats": [
-        "+19 SpiritRequires Level 70"
+        "+19 Spirit"
       ],
       "equip": "Increases spell power by 25. Restores 10 mana per 5 sec.",
       "use": null,
       "flavor": null,
       "acronym": "TG",
-      "req": null,
       "icon": "inv_misc_bone_09"
     },
     {
@@ -2613,7 +2432,6 @@
       "use": null,
       "flavor": null,
       "acronym": "EG",
-      "req": null,
       "icon": "spell_shadow_unholyfrenzy"
     },
     {
@@ -2629,7 +2447,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GMP",
-      "req": null,
       "icon": "inv_gauntlets_31"
     },
     {
@@ -2646,7 +2463,6 @@
       "use": null,
       "flavor": null,
       "acronym": "ALD",
-      "req": null,
       "hand": "Off Hand",
       "weaponType": "Shield",
       "icon": "inv_shield_30"
@@ -2657,13 +2473,12 @@
       "rarity": "Epic",
       "ilevel": 125,
       "stats": [
-        "+19 StaminaRequires Level 70"
+        "+19 Stamina"
       ],
       "equip": "Increases attack power by 42.",
       "use": null,
       "flavor": null,
       "acronym": "SN",
-      "req": null,
       "weaponType": "Thrown",
       "damage": "115 - 173 Damage",
       "speed": 1.2,
@@ -2685,7 +2500,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GD",
-      "req": null,
       "icon": "inv_gauntlets_25"
     },
     {
@@ -2700,7 +2514,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GG",
-      "req": null,
       "icon": "inv_belt_26"
     },
     {
@@ -2713,7 +2526,6 @@
       "use": null,
       "flavor": null,
       "acronym": "DT",
-      "req": null,
       "icon": "inv_misc_bone_03"
     },
     {
@@ -2726,7 +2538,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LFH",
-      "req": null,
       "icon": "inv_pants_plate_17"
     },
     {
@@ -2739,7 +2550,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LFC",
-      "req": null,
       "icon": "inv_pants_plate_17"
     },
     {
@@ -2752,7 +2562,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LFD",
-      "req": null,
       "icon": "inv_pants_plate_17"
     }
   ],
@@ -2767,7 +2576,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GP",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Polearm",
       "damage": "354 - 532 Damage",
@@ -2789,7 +2597,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TG",
-      "req": null,
       "icon": "inv_helmet_58"
     },
     {
@@ -2804,7 +2611,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LTG",
-      "req": null,
       "icon": "inv_gauntlets_19"
     },
     {
@@ -2813,13 +2619,12 @@
       "rarity": "Epic",
       "ilevel": 125,
       "stats": [
-        "+28 StaminaRequires Level 70"
+        "+28 Stamina"
       ],
       "equip": "Improves critical strike rating by 24. Increases attack power by 56.",
       "use": null,
       "flavor": null,
       "acronym": "CPS",
-      "req": null,
       "icon": "inv_misc_cape_14"
     },
     {
@@ -2835,7 +2640,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TPG",
-      "req": null,
       "icon": "inv_belt_20"
     },
     {
@@ -2851,7 +2655,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GEP",
-      "req": null,
       "icon": "inv_belt_22"
     },
     {
@@ -2867,7 +2670,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SH",
-      "req": null,
       "icon": "inv_gauntlets_15"
     },
     {
@@ -2876,13 +2678,12 @@
       "rarity": "Epic",
       "ilevel": 125,
       "stats": [
-        "+23 IntellectRequires Level 70"
+        "+23 Intellect"
       ],
       "equip": "Increases spell power by 35.",
       "use": null,
       "flavor": null,
       "acronym": "KT",
-      "req": null,
       "icon": "inv_offhand_draenei_a_01"
     },
     {
@@ -2898,7 +2699,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CP",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Staff",
       "damage": "143 - 297 Damage",
@@ -2919,7 +2719,6 @@
       "use": null,
       "flavor": null,
       "acronym": "EWO",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Wand",
       "damage": "177 - 330 Shadow Damage",
@@ -2937,7 +2736,6 @@
       "use": null,
       "flavor": null,
       "acronym": "EM",
-      "req": null,
       "icon": "inv_elemental_mote_life01"
     },
     {
@@ -2953,7 +2751,6 @@
       "use": null,
       "flavor": null,
       "acronym": "AV",
-      "req": null,
       "hand": "Off Hand",
       "weaponType": "Shield",
       "icon": "inv_shield_33"
@@ -2968,7 +2765,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CFD",
-      "req": null,
       "icon": "inv_chest_chain_03"
     },
     {
@@ -2981,7 +2777,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CFC",
-      "req": null,
       "icon": "inv_chest_chain_03"
     },
     {
@@ -2994,21 +2789,7 @@
       "use": null,
       "flavor": null,
       "acronym": "CFH",
-      "req": null,
       "icon": "inv_chest_chain_03"
-    },
-    {
-      "id": 31704,
-      "name": "The Tempest Key",
-      "rarity": "Common",
-      "ilevel": 1,
-      "stats": [],
-      "equip": "",
-      "use": null,
-      "flavor": null,
-      "acronym": "TK",
-      "req": null,
-      "icon": "inv_datacrystal11"
     },
     {
       "id": 31746,
@@ -3016,13 +2797,12 @@
       "rarity": "Epic",
       "ilevel": 115,
       "stats": [
-        "+30 Fire ResistanceSell Price: 6 2 56"
+        "+30 Fire Resistance"
       ],
       "equip": "",
       "use": null,
       "flavor": null,
       "acronym": "PB",
-      "req": null,
       "icon": "inv_jewelry_ring_36"
     },
     {
@@ -3035,20 +2815,6 @@
       "use": null,
       "flavor": "All that remains of the hellspawn, Magtheridon.",
       "acronym": "MH",
-      "req": null,
-      "icon": "inv_misc_head_tauren_01"
-    },
-    {
-      "id": 32386,
-      "name": "Magtheridon's Head",
-      "rarity": "Epic",
-      "ilevel": 70,
-      "stats": [],
-      "equip": "",
-      "use": null,
-      "flavor": "All that remains of the hellspawn, Magtheridon.",
-      "acronym": "MH",
-      "req": null,
       "icon": "inv_misc_head_tauren_01"
     },
     {
@@ -3061,7 +2827,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PLS",
-      "req": null,
       "icon": "inv_misc_bag_enchantedrunecloth"
     }
   ],
@@ -3079,7 +2844,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BW",
-      "req": null,
       "icon": "inv_bracer_02"
     },
     {
@@ -3095,7 +2859,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BJ",
-      "req": null,
       "icon": "inv_helmet_22"
     },
     {
@@ -3104,13 +2867,12 @@
       "rarity": "Epic",
       "ilevel": 128,
       "stats": [
-        "+12 IntellectRequires Level 70"
+        "+12 Intellect"
       ],
       "equip": "Improves critical strike rating by 23. Increases spell power by 36.",
       "use": null,
       "flavor": null,
       "acronym": "F",
-      "req": null,
       "icon": "inv_misc_gem_azuredraenite_02"
     },
     {
@@ -3126,7 +2888,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BSN",
-      "req": null,
       "icon": "inv_boots_05"
     },
     {
@@ -3139,7 +2900,6 @@
       "use": null,
       "flavor": null,
       "acronym": "ICG",
-      "req": null,
       "icon": "inv_qirajidol_night"
     },
     {
@@ -3148,13 +2908,12 @@
       "rarity": "Epic",
       "ilevel": 128,
       "stats": [
-        "+19 StaminaRequires Level 70"
+        "+19 Stamina"
       ],
       "equip": "Improves hit rating by 19. Increases attack power by 50.",
       "use": null,
       "flavor": null,
       "acronym": "RL",
-      "req": null,
       "icon": "inv_jewelry_ring_51naxxramas"
     },
     {
@@ -3170,7 +2929,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PW",
-      "req": null,
       "icon": "inv_shoulder_20"
     },
     {
@@ -3187,7 +2945,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RC",
-      "req": null,
       "icon": "inv_chest_plate09"
     },
     {
@@ -3203,7 +2960,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SS",
-      "req": null,
       "icon": "inv_shoulder_23"
     },
     {
@@ -3219,7 +2975,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RHE",
-      "req": null,
       "icon": "inv_chest_cloth_43"
     },
     {
@@ -3232,7 +2987,6 @@
       "use": "Increases your defense rating by 165, but decreases your melee and ranged attack power by 330.  Effect lasts for 15 sec. (3 Min Cooldown)",
       "flavor": null,
       "acronym": "SD",
-      "req": null,
       "icon": "inv_trinket_naxxramas05"
     },
     {
@@ -3245,7 +2999,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LRW",
-      "req": null,
       "icon": "inv_misc_herb_nightmarevine"
     },
     {
@@ -3261,7 +3014,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WP",
-      "req": null,
       "icon": "inv_bracer_13"
     },
     {
@@ -3274,7 +3026,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BVA",
-      "req": null,
       "icon": "inv_jewelry_ring_71"
     }
   ],
@@ -3292,7 +3043,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BE",
-      "req": null,
       "icon": "inv_bracer_19"
     },
     {
@@ -3307,7 +3057,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MT",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Mace",
       "damage": "115 - 214 Damage",
@@ -3325,7 +3074,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CAF",
-      "req": null,
       "icon": "inv_jewelry_necklace_ahnqiraj_03"
     },
     {
@@ -3341,7 +3089,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BES",
-      "req": null,
       "icon": "inv_boots_plate_06"
     },
     {
@@ -3351,13 +3098,12 @@
       "ilevel": 128,
       "stats": [
         "+21 Agility",
-        "+30 StaminaRequires Level 70"
+        "+30 Stamina"
       ],
       "equip": "",
       "use": null,
       "flavor": null,
       "acronym": "ARC",
-      "req": null,
       "icon": "inv_jewelry_ring_41"
     },
     {
@@ -3374,7 +3120,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GR",
-      "req": null,
       "icon": "inv_bracer_02"
     },
     {
@@ -3387,7 +3132,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LAT",
-      "req": null,
       "icon": "inv_relics_libramoftruth"
     },
     {
@@ -3403,7 +3147,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CST",
-      "req": null,
       "icon": "inv_belt_03"
     },
     {
@@ -3419,7 +3162,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GBT",
-      "req": null,
       "icon": "inv_chest_plate05"
     },
     {
@@ -3435,7 +3177,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TB",
-      "req": null,
       "icon": "inv_boots_chain_05"
     },
     {
@@ -3452,7 +3193,6 @@
       "use": null,
       "flavor": null,
       "acronym": "VBG",
-      "req": null,
       "icon": "inv_boots_05"
     },
     {
@@ -3465,7 +3205,6 @@
       "use": "Increases your Spirit by +300 for 20 sec. (2 Min Cooldown)",
       "flavor": null,
       "acronym": "ESM",
-      "req": null,
       "icon": "inv_jewelry_ring_07"
     },
     {
@@ -3474,13 +3213,12 @@
       "rarity": "Epic",
       "ilevel": 128,
       "stats": [
-        "+33 StaminaRequires Level 70"
+        "+33 Stamina"
       ],
       "equip": "Improves your resilience rating by 21. Increases spell power by 25.",
       "use": null,
       "flavor": "From beneath you it devours.",
       "acronym": "SD",
-      "req": null,
       "icon": "inv_jewelry_ring_39"
     }
   ],
@@ -3498,7 +3236,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TSB",
-      "req": null,
       "icon": "inv_bracer_15"
     },
     {
@@ -3515,7 +3252,6 @@
       "use": null,
       "flavor": null,
       "acronym": "OB",
-      "req": null,
       "icon": "inv_boots_cloth_16"
     },
     {
@@ -3531,7 +3267,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FL",
-      "req": null,
       "hand": "Main Hand",
       "weaponType": "Sword",
       "damage": "21 - 126 Damage",
@@ -3552,7 +3287,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GI",
-      "req": null,
       "icon": "inv_belt_27"
     },
     {
@@ -3568,7 +3302,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CS",
-      "req": null,
       "icon": "inv_shoulder_19"
     },
     {
@@ -3581,7 +3314,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GVC",
-      "req": null,
       "icon": "inv_gauntlets_27"
     },
     {
@@ -3594,7 +3326,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GVD",
-      "req": null,
       "icon": "inv_gauntlets_27"
     },
     {
@@ -3607,7 +3338,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GVH",
-      "req": null,
       "icon": "inv_gauntlets_27"
     },
     {
@@ -3620,7 +3350,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TT",
-      "req": null,
       "icon": "spell_nature_unrelentingstorm"
     }
   ],
@@ -3631,13 +3360,12 @@
       "rarity": "Epic",
       "ilevel": 128,
       "stats": [
-        "+17 IntellectRequires Level 70"
+        "+17 Intellect"
       ],
       "equip": "Increases spell power by 36. Reduces the duration of any Silence or Interrupt effects used against the wearer by 20%. This effect does not stack with other similar effects.",
       "use": null,
       "flavor": null,
       "acronym": "PLA",
-      "req": null,
       "icon": "inv_jewelry_necklace_12"
     },
     {
@@ -3653,7 +3381,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GTC",
-      "req": null,
       "icon": "inv_belt_19"
     },
     {
@@ -3670,7 +3397,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GCA",
-      "req": null,
       "icon": "inv_chest_leather_10"
     },
     {
@@ -3686,7 +3412,6 @@
       "use": null,
       "flavor": null,
       "acronym": "IS",
-      "req": null,
       "icon": "inv_shoulder_25"
     },
     {
@@ -3701,7 +3426,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LRN",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Wand",
       "damage": "186 - 346 Shadow Damage",
@@ -3722,7 +3446,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WO",
-      "req": null,
       "icon": "inv_boots_plate_04"
     },
     {
@@ -3738,7 +3461,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TA",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Sword",
       "damage": "182 - 339 Damage",
@@ -3756,7 +3478,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RSS",
-      "req": null,
       "icon": "inv_jewelry_ring_31"
     },
     {
@@ -3771,7 +3492,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PAS",
-      "req": null,
       "icon": "inv_shoulder_14"
     },
     {
@@ -3787,7 +3507,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MTT",
-      "req": null,
       "icon": "inv_shoulder_27"
     },
     {
@@ -3798,13 +3517,12 @@
       "stats": [
         "+33 Strength",
         "+23 Agility",
-        "+22 StaminaRequires Level 70"
+        "+22 Stamina"
       ],
       "equip": "",
       "use": null,
       "flavor": null,
       "acronym": "RB",
-      "req": null,
       "icon": "inv_misc_cape_20"
     },
     {
@@ -3817,7 +3535,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SB",
-      "req": null,
       "icon": "spell_nature_poisoncleansingtotem"
     },
     {
@@ -3830,7 +3547,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BV",
-      "req": null,
       "icon": "inv_jewelry_ring_43"
     }
   ],
@@ -3848,7 +3564,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WB",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Mace",
       "damage": "371 - 558 Damage",
@@ -3866,7 +3581,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FTD",
-      "req": null,
       "icon": "inv_misc_noose_01"
     },
     {
@@ -3883,7 +3597,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SB",
-      "req": null,
       "icon": "inv_boots_fabric_01"
     },
     {
@@ -3898,7 +3611,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BBV",
-      "req": null,
       "icon": "inv_chest_plate08"
     },
     {
@@ -3911,7 +3623,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LVC",
-      "req": null,
       "icon": "inv_pants_plate_17"
     },
     {
@@ -3924,7 +3635,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LVD",
-      "req": null,
       "icon": "inv_pants_plate_17"
     },
     {
@@ -3937,7 +3647,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LVH",
-      "req": null,
       "icon": "inv_pants_plate_17"
     },
     {
@@ -3950,7 +3659,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SUC",
-      "req": null,
       "icon": "inv_gizmo_09"
     },
     {
@@ -3963,7 +3671,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FT",
-      "req": null,
       "icon": "inv_misc_qirajicrystal_04"
     }
   ],
@@ -3982,7 +3689,6 @@
       "use": null,
       "flavor": null,
       "acronym": "KB",
-      "req": null,
       "icon": "inv_chest_plate11"
     },
     {
@@ -3997,7 +3703,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FV",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Dagger",
       "damage": "144 - 217 Damage",
@@ -4019,7 +3724,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CB",
-      "req": null,
       "icon": "inv_boots_chain_12"
     },
     {
@@ -4034,7 +3738,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SSL",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Bow",
       "damage": "217 - 327 Damage",
@@ -4055,7 +3758,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BOD",
-      "req": null,
       "icon": "inv_belt_26"
     },
     {
@@ -4071,7 +3773,6 @@
       "use": null,
       "flavor": null,
       "acronym": "VS",
-      "req": null,
       "icon": "inv_chest_cloth_17"
     },
     {
@@ -4087,7 +3788,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LS",
-      "req": null,
       "hand": "Main Hand",
       "weaponType": "Mace",
       "damage": "21 - 136 Damage",
@@ -4105,7 +3805,6 @@
       "use": null,
       "flavor": null,
       "acronym": "REC",
-      "req": null,
       "icon": "inv_jewelry_ring_44"
     },
     {
@@ -4115,13 +3814,12 @@
       "ilevel": 138,
       "stats": [
         "+14 Intellect",
-        "+27 SpiritRequires Level 70"
+        "+27 Spirit"
       ],
       "equip": "Increases spell power by 40.",
       "use": null,
       "flavor": null,
       "acronym": "CBR",
-      "req": null,
       "icon": "inv_jewelry_ring_35"
     },
     {
@@ -4138,7 +3836,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RM",
-      "req": null,
       "icon": "inv_shoulder_07"
     },
     {
@@ -4154,7 +3851,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GGC",
-      "req": null,
       "icon": "inv_gauntlets_20"
     },
     {
@@ -4167,7 +3863,6 @@
       "use": null,
       "flavor": null,
       "acronym": "NV",
-      "req": null,
       "icon": "inv_elemental_mote_nether"
     },
     {
@@ -4180,7 +3875,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HVC",
-      "req": null,
       "icon": "inv_helmet_24"
     },
     {
@@ -4193,7 +3887,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HVD",
-      "req": null,
       "icon": "inv_helmet_24"
     },
     {
@@ -4206,7 +3899,6 @@
       "use": null,
       "flavor": null,
       "acronym": "HVH",
-      "req": null,
       "icon": "inv_helmet_24"
     },
     {
@@ -4219,21 +3911,7 @@
       "use": null,
       "flavor": null,
       "acronym": "PIC",
-      "req": null,
       "icon": "inv_misc_gem_diamond_07"
-    },
-    {
-      "id": 32895,
-      "name": "Scroll of the Maelstrom",
-      "rarity": "Epic",
-      "ilevel": 70,
-      "stats": [],
-      "equip": "",
-      "use": "Creates 5 Marks of the Illidari.",
-      "flavor": "A scroll imbued with the magic of the Serpentshrine.",
-      "acronym": "SM",
-      "req": null,
-      "icon": "inv_scroll_05"
     }
   ],
   "alar": [
@@ -4250,7 +3928,6 @@
       "use": null,
       "flavor": null,
       "acronym": "MW",
-      "req": null,
       "icon": "inv_bracer_13"
     },
     {
@@ -4263,7 +3940,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PR",
-      "req": null,
       "icon": "inv_jewelry_ring_51naxxramas"
     },
     {
@@ -4279,7 +3955,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FCB",
-      "req": null,
       "icon": "inv_chest_plate03"
     },
     {
@@ -4288,13 +3963,12 @@
       "rarity": "Epic",
       "ilevel": 128,
       "stats": [
-        "+23 IntellectRequires Level 70"
+        "+23 Intellect"
       ],
       "equip": "Increases spell power by 37.",
       "use": null,
       "flavor": null,
       "acronym": "BA",
-      "req": null,
       "icon": "inv_jewelry_ring_61"
     },
     {
@@ -4303,13 +3977,12 @@
       "rarity": "Epic",
       "ilevel": 128,
       "stats": [
-        "+24 IntellectRequires Level 70"
+        "+24 Intellect"
       ],
       "equip": "Increases spell power by 32. Restores 8 mana per 5 sec.",
       "use": null,
       "flavor": null,
       "acronym": "TSK",
-      "req": null,
       "icon": "inv_offhand_blood_02"
     },
     {
@@ -4325,7 +3998,6 @@
       "use": null,
       "flavor": null,
       "acronym": "N",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Axe",
       "damage": "175 - 327 Damage",
@@ -4339,13 +4011,12 @@
       "rarity": "Epic",
       "ilevel": 128,
       "stats": [
-        "+37 StaminaRequires Level 70"
+        "+37 Stamina"
       ],
       "equip": "Increases defense rating by 22. Increases your dodge rating by 27.",
       "use": null,
       "flavor": null,
       "acronym": "PC",
-      "req": null,
       "icon": "inv_misc_cape_08"
     },
     {
@@ -4361,7 +4032,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GSG",
-      "req": null,
       "icon": "inv_gauntlets_28"
     },
     {
@@ -4377,7 +4047,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CP",
-      "req": null,
       "hand": "Off Hand",
       "weaponType": "Fist Weapon",
       "damage": "101 - 189 Damage",
@@ -4397,7 +4066,6 @@
       "use": null,
       "flavor": null,
       "acronym": "AS",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Gun",
       "damage": "177 - 329 Damage",
@@ -4415,7 +4083,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TFR",
-      "req": null,
       "icon": "inv_misc_book_07"
     },
     {
@@ -4428,7 +4095,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TA",
-      "req": null,
       "icon": "spell_fire_soulburn"
     },
     {
@@ -4441,7 +4107,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TP",
-      "req": null,
       "hand": "Main Hand",
       "weaponType": "Fist Weapon",
       "damage": "182 - 339 Damage",
@@ -4464,7 +4129,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FW",
-      "req": null,
       "icon": "inv_helmet_03"
     },
     {
@@ -4481,7 +4145,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GZ",
-      "req": null,
       "icon": "inv_belt_08"
     },
     {
@@ -4498,7 +4161,6 @@
       "use": null,
       "flavor": null,
       "acronym": "VRG",
-      "req": null,
       "icon": "inv_pants_mail_15"
     },
     {
@@ -4514,7 +4176,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CGE",
-      "req": null,
       "icon": "inv_helmet_14"
     },
     {
@@ -4527,7 +4188,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PVC",
-      "req": null,
       "icon": "inv_shoulder_22"
     },
     {
@@ -4540,7 +4200,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PVD",
-      "req": null,
       "icon": "inv_shoulder_22"
     },
     {
@@ -4553,7 +4212,6 @@
       "use": null,
       "flavor": null,
       "acronym": "PVH",
-      "req": null,
       "icon": "inv_shoulder_22"
     },
     {
@@ -4566,7 +4224,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WC",
-      "req": null,
       "icon": "inv_gizmo_hardenedadamantitetube"
     },
     {
@@ -4579,7 +4236,6 @@
       "use": null,
       "flavor": null,
       "acronym": "FRP",
-      "req": null,
       "icon": "inv_misc_enggizmos_14"
     },
     {
@@ -4595,7 +4251,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WD",
-      "req": null,
       "icon": "inv_bracer_19"
     }
   ],
@@ -4613,7 +4268,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GB",
-      "req": null,
       "icon": "inv_pants_plate_05"
     },
     {
@@ -4630,7 +4284,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SB",
-      "req": null,
       "icon": "inv_boots_chain_04"
     },
     {
@@ -4646,7 +4299,6 @@
       "use": null,
       "flavor": null,
       "acronym": "H",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Dagger",
       "damage": "121 - 226 Damage",
@@ -4667,7 +4319,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GRP",
-      "req": null,
       "icon": "inv_belt_22"
     },
     {
@@ -4683,7 +4334,6 @@
       "use": null,
       "flavor": null,
       "acronym": "VE",
-      "req": null,
       "icon": "inv_bracer_15"
     },
     {
@@ -4700,7 +4350,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TA",
-      "req": null,
       "icon": "inv_pants_cloth_05"
     },
     {
@@ -4716,7 +4365,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WG",
-      "req": null,
       "icon": "inv_gauntlets_26"
     },
     {
@@ -4733,7 +4381,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SB",
-      "req": null,
       "icon": "inv_pants_cloth_07"
     },
     {
@@ -4750,7 +4397,6 @@
       "use": null,
       "flavor": null,
       "acronym": "EL",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Staff",
       "damage": "144 - 306 Damage",
@@ -4768,7 +4414,6 @@
       "use": null,
       "flavor": null,
       "acronym": "WFS",
-      "req": null,
       "hand": "Ranged",
       "weaponType": "Wand",
       "damage": "186 - 346 Shadow Damage",
@@ -4786,7 +4431,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SS",
-      "req": null,
       "icon": "inv_misc_gem_sapphire_01"
     },
     {
@@ -4799,7 +4443,6 @@
       "use": null,
       "flavor": null,
       "acronym": "VST",
-      "req": null,
       "icon": "inv_misc_gem_ebondraenite_01"
     },
     {
@@ -4815,7 +4458,6 @@
       "use": null,
       "flavor": null,
       "acronym": "BR",
-      "req": null,
       "icon": "inv_boots_plate_06"
     }
   ],
@@ -4834,7 +4476,6 @@
       "use": null,
       "flavor": null,
       "acronym": "GSK",
-      "req": null,
       "icon": "inv_gauntlets_17"
     },
     {
@@ -4850,7 +4491,6 @@
       "use": null,
       "flavor": null,
       "acronym": "NK",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Staff",
       "damage": "145 - 312 Damage",
@@ -4866,13 +4506,12 @@
       "stats": [
         "+18 Stamina",
         "+24 Intellect",
-        "+20 SpiritRequires Level 70"
+        "+20 Spirit"
       ],
       "equip": "Increases spell power by 41.",
       "use": null,
       "flavor": null,
       "acronym": "SLC",
-      "req": null,
       "icon": "inv_misc_cape_06"
     },
     {
@@ -4889,7 +4528,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CS",
-      "req": null,
       "icon": "inv_helmet_32"
     },
     {
@@ -4905,7 +4543,6 @@
       "use": null,
       "flavor": null,
       "acronym": "SL",
-      "req": null,
       "icon": "inv_pants_plate_07"
     },
     {
@@ -4915,13 +4552,12 @@
       "ilevel": 138,
       "stats": [
         "+27 Stamina",
-        "+22 IntellectRequires Level 70"
+        "+22 Intellect"
       ],
       "equip": "Increases spell power by 44.",
       "use": null,
       "flavor": null,
       "acronym": "RCS",
-      "req": null,
       "icon": "inv_misc_cape_10"
     },
     {
@@ -4936,7 +4572,6 @@
       "use": null,
       "flavor": null,
       "acronym": "TP",
-      "req": null,
       "hand": "Two-Hand",
       "weaponType": "Sword",
       "damage": "375 - 564 Damage",
@@ -4951,13 +4586,12 @@
       "ilevel": 138,
       "stats": [
         "+28 Agility",
-        "+28 StaminaRequires Level 70"
+        "+28 Stamina"
       ],
       "equip": "Increases attack power by 68.",
       "use": null,
       "flavor": null,
       "acronym": "TW",
-      "req": null,
       "icon": "inv_misc_cape_15"
     },
     {
@@ -4973,7 +4607,6 @@
       "use": null,
       "flavor": null,
       "acronym": "LMI",
-      "req": null,
       "icon": "inv_pants_leather_03"
     },
     {
@@ -4986,7 +4619,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RSK",
-      "req": null,
       "hand": "One-Hand",
       "weaponType": "Mace",
       "damage": "189 - 352 Damage",
@@ -5004,7 +4636,6 @@
       "use": null,
       "flavor": "This ring was formerly held by Sylvanas Windrunner....",
       "acronym": "BR",
-      "req": null,
       "icon": "inv_jewelry_ring_55"
     },
     {
@@ -5020,7 +4651,6 @@
       "use": null,
       "flavor": null,
       "acronym": "RGS",
-      "req": null,
       "icon": "inv_gauntlets_29"
     },
     {
@@ -5033,7 +4663,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CVC",
-      "req": null,
       "icon": "inv_chest_chain_03"
     },
     {
@@ -5046,7 +4675,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CVD",
-      "req": null,
       "icon": "inv_chest_chain_03"
     },
     {
@@ -5059,7 +4687,6 @@
       "use": null,
       "flavor": null,
       "acronym": "CVH",
-      "req": null,
       "icon": "inv_chest_chain_03"
     },
     {
@@ -5072,7 +4699,6 @@
       "use": null,
       "flavor": "A magical sphere belonging to the lord of the blood elves.",
       "acronym": "VS",
-      "req": null,
       "icon": "inv_misc_gem_pearl_06"
     },
     {
@@ -5085,8 +4711,346 @@
       "use": "Teaches you how to summon this mount.  This is an extremely fast mount.",
       "flavor": null,
       "acronym": "AA",
-      "req": null,
       "icon": "inv_misc_summerfest_brazierorange"
+    }
+  ],
+  "karazhan-trash": [
+    {
+      "id": 30668,
+      "name": "Grasp of the Dead",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "stats": [
+        "121 Armor",
+        "+24 Intellect",
+        "+21 Spirit"
+      ],
+      "equip": "Improves hit rating by 17. Increases spell power by 37.",
+      "use": null,
+      "flavor": null,
+      "acronym": "GD",
+      "isQuestItem": false,
+      "icon": "inv_gauntlets_17"
+    },
+    {
+      "id": 30673,
+      "name": "Inferno Waist Cord",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "stats": [
+        "109 Armor",
+        "+18 Intellect"
+      ],
+      "equip": "Improves critical strike rating by 24. Increases spell power by 49.",
+      "use": null,
+      "flavor": null,
+      "acronym": "IWC",
+      "isQuestItem": false,
+      "icon": "inv_belt_03"
+    },
+    {
+      "id": 30644,
+      "name": "Grips of Deftness",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "stats": [
+        "228 Armor",
+        "+29 Agility",
+        "+34 Stamina"
+      ],
+      "equip": "Increases your expertise rating by 15. Increases attack power by 60.",
+      "use": null,
+      "flavor": null,
+      "acronym": "GD",
+      "isQuestItem": false,
+      "icon": "inv_gauntlets_28"
+    },
+    {
+      "id": 30674,
+      "name": "Zierhut's Lost Treads",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "stats": [
+        "250 Armor",
+        "+34 Strength",
+        "+28 Agility",
+        "+33 Stamina"
+      ],
+      "equip": "Increases your dodge rating by 10.",
+      "use": null,
+      "flavor": null,
+      "acronym": "ZLT",
+      "isQuestItem": false,
+      "icon": "inv_boots_plate_06"
+    },
+    {
+      "id": 30643,
+      "name": "Belt of the Tracker",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "stats": [
+        "457 Armor",
+        "+15 Intellect"
+      ],
+      "equip": "Restores 19 mana per 5 sec. Increases attack power by 42.",
+      "use": null,
+      "flavor": null,
+      "acronym": "BT",
+      "isQuestItem": false,
+      "icon": "inv_belt_22"
+    },
+    {
+      "id": 30641,
+      "name": "Boots of Elusion",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "stats": [
+        "997 Armor",
+        "+34 Stamina"
+      ],
+      "equip": "Increases defense rating by 23. Increases your dodge rating by 38.",
+      "use": null,
+      "flavor": null,
+      "acronym": "BE",
+      "isQuestItem": false,
+      "icon": "inv_boots_plate_04"
+    },
+    {
+      "id": 30642,
+      "name": "Drape of the Righteous",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "stats": [
+        "97 Armor",
+        "+13 Intellect"
+      ],
+      "equip": "Increases spell power by 35. Restores 9 mana per 5 sec.",
+      "use": null,
+      "flavor": null,
+      "acronym": "DR",
+      "isQuestItem": false,
+      "icon": "inv_misc_cape_18"
+    },
+    {
+      "id": 30667,
+      "name": "Ring of Unrelenting Storms",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "stats": [
+        "+15 Intellect"
+      ],
+      "equip": "Improves critical strike rating by 19. Increases spell power by 35.",
+      "use": null,
+      "flavor": null,
+      "acronym": "RUS",
+      "isQuestItem": false,
+      "icon": "inv_jewelry_ring_51naxxramas"
+    },
+    {
+      "id": 30666,
+      "name": "Ritssyn's Lost Pendant",
+      "rarity": "Epic",
+      "ilevel": 115,
+      "stats": [
+        "+24 Stamina"
+      ],
+      "equip": "Increases spell power by 42.",
+      "use": null,
+      "flavor": null,
+      "acronym": "RLP",
+      "isQuestItem": false,
+      "icon": "inv_jewelry_necklace_30naxxramas"
+    }
+  ],
+  "ssc-trash": [
+    {
+      "id": 30620,
+      "name": "Spyglass of the Hidden Fleet",
+      "rarity": "Epic",
+      "ilevel": 128,
+      "stats": [
+        "+40 Stamina"
+      ],
+      "equip": "",
+      "use": "Heals 1300 damage over 12 sec. (2 Min Cooldown)",
+      "flavor": null,
+      "acronym": "SHF",
+      "isQuestItem": false,
+      "icon": "inv_misc_spyglass_02"
+    },
+    {
+      "id": 30022,
+      "name": "Pendant of the Perilous",
+      "rarity": "Epic",
+      "ilevel": 128,
+      "stats": [
+        "+32 Strength",
+        "+24 Stamina"
+      ],
+      "equip": "Improves critical strike rating by 23.",
+      "use": null,
+      "flavor": null,
+      "acronym": "PP",
+      "isQuestItem": false,
+      "icon": "inv_jewelry_necklace_ahnqiraj_01"
+    },
+    {
+      "id": 30023,
+      "name": "Totem of the Maelstrom",
+      "rarity": "Epic",
+      "ilevel": 128,
+      "stats": [],
+      "equip": "Reduces the mana cost of Healing Wave by 24.",
+      "use": null,
+      "flavor": "Counts as an Air, Earth, Fire, and Water totem.",
+      "acronym": "TM",
+      "isQuestItem": false,
+      "icon": "spell_nature_earthbind"
+    },
+    {
+      "id": 30027,
+      "name": "Boots of Courage Unending",
+      "rarity": "Epic",
+      "ilevel": 128,
+      "stats": [
+        "1105 Armor",
+        "+19 Stamina",
+        "+20 Intellect"
+      ],
+      "equip": "Improves critical strike rating by 31. Increases spell power by 48.",
+      "use": null,
+      "flavor": null,
+      "acronym": "BCU",
+      "isQuestItem": false,
+      "icon": "inv_boots_chain_08"
+    },
+    {
+      "id": 30021,
+      "name": "Wildfury Greatstaff",
+      "rarity": "Epic",
+      "ilevel": 134,
+      "stats": [
+        "500 Armor",
+        "+75 Stamina"
+      ],
+      "equip": "Increases attack power by 989 in Cat, Bear, Dire Bear, and Moonkin forms only. Increases your dodge rating by 54.",
+      "use": null,
+      "flavor": null,
+      "acronym": "WG",
+      "isQuestItem": false,
+      "hand": "Two-Hand",
+      "weaponType": "Staff",
+      "damage": "301 - 452 Damage",
+      "speed": 3,
+      "dps": "125.50 damage per second",
+      "icon": "inv_staff_50"
+    },
+    {
+      "id": 30025,
+      "name": "Serpentshrine Shuriken",
+      "rarity": "Epic",
+      "ilevel": 134,
+      "stats": [
+        "+14 Stamina"
+      ],
+      "equip": "Improves critical strike rating by 20. Improves hit rating by 12.",
+      "use": null,
+      "flavor": null,
+      "acronym": "SS",
+      "isQuestItem": false,
+      "hand": "Thrown",
+      "weaponType": "Thrown",
+      "damage": "140 - 211 Damage",
+      "speed": 1.4,
+      "dps": "125.36 damage per second",
+      "icon": "inv_throwingknife_06"
+    }
+  ],
+  "tk-trash": [
+    {
+      "id": 30030,
+      "name": "Girdle of Fallen Stars",
+      "rarity": "Epic",
+      "ilevel": 128,
+      "stats": [
+        "506 Armor",
+        "+26 Stamina",
+        "+18 Intellect"
+      ],
+      "equip": "Increases spell power by 39. Restores 13 mana per 5 sec.",
+      "use": null,
+      "flavor": null,
+      "acronym": "GFS",
+      "isQuestItem": false,
+      "icon": "inv_belt_22"
+    },
+    {
+      "id": 30024,
+      "name": "Mantle of the Elven Kings",
+      "rarity": "Epic",
+      "ilevel": 128,
+      "stats": [
+        "161 Armor",
+        "+27 Stamina",
+        "+18 Intellect",
+        "+17 Spirit"
+      ],
+      "equip": "Improves critical strike rating by 25. Improves hit rating by 18. Increases spell power by 39.",
+      "use": null,
+      "flavor": null,
+      "acronym": "MEK",
+      "isQuestItem": false,
+      "icon": "inv_shoulder_25"
+    },
+    {
+      "id": 30026,
+      "name": "Bands of the Celestial Archer",
+      "rarity": "Epic",
+      "ilevel": 128,
+      "stats": [
+        "394 Armor",
+        "+17 Agility",
+        "+24 Intellect"
+      ],
+      "equip": "Improves critical strike rating by 17. Increases attack power by 48.",
+      "use": null,
+      "flavor": null,
+      "acronym": "BCA",
+      "isQuestItem": false,
+      "icon": "inv_bracer_17"
+    },
+    {
+      "id": 30028,
+      "name": "Seventh Ring of the Tirisfalen",
+      "rarity": "Epic",
+      "ilevel": 128,
+      "stats": [
+        "+37 Stamina"
+      ],
+      "equip": "Increases your shield block rating by 24. Increases defense rating by 17. Increases the block value of your shield by 48.",
+      "use": null,
+      "flavor": null,
+      "acronym": "SRT",
+      "isQuestItem": false,
+      "icon": "inv_jewelry_ring_24"
+    },
+    {
+      "id": 30029,
+      "name": "Bark-Gloves of Ancient Wisdom",
+      "rarity": "Epic",
+      "ilevel": 128,
+      "stats": [
+        "252 Armor",
+        "+28 Stamina",
+        "+25 Intellect",
+        "+33 Spirit"
+      ],
+      "equip": "Increases spell power by 39.",
+      "use": null,
+      "flavor": null,
+      "acronym": "BAW",
+      "isQuestItem": false,
+      "icon": "inv_gauntlets_25"
     }
   ]
 }

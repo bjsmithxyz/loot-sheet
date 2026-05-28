@@ -1,4 +1,4 @@
-import { CLASSES, CLASS_SPECS } from './wow-constants';
+import { CLASSES } from './wow-constants';
 
 const MAX_NAME_LENGTH = 24;
 const MAX_PLAYERS = 40;
@@ -17,6 +17,7 @@ const CLASS_FILE_MAP = {
 };
 
 const VALID_RARITIES = new Set(['poor', 'common', 'uncommon', 'rare', 'epic', 'legendary']);
+const VALID_ROLES = new Set(['tank', 'healer', 'dps']);
 
 function normalizeClassName(className) {
   if (!className) return 'Warrior';
@@ -26,15 +27,6 @@ function normalizeClassName(className) {
   if (mapped) return mapped;
   const titleCase = trimmed.charAt(0).toUpperCase() + trimmed.slice(1).toLowerCase();
   return CLASSES.includes(titleCase) ? titleCase : 'Warrior';
-}
-
-function normalizeSpec(className, spec) {
-  const normalizedClass = normalizeClassName(className);
-  const trimmed = (spec || 'None').trim();
-  if (trimmed.startsWith('Role-')) return trimmed;
-  const specs = CLASS_SPECS[normalizedClass] || [];
-  if (specs.includes(trimmed)) return trimmed;
-  return specs[0] || 'None';
 }
 
 function sanitizeName(name) {
@@ -49,19 +41,20 @@ function parsePlayerEntry(entry) {
   if (!trimmed) return null;
 
   const parts = trimmed.split(':');
-  if (parts.length < 3) return null;
+  if (parts.length < 2) return null;
 
-  const spec = parts.pop();
+  if (parts.length >= 3) {
+    parts.pop();
+  }
+
   const className = parts.pop();
   const name = sanitizeName(parts.join(':'));
 
   if (!name) return null;
 
-  const normalizedClass = normalizeClassName(className);
   return {
     name,
-    className: normalizedClass,
-    spec: normalizeSpec(normalizedClass, spec),
+    className: normalizeClassName(className),
   };
 }
 
@@ -84,13 +77,18 @@ export function parseImportText(importText) {
   });
 }
 
-export function createPlayer({ name, className, spec, id, items }) {
+export function normalizeRole(role) {
+  const key = (role || 'dps').toLowerCase();
+  return VALID_ROLES.has(key) ? key : 'dps';
+}
+
+export function createPlayer({ name, className, role, id, items }) {
   const normalizedClass = normalizeClassName(className);
   return {
     id: id || crypto.randomUUID(),
     name: sanitizeName(name),
     className: normalizedClass,
-    spec: normalizeSpec(normalizedClass, spec),
+    role: normalizeRole(role),
     items: items || [],
   };
 }
@@ -100,4 +98,4 @@ export function rarityClass(rarity) {
   return VALID_RARITIES.has(key) ? key : 'common';
 }
 
-export { sanitizeName, normalizeClassName, normalizeSpec };
+export { sanitizeName, normalizeClassName };

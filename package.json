@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "generate:trash": "node scripts/generate-trash-loot.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.5.4",

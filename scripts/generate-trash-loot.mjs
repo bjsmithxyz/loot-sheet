@@ -1,6 +1,5 @@
 /**
- * Fetches boss loot from mmo4ever drop lists and Wowhead tooltips,
- * then writes src/data/loot.json entries for the requested bosses.
+ * Fetches curated trash loot tables from Wowhead and writes them to loot.json.
  */
 import fs from 'fs';
 import path from 'path';
@@ -9,48 +8,34 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LOOT_PATH = path.join(__dirname, '../src/data/loot.json');
 
-const BOSS_NPCS = {
-  attumen: [15550],
-  moroes: [15687],
-  maiden: [16457],
-  opera: [17521, 18168, 17533, 17534],
-  curator: [15691],
-  illhoof: [15688],
-  shade: [16524],
-  netherspite: [15689],
-  prince: [15690],
-  nightbane: [17225],
-  maulgar: [18831],
-  gruul: [19044],
-  magtheridon: [17257],
-  hydross: [21216],
-  lurker: [21217],
-  leotheras: [21215],
-  karathress: [21213],
-  morogrim: [21214],
-  vashj: [21212],
-  alar: [19514],
-  voidreaver: [19516],
-  solarian: [18805],
-  kaelthas: [19622],
+const TRASH_ITEM_IDS = {
+  'karazhan-trash': [
+    30668, // Grasp of the Dead
+    30673, // Inferno Waist Cord
+    30644, // Grips of Deftness
+    30674, // Zierhut's Lost Treads
+    30643, // Belt of the Tracker
+    30641, // Boots of Elusion
+    30642, // Drape of the Righteous
+    30667, // Ring of Unrelenting Storms
+    30666, // Ritssyn's Lost Pendant
+  ],
+  'ssc-trash': [
+    30620, // Spyglass of the Hidden Fleet
+    30022, // Pendant of the Perilous
+    30023, // Totem of the Maelstrom
+    30027, // Boots of Courage Unending
+    30021, // Wildfury Greatstaff
+    30025, // Serpentshrine Shuriken
+  ],
+  'tk-trash': [
+    30030, // Girdle of Fallen Stars
+    30024, // Mantle of the Elven Kings
+    30026, // Bands of the Celestial Archer
+    30028, // Seventh Ring of the Tirisfalen
+    30029, // Bark-Gloves of Ancient Wisdom
+  ],
 };
-
-const EXCLUDED_ITEM_IDS = new Set([
-  29434, // Badge of Justice
-  24139, // Faint Arcane Essence
-  31751, // Blazing Signet
-  31704, // The Tempest Key
-  32895, // Scroll of the Maelstrom
-  32386, // Magtheridon's Head (duplicate faction variant)
-]);
-
-const EXCLUDED_NAME_PREFIXES = [
-  'Pattern:',
-  'Plans:',
-  'Formula:',
-  'Design:',
-  'Schematic:',
-];
 
 const QUALITY_MAP = {
   0: 'Poor',
@@ -62,36 +47,10 @@ const QUALITY_MAP = {
 };
 
 const SLOT_TYPE = {
-  1: 'Head',
-  2: 'Neck',
-  3: 'Shoulder',
-  4: 'Shirt',
-  5: 'Chest',
-  6: 'Waist',
-  7: 'Legs',
-  8: 'Feet',
-  9: 'Wrist',
-  10: 'Hands',
-  11: 'Finger',
-  12: 'Trinket',
-  13: 'One-Hand',
-  14: 'Shield',
-  15: 'Ranged',
-  16: 'Back',
-  17: 'Two-Hand',
-  20: 'Robe',
-  21: 'Main Hand',
-  22: 'Off Hand',
-  23: 'Held In Off-hand',
-  25: 'Thrown',
-  26: 'Ranged',
-  28: 'Relic',
-};
-
-const SUBCLASS = {
-  0: { 0: 'Miscellaneous', 1: 'Cloth', 2: 'Leather', 3: 'Mail', 4: 'Plate', 5: 'Bucklers', 6: 'Shields', 7: 'Librams', 8: 'Idols', 9: 'Totems', 10: 'Sigils' },
-  2: { 0: 'One-Handed Axes', 1: 'Two-Handed Axes', 2: 'Bows', 3: 'Guns', 4: 'One-Handed Maces', 5: 'Two-Handed Maces', 6: 'Polearms', 7: 'One-Handed Swords', 8: 'Two-Handed Swords', 9: 'Obsolete', 10: 'Staves', 13: 'Fist Weapons', 15: 'Daggers', 16: 'Thrown', 18: 'Crossbows', 19: 'Wands', 20: 'Fishing Poles' },
-  4: { 0: 'Miscellaneous', 1: 'Cloth', 2: 'Leather', 3: 'Mail', 4: 'Plate', 5: 'Mail', 6: 'Shield', 7: 'Libram', 8: 'Idol', 9: 'Totem', 10: 'Sigil' },
+  1: 'Head', 2: 'Neck', 3: 'Shoulder', 4: 'Shirt', 5: 'Chest', 6: 'Waist', 7: 'Legs',
+  8: 'Feet', 9: 'Wrist', 10: 'Hands', 11: 'Finger', 12: 'Trinket', 13: 'One-Hand',
+  14: 'Shield', 15: 'Ranged', 16: 'Back', 17: 'Two-Hand', 20: 'Robe', 21: 'Main Hand',
+  22: 'Off Hand', 23: 'Held In Off-hand', 25: 'Thrown', 26: 'Ranged', 28: 'Relic',
 };
 
 const SLOT_TYPE_VALUES = new Set(Object.values(SLOT_TYPE));
@@ -173,10 +132,7 @@ function parseTooltip(tooltip, quality, name) {
       item.ilevel = parseInt(line.replace('Item Level', '').trim(), 10);
       continue;
     }
-    if (line.startsWith('Requires Level')) {
-      item.req = parseInt(line.replace('Requires Level', '').trim(), 10);
-      continue;
-    }
+    if (line.startsWith('Requires Level')) continue;
     if (line.startsWith('Requires ')) continue;
     if (line.startsWith('Binds when')) continue;
     if (SLOT_TYPE_VALUES.has(line)) continue;
@@ -223,13 +179,6 @@ function parseTooltip(tooltip, quality, name) {
   return item;
 }
 
-async function fetchItemIds(npcId) {
-  const res = await fetch(`https://mmo4ever.com/wow/creature.php?id=${npcId}`);
-  const html = await res.text();
-  const ids = [...html.matchAll(/item\.php\?id=(\d+)/g)].map((m) => parseInt(m[1], 10));
-  return [...new Set(ids)];
-}
-
 async function fetchItem(itemId) {
   const res = await fetch(`https://nether.wowhead.com/tooltip/item/${itemId}?dataEnv=8&locale=0`);
   if (!res.ok) throw new Error(`Wowhead ${itemId}: ${res.status}`);
@@ -239,67 +188,26 @@ async function fetchItem(itemId) {
   return item;
 }
 
-function shouldInclude(item) {
-  if (EXCLUDED_ITEM_IDS.has(item.id)) return false;
-  if (item.isQuestItem && !/\bHead$/i.test(item.name)) return false;
-  if (EXCLUDED_NAME_PREFIXES.some((p) => item.name.startsWith(p))) return false;
-  if (item.bind?.includes('Quest Item')) return false;
-  if (item.rarity === 'Poor') return false;
-  if (item.name === "Medivh's Journal") return false;
-  if (item.name === 'Earthen Signet') return false;
-  if (item.name === 'Nether Vortex' && item.rarity === 'Rare') return false;
-  return true;
-}
-
-async function generateBossLoot(bossId) {
-  const npcIds = BOSS_NPCS[bossId];
-  if (!npcIds?.length) return null;
-
-  const itemIds = new Set();
-  for (const npcId of npcIds) {
-    const ids = await fetchItemIds(npcId);
-    ids.forEach((id) => itemIds.add(id));
-  }
-
+async function generateTrashTable(tableId, itemIds) {
   const items = [];
-  for (const id of [...itemIds].sort((a, b) => a - b)) {
-    try {
-      const item = await fetchItem(id);
-      if (shouldInclude(item)) items.push(item);
-      await new Promise((r) => setTimeout(r, 120));
-    } catch (err) {
-      console.warn(`  skip ${id}: ${err.message}`);
-    }
+  for (const id of itemIds) {
+    const item = await fetchItem(id);
+    items.push(item);
+    await new Promise((r) => setTimeout(r, 120));
   }
-
   return items;
 }
 
 async function main() {
-  const bosses = process.argv.slice(2);
-  const targetBosses = bosses.length ? bosses : Object.keys(BOSS_NPCS);
-  const existing = JSON.parse(fs.readFileSync(LOOT_PATH, 'utf8'));
-  const output = { ...existing };
+  const loot = JSON.parse(fs.readFileSync(LOOT_PATH, 'utf8'));
 
-  if (output.aran && !output.shade) {
-    output.shade = output.aran;
-    delete output.aran;
+  for (const [tableId, itemIds] of Object.entries(TRASH_ITEM_IDS)) {
+    console.log(`Generating ${tableId}...`);
+    loot[tableId] = await generateTrashTable(tableId, itemIds);
+    console.log(`  ${loot[tableId].length} items`);
   }
 
-  for (const bossId of targetBosses) {
-    if (!BOSS_NPCS[bossId]) {
-      console.warn(`Unknown boss: ${bossId}`);
-      continue;
-    }
-    console.log(`Generating ${bossId}...`);
-    const items = await generateBossLoot(bossId);
-    if (items) {
-      output[bossId] = items;
-      console.log(`  ${items.length} items`);
-    }
-  }
-
-  fs.writeFileSync(LOOT_PATH, `${JSON.stringify(output, null, 2)}\n`);
+  fs.writeFileSync(LOOT_PATH, `${JSON.stringify(loot, null, 2)}\n`);
   console.log(`Wrote ${LOOT_PATH}`);
 }
 

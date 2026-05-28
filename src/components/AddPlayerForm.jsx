@@ -2,7 +2,8 @@ import React from 'react';
 import { sanitizeName } from '../utils/import-parser';
 import { motion } from 'framer-motion';
 import { UserPlus } from 'lucide-react';
-import { CLASS_COLORS, CLASSES, CLASS_SPECS } from '../utils/wow-constants';
+import { CLASS_COLORS, CLASSES } from '../utils/wow-constants';
+import RoleSelector from './RoleSelector';
 
 export default function AddPlayerForm({
     isAddingPlayer,
@@ -16,7 +17,7 @@ export default function AddPlayerForm({
             <div className="add-player-row">
                 <button className="add-player-init" onClick={() => {
                     setIsAddingPlayer(true);
-                    setTempPlayer({ name: '', className: 'Warrior', spec: 'Arms' });
+                    setTempPlayer({ name: '', className: 'Warrior', role: 'dps' });
                 }}>
                     <UserPlus size={18} /> Add player
                 </button>
@@ -47,29 +48,16 @@ export default function AddPlayerForm({
                             key={className}
                             className={`class-circle ${tempPlayer.className === className ? 'active' : ''}`}
                             style={{ backgroundColor: CLASS_COLORS[className] }}
-                            onClick={() => {
-                                setTempPlayer({
-                                    ...tempPlayer,
-                                    className,
-                                    spec: CLASS_SPECS[className][0]
-                                });
-                            }}
+                            onClick={() => setTempPlayer({ ...tempPlayer, className })}
                             title={className}
                         />
                     ))}
                 </div>
 
-                <div className="spec-selector">
-                    {CLASS_SPECS[tempPlayer.className].map(spec => (
-                        <button
-                            key={spec}
-                            className={`spec-btn ${tempPlayer.spec === spec ? 'active' : ''}`}
-                            onClick={() => setTempPlayer({ ...tempPlayer, spec })}
-                        >
-                            {spec}
-                        </button>
-                    ))}
-                </div>
+                <RoleSelector
+                    role={tempPlayer.role}
+                    onChange={(role) => setTempPlayer({ ...tempPlayer, role })}
+                />
 
                 <div className="form-actions">
                     <button className="confirm-add" onClick={onAddPlayer}>Add</button>

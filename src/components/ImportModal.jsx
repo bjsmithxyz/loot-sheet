@@ -15,7 +15,7 @@ export default function ImportModal({ onImport, onClose }) {
                 animate={{ y: 0, opacity: 1 }}
                 className="import-modal glass-panel"
             >
-                <h2>Raid Export Import</h2>
+                <h2>Addon import</h2>
                 <p>Paste your addon export string below:</p>
                 <textarea
                     value={importText}

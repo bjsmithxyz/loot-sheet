@@ -14,20 +14,31 @@ const SLOT_NAMES = new Set([
   'Wand', 'Dagger', 'Staff', 'Polearm', 'Axe', 'Sword', 'Mace',
 ]);
 
+function cleanStatText(text) {
+  return String(text)
+    .replace(/Requires Level \d+/gi, '')
+    .replace(/Sell Price:.+$/i, '')
+    .trim();
+}
+
 function cleanItem(item) {
   delete item.phase;
   delete item.bind;
   delete item.type;
+  delete item.req;
 
   if (item.stats) {
-    item.stats = item.stats.filter((stat) => {
-      if (ARMOR_TYPES.has(stat)) return false;
-      if (SLOT_NAMES.has(stat)) return false;
-      if (stat.startsWith('Binds when')) return false;
-      if (stat === item.name) return false;
-      if (stat.startsWith(item.name)) return false;
-      return true;
-    });
+    item.stats = item.stats
+      .map(cleanStatText)
+      .filter((stat) => {
+        if (!stat) return false;
+        if (ARMOR_TYPES.has(stat)) return false;
+        if (SLOT_NAMES.has(stat)) return false;
+        if (stat.startsWith('Binds when')) return false;
+        if (stat === item.name) return false;
+        if (stat.startsWith(item.name)) return false;
+        return true;
+      });
   }
 
   return item;

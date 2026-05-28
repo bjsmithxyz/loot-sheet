@@ -1,91 +1,46 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Pencil, Check, X, Plus, Trash2 } from 'lucide-react';
-import { CLASS_COLORS, CLASSES, CLASS_SPECS } from '../utils/wow-constants';
-import { sanitizeName } from '../utils/import-parser';
+import { Pencil, X, Plus } from 'lucide-react';
+import { CLASS_COLORS } from '../utils/wow-constants';
 import ItemIcon from './ItemIcon';
 import RoleIcon from './RoleIcon';
 
 export default function PlayerRow({
     player,
     isEditing,
-    tempPlayer,
-    setTempPlayer,
-    onSaveEdit,
-    onDeletePlayer,
     onStartEdit,
     onRemoveItem,
     onShowLootMenu,
     onHoverItem,
     onLeaveItem
 }) {
+    const handleEditClick = (e) => {
+        e.stopPropagation();
+        const row = e.currentTarget.closest('.player-row');
+        const rect = row.getBoundingClientRect();
+        onStartEdit(player, { x: rect.left, y: rect.top, height: rect.height });
+    };
+
     return (
-        <div className="player-row">
+        <div className={`player-row ${isEditing ? 'is-editing' : ''}`}>
             <div className="player-meta-container">
-                {isEditing ? (
-                    <div className="inline-edit-form">
-                        <input
-                            type="text"
-                            value={tempPlayer.name}
-                            onChange={(e) => setTempPlayer({ ...tempPlayer, name: sanitizeName(e.target.value) })}
-                            onKeyDown={(e) => e.key === 'Enter' && onSaveEdit()}
-                            autoFocus
-                        />
-                        <div className="edit-options">
-                            <div className="class-selector small">
-                                {CLASSES.map(c => (
-                                    <button
-                                        key={c}
-                                        className={`class-circle small ${tempPlayer.className === c ? 'active' : ''}`}
-                                        style={{ backgroundColor: CLASS_COLORS[c] }}
-                                        onClick={() => setTempPlayer({ ...tempPlayer, className: c, spec: CLASS_SPECS[c][0] })}
-                                    />
-                                ))}
-                            </div>
-                            <div className="spec-selector small">
-                                {CLASS_SPECS[tempPlayer.className].map(s => (
-                                    <button
-                                        key={s}
-                                        className={`spec-btn small ${tempPlayer.spec === s ? 'active' : ''}`}
-                                        onClick={() => setTempPlayer({ ...tempPlayer, spec: s })}
-                                    >
-                                        {s}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="edit-form-actions">
-                            <button
-                                className="delete-player-btn"
-                                onClick={() => onDeletePlayer(player.id)}
-                                title="Delete player"
-                            >
-                                <Trash2 size={16} />
-                            </button>
-                            <button className="save-edit-btn" onClick={onSaveEdit} title="Save changes">
-                                <Check size={16} />
-                            </button>
-                        </div>
-                    </div>
-                ) : (
-                    <>
-                        <button className="edit-action-btn" onClick={() => onStartEdit(player)}>
-                            <Pencil size={14} />
-                        </button>
-                        <div className="player-meta">
-                            <span
-                                className="player-name-top"
-                                style={{ color: CLASS_COLORS[player.className] || '#fff' }}
-                            >
-                                {player.name}
-                            </span>
-                            <div className="player-spec-line">
-                                <RoleIcon spec={player.spec} />
-                                <span className="player-spec-name">{player.spec}</span>
-                            </div>
-                        </div>
-                    </>
-                )}
+                <button
+                    type="button"
+                    className="edit-action-btn"
+                    onClick={handleEditClick}
+                    title="Edit player"
+                >
+                    <Pencil size={12} />
+                </button>
+                <div className="player-meta">
+                    <span
+                        className="player-name-top"
+                        style={{ color: CLASS_COLORS[player.className] || '#fff' }}
+                    >
+                        {player.name}
+                    </span>
+                    <RoleIcon role={player.role} />
+                </div>
             </div>
             <div className="player-items">
                 <AnimatePresence>
@@ -114,7 +69,7 @@ export default function PlayerRow({
                                     onLeaveItem();
                                 }}
                             >
-                                <X size={12} />
+                                <X size={10} />
                             </button>
                         </motion.div>
                     ))}
@@ -122,9 +77,10 @@ export default function PlayerRow({
 
                 <div className="add-item-container">
                     <button
+                        type="button"
                         className="add-item-btn"
                         onClick={(e) => {
-                            e.stopPropagation(); // Prevent instantaneous closure
+                            e.stopPropagation();
                             const rect = e.currentTarget.getBoundingClientRect();
                             onShowLootMenu({
                                 playerId: player.id,
@@ -133,7 +89,7 @@ export default function PlayerRow({
                             });
                         }}
                     >
-                        <Plus size={20} />
+                        <Plus size={16} />
                     </button>
                 </div>
             </div>
