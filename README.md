@@ -29,17 +29,24 @@ Alternatively, copy only the `LootTracker` folder from the repo.
 
 ### Install (TBC Anniversary)
 
-1. Locate your WoW install folder.
-2. Copy the `LootTracker` folder into:
+1. Locate your WoW install folder (Battle.net → WoW → Options cog → **Show in Explorer** / **Reveal in Finder**).
+2. Open the **`_anniversary_`** folder (not `_classic_` or `_classic_era_`).
+3. Copy the **`LootTracker`** folder from [`addon/LootTracker/`](addon/LootTracker/) into:
 
    ```
    World of Warcraft/_anniversary_/Interface/AddOns/LootTracker/
    ```
 
-   The folder must contain `LootTracker.toc` and `LootTracker.lua`.
+   The folder must contain `LootTracker.toc`, `LootTracker_TBC.toc`, and `LootTracker.lua`.
 
-3. Restart WoW or `/reload` if already logged in.
-4. On the character select screen, click **AddOns** and ensure **Loot Sheet Export** is enabled.
+   **Do not** copy the parent `addon` folder — that creates a double-nested path WoW will ignore.
+
+4. Restart WoW completely (quit to desktop, not just `/reload`).
+5. On the character select screen, click **AddOns** and ensure **Loot Sheet Export** is enabled. Turn on **Load out of date AddOns** if needed.
+
+See [`addon/LootTracker/README.md`](addon/LootTracker/README.md) for troubleshooting if the addon does not appear.
+
+**Client:** TBC Anniversary **2.5.5.x** (Interface **20505**).
 
 ### Use in game
 
